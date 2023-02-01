@@ -9,6 +9,7 @@
   <meta name="keywords" content="Page-specific keywords">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="shortcut icon" href="static/images/favicons/favicon.png" type="image/x-icon">
+  <link rel="icon-ml" href="static/images/favicons/ml.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="static/images/favicons/apple-touch-icon.png">
   <link rel="apple-touch-icon-precomposed" href="static/images/favicons/apple-touch-icon-precomposed.png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
@@ -34,6 +35,8 @@
           }
       }
     </script>
+
+
       <!-- Header-->
       <header class="main-header">
         <div class="first-nav">
@@ -49,10 +52,10 @@
             <nav class="menu">
               <ul>
                 <li><a class="js-link js-anchor is-selected" href="#home">Home</a></li>
-                <li><a class="js-link js-anchor" href="#about">About</a></li>
+                <!-- <li><a class="js-link js-anchor" href="#about">About</a></li>
                 <li><a class="js-link js-anchor" href="#research">Research</a></li>
-                <li><a class="js-link js-anchor" href="#news">Recent News</a></li>
-                <li><a class="js-link js-anchor" href="#contacts">Contacts</a></li>
+                <li><a class="js-link js-anchor" href="#news">Recent News</a></li> -->
+                <li><a class="js-link js-anchor" href="#contacts">Contact</a></li>
                 <li><a class="js-link js-anchor" href="publications.html">Publications</a></li>
                 <li><a class="js-link js-anchor" href="static/files/CV.pdf">CV</a></li>
               </ul>
@@ -60,6 +63,8 @@
           </div>
         </div>
       </header>
+
+
       <!-- Home section-->
       <section class="home-section" id="home">
       <div class="home-section__bg"></div>
@@ -72,10 +77,12 @@
       </div>
       </div>
       </section>
+
+
       <!-- About section-->
       <section class="about-section" id="about">
         <div class="container">
-          <img src="static/images/ProfilePic.jpg" alt="Avatar" class="" style="width:210px;float:left;margin-left:90px">
+          <img src="static/images/ProfilePic.jpg" alt="Avatar" class="" style="width:210px;float:left;margin-left:90px;margin-top:5px">
           <div class="about-card">
             <header class="about-card__header">
               <h2>About Harender</h2>
@@ -102,7 +109,6 @@
           <p>PhD, Supervisor: Prof Hemant K. Kashyap: Indian Institute of Techonology Delhi, New Delhi, India, Co-Supervisor: Prof Jer-Lai Kuo, Institute of Atomic and Molecular Sciences, Taipei, Taiwan </p>
         </blockquote>
           </div> -->
-      </section>
 
 
       <!-- Projects section-->
@@ -112,27 +118,29 @@
           <h2>Research interests</h2>
           <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam interdum tortor</h4> -->
         </header>
-      <div class="grid-container">
-        <ul class="process">
-          <li class="process__step process__step_research">
-            <div class="process__step-icon icon icon_research is-active"></div>
+
+      <div class="grid-container-custom">
+
+        <ul class="projects">
+          <li class="projects__step projects__step_first">
+            <div class="projects__step-icon icon icon_support is-active"></div>
           </li>
-          <li class="process__step-info process__step-info_research is-active">
+          <li class="projects__step-info projects__step-info_first is-active">
             <h3><span>Machine Learning</span> &mdash; Neural Network Potentials</h3>
             <p>Our work in this area involves developing theories and computational methods for modeling extended and molecular-scale interfaces, with a focus on quantitative descriptions of solvation in equilibrium and nonequilibrium systems. Current interests include methods for machine learning models capable of describing long range interactions, analytic theories for long range interactions, path integral methods for quasiparticles, and nonequilibrium descriptions of model chemical reactions in solution.</p>
           </li>
-          <li class="process__step process__step_develop">
-            <div class="process__step-icon icon icon_develop">
+          <li class="projects__step projects__step_second">
+            <div class="projects__step-icon icon icon_qr">
             </div>
           </li>
-          <li class="process__step-info process__step-info_develop">
+          <li class="projects__step-info projects__step-info_second">
             <h3><span>Energy Storage Materials</span> &mdash; Solid state electrolytes</h3>
             <p>Nullam laoreet lacus et ante consequat pharetra. Nam non felis tincidunt, auctor eros at, semper eros. Mauris feugiat a nibh et luctus.</p>
           </li>
-          <li class="process__step process__step_deploy">
-            <div class="process__step-icon icon icon_deploy"></div>
+          <li class="projects__step projects__step_third">
+            <div class="projects__step-icon icon icon_deploy"></div>
           </li>
-          <li class="process__step-info process__step-info_deploy">
+          <li class="projects__step-info projects__step-info_third">
             <h3><span>Hybrid Electrolytes</span> &mdash; Water-in-salt and IL</h3>
             <p>Donec lobortis, est iaculis rutrum feugiat, orci est ultrices mauris, in rhoncus dolor eros non sem. Duis feugiat, metus eu ullamcorper accumsan, massa risus dictum nisi, sit amet ultricies lectus nisl eu libero.</p>
           </li>
