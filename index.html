@@ -12,6 +12,7 @@
   <link rel="apple-touch-icon" href="static/images/favicons/apple-touch-icon.png">
   <link rel="apple-touch-icon-precomposed" href="static/images/favicons/apple-touch-icon-precomposed.png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/screen.min.css">
   <link rel="stylesheet" href="static/css/custom.min.css">
   <script src="static/js/head.min.js"></script>
@@ -37,7 +38,8 @@
       <header class="main-header">
         <div class="first-nav">
           <div class="container">
-              <a class="first-nav__navcontrol icon icon_menu js-navcontrol" href="#">Menu</a>
+              <!-- <a class="first-nav__navcontrol icon icon_menu js-navcontrol" href="#">Menu</a> -->
+              <a class="first-nav__navcontrol icon icon_menu js-navcontrol">Menu</a>
           </div>
         </div>
         <div class="second-nav js-nav">
@@ -48,10 +50,11 @@
               <ul>
                 <li><a class="js-link js-anchor is-selected" href="#home">Home</a></li>
                 <li><a class="js-link js-anchor" href="#about">About</a></li>
-                <li><a class="js-link js-anchor" href="#projects">Projects</a></li>
+                <li><a class="js-link js-anchor" href="#research">Research</a></li>
                 <li><a class="js-link js-anchor" href="#news">Recent News</a></li>
                 <li><a class="js-link js-anchor" href="#contacts">Contacts</a></li>
-                <li><a class="js-link js-anchor" href="#contacts">Publications</a></li>
+                <li><a class="js-link js-anchor" href="publications.html">Publications</a></li>
+                <li><a class="js-link js-anchor" href="static/files/CV.pdf">CV</a></li>
               </ul>
             </nav>
           </div>
@@ -72,6 +75,7 @@
       <!-- About section-->
       <section class="about-section" id="about">
         <div class="container">
+          <img src="static/images/ProfilePic.jpg" alt="Avatar" class="" style="width:210px;float:left;margin-left:90px">
           <div class="about-card">
             <header class="about-card__header">
               <h2>About Harender</h2>
@@ -89,7 +93,7 @@
         </div>
       </div>
       </section>
-      <!-- Why me?-->
+      <!-- Bio-data-->
       <div class="advantages">
         <h2>Bio-sketch</h2>
         <blockquote>
@@ -101,12 +105,14 @@
       </div> -->
       </div>
       </section>
-      <!-- Process section-->
-      <section class="common-section" id="projects">
+
+
+      <!-- Projects section-->
+      <section class="common-section" id="research">
       <div class="container">
         <header class="common-section__header">
-          <h2>Projects</h2>
-          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam interdum tortor</h4>
+          <h2>Research interests</h2>
+          <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam interdum tortor</h4> -->
         </header>
       <div class="grid-container">
         <ul class="process">
@@ -133,137 +139,146 @@
             <p>Donec lobortis, est iaculis rutrum feugiat, orci est ultrices mauris, in rhoncus dolor eros non sem. Duis feugiat, metus eu ullamcorper accumsan, massa risus dictum nisi, sit amet ultricies lectus nisl eu libero.</p>
           </li>
         </ul>
-                                        </div>
-                                      </div>
-                                    </section>
-                                    <!-- News section-->
-                                    <section class="common-section" id="news">
-                                      <div class="container">
-                                        <header class="common-section__header">
-                                          <h2>Recent News</h2>
-                                          <!-- <p>Aenean sagittis, turpis ac fermentum elementum, lorem urna lobortis eros, nec ultrices sem tortor sit amet elit</p> -->
-                                        </header>
-                                        <div class="grid-container">
-                                          <ul class="testimonials">
-                                            <li class="testimonials__item">
-                                              <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
-                                              <blockquote>
-                                                <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
-                                                <cite>
-                                                  <span class="name">Jan 17,</span>
-                                                  <span class="role"> 2023</span>
-                                                </cite>
-                                              </blockquote>
-                                            </li>
-                                            <li class="testimonials__item">
-                                              <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
-                                              <blockquote>
-                                                <!-- <p class="icon icon_ql"> -->
-                                                <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
-                                                <cite>
-                                                  <span class="name">Jan 17,</span>
-                                                  <span class="role"> 2023</span>
-                                                </cite>
-                                              </blockquote>
-                                            </li>
-                                          </ul>
-                                          <ul class="testimonials">
-                                            <li class="testimonials__item">
-                                              <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
-                                              <blockquote>
-                                                <!-- <p class="icon icon_ql"> -->
-                                                <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
-                                                <cite>
-                                                  <span class="name">Jan 17,</span>
-                                                  <span class="role"> 2023</span>
-                                                </cite>
-                                              </blockquote>
-                                            </li>
-                                            <li class="testimonials__item">
-                                              <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
-                                              <blockquote>
-                                                <!-- <p class="icon icon_ql"> -->
-                                                <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
-                                                <cite>
-                                                  <span class="name">Jan 17,</span>
-                                                  <span class="role"> 2023</span>
-                                                </cite>
-                                              </blockquote>
-                                            </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </section>
-                                  <!-- Contacts section-->
-                                  <div class="contacts-section" id="contacts">
-                                    <div class="container"><section class="contact-card">
-                                      <header class="contact-card__header">
-                                        <h2>Contact information</h2>
-                                        <!-- <h4>Mauris leo nisl, malesuada id faucibus non, gravida sit amet lectus</h4> -->
-                                      </header>
-                                      <div class="contact-info">
-                                        <div class="contact-info__logo">HSD</div>
-                                        <div class="contact-info__group">
-                                          <!-- <div class="contact-info__additional">
-                                            <p>Have any question?</p>
-                                            <p>Want to collaborate?</p>
-                                          </div> -->
-                                          <div class="contact-info__vcard vcard">
-                                            <h4 class="fn org">Harender Singh Dhattarwal</h4>
-                                            <p class="role title">Department of Chemistry and Chemical Biology</p>
-                                            <p class="role title">Rutgers University-New Brunswick</p>
-                                            <p class="icon icon_location">
-                                              <a class="adr js-anchor" href="#gmap">
-                                                <span class="country-name">Piscataway</span>,&nbsp;
-                                                <span class="locality">NJ (USA)</span>
-                                              </a>
-                                            </p>
-                                            <p class="icon icon_mail">
-                                              <a class="email" href="harender.dhattarwal@rutgers.edu">harender.dhattarwal@rutgers.edu</a>
-                                            </p>
-                                            <p class="icon icon_mail">
-                                              <a class="email" href="1harendersingh1@gmail.com">1harendersingh1@gmail.com</a>
-                                            </p>
-                                            <p class="icon icon_phone">
-                                              <a class="email" href="tel:+19082104331">+1-908-201-4331</a>
-                                            </p>
-                                            <p class="icon icon_phone">
-                                              <a class="email" href="tel:+918826772839">+91-882-677-2839</a>
-                                            </p>
-                                          </div>
-                                          <ul class="contact-info__social">
-                                            <li>
-                                              <a class="icon icon_fb" rel="nofollow">I'm on Facebook</a>
-                                            </li>
-                                            <li>
-                                              <a class="icon icon_twi" rel="nofollow">My Twitter</a>
-                                            </li>
-                                            <li>
-                                              <a class="icon icon_gplus" rel="nofollow">I'm on Google+</a>
-                                            </li>
-                                            <li>
-                                              <a class="icon icon_vk" rel="nofollow">I'm in Vk</a>
-                                            </li>
-                                            <li>
-                                              <a class="icon icon_in" rel="nofollow">My Linkedin profile</a>
-                                            </li>
-                                            <li><a class="icon icon_rss" rel="nofollow">RSS feed... maybe</a>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </section>
-                                  </div>
-                                  <div class="gmap" id="gmap"></div>
-                                </div>
-                                <!-- Footer-->
-                                <footer class="main-footer">
-                                  <div class="container">
-                                    <p class="main-footer__copyright">&copy;&nbsp;
-                                      <span>Harender</span></p>
-                                      <a class="main-footer__gotop icon icon_gotop js-anchor" href="#home">To top!</a>
-                                    </div>
-                                  </footer>
-                                  <script src="static/js/body.min.js"></script>
+      </div>
+      </div>
+      </section>
+
+
+      <!-- News section-->
+      <section class="common-section" id="news">
+        <div class="container">
+          <header class="common-section__header">
+            <h2>Recent News</h2>
+            <!-- <p>Aenean sagittis, turpis ac fermentum elementum, lorem urna lobortis eros, nec ultrices sem tortor sit amet elit</p> -->
+          </header>
+          <div class="grid-container">
+            <ul class="testimonials">
+              <li class="testimonials__item">
+                <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
+                <blockquote>
+                  <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
+                  <cite>
+                    <span class="name">Jan 17,</span>
+                    <span class="role"> 2023</span>
+                  </cite>
+                </blockquote>
+              </li>
+              <li class="testimonials__item">
+                <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
+                <blockquote>
+                  <!-- <p class="icon icon_ql"> -->
+                  <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
+                  <cite>
+                    <span class="name">Jan 17,</span>
+                    <span class="role"> 2023</span>
+                  </cite>
+                </blockquote>
+              </li>
+            </ul>
+            <ul class="testimonials">
+              <li class="testimonials__item">
+                <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
+                <blockquote>
+                  <!-- <p class="icon icon_ql"> -->
+                  <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
+                  <cite>
+                    <span class="name">Jan 17,</span>
+                    <span class="role"> 2023</span>
+                  </cite>
+                </blockquote>
+              </li>
+              <li class="testimonials__item">
+                <img src="static/images/logos/placeholder.png" alt="Lorem ipsum dolor sit amet">
+                <blockquote>
+                  <!-- <p class="icon icon_ql"> -->
+                  <p>We use self consistent field neural network (SCFNN) model trained on long-range interaction to predict the dielectric saturation in water.</p>
+                  <cite>
+                    <span class="name">Jan 17,</span>
+                    <span class="role"> 2023</span>
+                  </cite>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts section-->
+      <div class="contacts-section" id="contacts">
+        <div class="container"><section class="contact-card">
+          <header class="contact-card__header">
+            <h2>Contact information</h2>
+            <!-- <h4>Mauris leo nisl, malesuada id faucibus non, gravida sit amet lectus</h4> -->
+          </header>
+          <div class="contact-info">
+            <div class="contact-info__logo">HSD</div>
+            <div class="contact-info__group">
+              <!-- <div class="contact-info__additional">
+              <p>Have any question?</p>
+              <p>Want to collaborate?</p>
+            </div> -->
+            <div class="contact-info__vcard vcard">
+              <h4 class="fn org">Harender Singh Dhattarwal</h4>
+              <p class="role title">Department of Chemistry and Chemical Biology</p>
+              <p class="role title">Rutgers University-New Brunswick</p>
+              <p class="icon icon_location">
+                <a class="adr js-anchor" href="#gmap">
+                  <span class="country-name">Piscataway</span>,&nbsp;
+                  <span class="locality">NJ (USA)</span>
+                </a>
+              </p>
+              <p class="icon icon_mail">
+                <a class="email" href="mailto:harender.dhattarwal@rutgers.edu">harender.dhattarwal@rutgers.edu</a>
+              </p>
+              <p class="icon icon_mail">
+                <a class="email" href="mailto:1harendersingh1@gmail.com">1harendersingh1@gmail.com</a>
+              </p>
+              <p class="icon icon_phone">
+                <a class="email" href="tel:+19082104331">+1-908-201-4331</a>
+              </p>
+              <p class="icon icon_phone">
+                <a class="email" href="tel:+918826772839">+91-882-677-2839</a>
+              </p>
+            </div>
+            <ul class="contact-info__social">
+              <li>
+                <a class="ai ai-google-scholar ai-2x" rel="nofollow" href="https://scholar.google.com/citations?hl=en&user=Y4dvObYAAAAJ&view_op=list_works&authuser=1&sortby=pubdate">My Google Scholar</a>
+              </li>
+              <li>
+                <a class="ai ai-researchgate ai-2x" rel="nofollow" href="https://www.researchgate.net/profile/Harender-Dhattarwal">My ResearchGate</a>
+              </li>
+              <li>
+                <a class="icon icon_twi" rel="nofollow" href="https://twitter.com/HSDhattarwal">My Twitter</a>
+              </li>
+              <li>
+                <a class="icon icon_in" rel="nofollow" href="https://www.linkedin.com/in/hrendrsingh/">My Linkedin profile</a>
+              </li>
+              <li>
+                <a class="ai ai-orcid ai-2x" rel="nofollow" href="https://orcid.org/0000-0001-6074-6734">My OrcID</a>
+              </li>
+              <li>
+                <a class="ai ai-cv ai-2x" rel="nofollow" href="static/files/CV.pdf">My CV</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="gmap" id="gmap"></div>
+  </div>
+
+  <!-- Footer-->
+  <footer class="main-footer">
+    <div class="container">
+      <p class="main-footer__copyright">&copy;&nbsp;
+        <span>Harender</span></p>
+        <a class="main-footer__gotop icon icon_gotop js-anchor" href="#home">To top!</a>
+      </div>
+  </footer>
+
+<script src="static/js/body.min.js"></script>
+
 </body>
+
+
 </html>
