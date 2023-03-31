@@ -30,9 +30,9 @@ a:hover{border-bottom:none}
 .icon_he:before{content:"HE"}
 .icon_ml {
   background-image: url('../images/favicons/ml.png');
-  background-size: 100px 100px; /* adjust size as needed */
-  width: 100px;
-  height: 100px;
+  background-size: 180px 180px; /* adjust size as needed */
+  width: 180px;
+  height: 180px;
 }
 
 .home-section{position:relative;width:100%;overflow:hidden;height:70%}
