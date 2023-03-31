@@ -26,9 +26,9 @@ a:hover{border-bottom:none}
     transform: scale(.25);
     } */
 .icon_batt:before{content:"SSB"}
-.icon_ml:before{content:"ML"}
+/*.icon_ml:before{content:"ML"}*/
 .icon_he:before{content:"HE"}
-.icon {
+.icon_ml {
   background-image: url('../images/favicons/ml.png');
   background-size: 50px 50px; /* adjust size as needed */
   width: 50px;
