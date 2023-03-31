@@ -27,7 +27,7 @@ a:hover{border-bottom:none}
     } */
 /*.icon_batt:before{content:"SSB"}*/
 /*.icon_ml:before{content:"ML"}*/
-.icon_he:before{content:"HE"}
+/*.icon_he:before{content:"HE"}*/
 .icon_ml {
   background-image: url('../images/favicons/ml.png');
   background-size: 180px 180px; /* adjust size as needed */
@@ -37,6 +37,13 @@ a:hover{border-bottom:none}
 
 .icon_batt {
   background-image: url('../images/favicons/ssb.png');
+  background-size: 180px 180px; /* adjust size as needed */
+  width: 180px;
+  height: 180px;
+}
+
+.icon_he {
+  background-image: url('../images/favicons/he.png');
   background-size: 180px 180px; /* adjust size as needed */
   width: 180px;
   height: 180px;
