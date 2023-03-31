@@ -35,6 +35,13 @@ a:hover{border-bottom:none}
   height: 180px;
 }
 
+.icon_batt {
+  background-image: url('../images/favicons/ssb.png');
+  background-size: 180px 180px; /* adjust size as needed */
+  width: 180px;
+  height: 180px;
+}
+
 .home-section{position:relative;width:100%;overflow:hidden;height:70%}
 .home-section:after{content:"";position:absolute;left:0;bottom:0;display:block;width:100%;height:0;clear:both;-webkit-box-shadow:0 0 2px 1px #2c3e50;box-shadow:0 0 2px 1px #2c3e50}
 .home-section__bg{position:absolute;min-width:100%;min-height:100%;z-index:0;background:url(../images/background.jpg) center 0 no-repeat;background-attachment:fixed;background-size:cover}
