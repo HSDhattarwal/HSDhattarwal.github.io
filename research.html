@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Three research themes: ML interatomic potentials with long-range electrostatics, solid-state electrolytes and superionic conductors, and electrochemical interface design."/>
+  <meta name="author" content="Harender S. Dhattarwal"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://HSDhattarwal.github.io/research.html"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Research — Harender Dhattarwal"/>
+  <meta property="og:description" content="Three research themes: ML interatomic potentials with long-range electrostatics, solid-state electrolytes and superionic conductors, and electrochemical interface design."/>
+  <meta property="og:url" content="https://HSDhattarwal.github.io/research.html"/>
+  <meta property="og:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
+  <meta property="og:site_name" content="Harender Dhattarwal"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Research — Harender Dhattarwal"/>
+  <meta name="twitter:description" content="Three research themes: ML interatomic potentials with long-range electrostatics, solid-state electrolytes and superionic conductors, and electrochemical interface design."/>
+  <meta name="twitter:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
+  <title>Research | Harender Dhattarwal</title>
+  <meta name="description" content="Research themes: ML interatomic potentials, solid-state electrolytes, and electrochemical interfaces."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/research.css"/>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html"><span class="nav__monogram">HD</span><span class="nav__name">Harender Dhattarwal</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="group.html">Group</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay">
+  <button class="nav__overlay-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <ul class="nav__overlay-links" role="list">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="group.html">Group</a></li>
+  </ul>
+</div>
+
+<main class="page-offset">
+
+  <!-- Page Header -->
+  <header class="rp-header fade-up">
+    <div class="container">
+      <p class="rp-header__label">Research Program</p>
+      <h1 class="rp-header__title">Research</h1>
+      <p class="rp-header__sub">Computational approaches to understand materials from first principles</p>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       THEME 1 — ML Interatomic Potentials
+       SVG LEFT · Text RIGHT
+       ══════════════════════════════════════════ -->
+  <section class="theme-section" id="mlip">
+    <div class="container">
+      <div class="theme-layout reveal">
+
+        <!-- SVG: ML Pipeline Flowchart -->
+        <div class="theme-svg-col">
+          <svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg" aria-label="Machine learning potential workflow pipeline">
+            <defs>
+              <marker id="arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0, 7 2.5, 0 5" fill="#27AE60"/>
+              </marker>
+            </defs>
+
+            <!-- Box 1: Ab Initio / DFT (x=12, y=38, w=108, h=188) -->
+            <rect x="12" y="38" width="108" height="188" rx="10" fill="#f0faf5" stroke="#27AE60" stroke-width="1.5"/>
+            <!-- Atom cluster: 6 hex ring + center, ring r=20, center (66,127) -->
+            <g stroke="#27AE60" stroke-width="1.4" fill="white">
+              <line x1="86" y1="127" x2="76" y2="110"/><line x1="76" y1="110" x2="56" y2="110"/>
+              <line x1="56" y1="110" x2="46" y2="127"/><line x1="46" y1="127" x2="56" y2="144"/>
+              <line x1="56" y1="144" x2="76" y2="144"/><line x1="76" y1="144" x2="86" y2="127"/>
+              <circle cx="86" cy="127" r="7.5" fill="#e6f7ef"/><circle cx="76" cy="110" r="7.5" fill="#e6f7ef"/>
+              <circle cx="56" cy="110" r="7.5" fill="#e6f7ef"/><circle cx="46" cy="127" r="7.5" fill="#e6f7ef"/>
+              <circle cx="56" cy="144" r="7.5" fill="#e6f7ef"/><circle cx="76" cy="144" r="7.5" fill="#e6f7ef"/>
+              <circle cx="66" cy="127" r="7.5" fill="white"/>
+            </g>
+            <text x="66" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="700" fill="#1A1A2E">Ab Initio / DFT</text>
+            <text x="66" y="238" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#8892A4">Training Data</text>
+
+            <!-- Arrow 1 -->
+            <line x1="124" y1="132" x2="143" y2="132" stroke="#27AE60" stroke-width="2" marker-end="url(#arr)"/>
+
+            <!-- Box 2: Descriptor (x=148, y=38, w=108, h=188) -->
+            <rect x="148" y="38" width="108" height="188" rx="10" fill="#f0faf5" stroke="#27AE60" stroke-width="1.5"/>
+            <!-- 4×3 matrix, cells 13×13, gap 3. Total w=61, h=45. Center (202,127) → start x=172, y=105 -->
+            <g rx="2">
+              <rect x="172" y="105" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="188" y="105" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+              <rect x="204" y="105" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="220" y="105" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+              <rect x="172" y="121" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+              <rect x="188" y="121" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="204" y="121" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+              <rect x="220" y="121" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="172" y="137" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="188" y="137" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+              <rect x="204" y="137" width="13" height="13" rx="2" fill="#D5F5E3"/>
+              <rect x="220" y="137" width="13" height="13" rx="2" fill="white" stroke="#E8ECF2" stroke-width="0.8"/>
+            </g>
+            <!-- Value hints inside cells -->
+            <text x="178" y="114.5" font-family="'Courier New',monospace" font-size="6" fill="#27AE60" text-anchor="middle">0.8</text>
+            <text x="226" y="114.5" font-family="'Courier New',monospace" font-size="6" fill="#27AE60" text-anchor="middle">0.3</text>
+            <text x="202" y="130.5" font-family="'Courier New',monospace" font-size="6" fill="#27AE60" text-anchor="middle">0.6</text>
+            <text x="202" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="700" fill="#1A1A2E">Descriptor</text>
+            <text x="202" y="238" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#8892A4">Atomic Fingerprints</text>
+
+            <!-- Arrow 2 -->
+            <line x1="260" y1="132" x2="279" y2="132" stroke="#27AE60" stroke-width="2" marker-end="url(#arr)"/>
+
+            <!-- Box 3: Neural Network (x=284, y=32, w=122, h=200) — slightly larger -->
+            <rect x="284" y="32" width="122" height="200" rx="10" fill="#f0faf5" stroke="#27AE60" stroke-width="2"/>
+            <!-- Mini NN: Input(3)→H1(4)→H2(3)→Output(1) -->
+            <!-- Input x=300, H1 x=322, H2 x=347, Output x=382 -->
+            <!-- Input y: 107,128,149  H1 y: 100,118,136,154  H2 y: 107,128,149  Out y: 128 -->
+            <g stroke="#E8ECF2" stroke-width="0.75" fill="none">
+              <!-- I→H1 (all 12) -->
+              <line x1="307" y1="107" x2="316" y2="100"/><line x1="307" y1="107" x2="316" y2="118"/>
+              <line x1="307" y1="107" x2="316" y2="136"/><line x1="307" y1="107" x2="316" y2="154"/>
+              <line x1="307" y1="128" x2="316" y2="100"/><line x1="307" y1="128" x2="316" y2="118"/>
+              <line x1="307" y1="128" x2="316" y2="136"/><line x1="307" y1="128" x2="316" y2="154"/>
+              <line x1="307" y1="149" x2="316" y2="100"/><line x1="307" y1="149" x2="316" y2="118"/>
+              <line x1="307" y1="149" x2="316" y2="136"/><line x1="307" y1="149" x2="316" y2="154"/>
+              <!-- H1→H2 (all 12) -->
+              <line x1="329" y1="100" x2="340" y2="107"/><line x1="329" y1="100" x2="340" y2="128"/>
+              <line x1="329" y1="100" x2="340" y2="149"/><line x1="329" y1="118" x2="340" y2="107"/>
+              <line x1="329" y1="118" x2="340" y2="128"/><line x1="329" y1="118" x2="340" y2="149"/>
+              <line x1="329" y1="136" x2="340" y2="107"/><line x1="329" y1="136" x2="340" y2="128"/>
+              <line x1="329" y1="136" x2="340" y2="149"/><line x1="329" y1="154" x2="340" y2="107"/>
+              <line x1="329" y1="154" x2="340" y2="128"/><line x1="329" y1="154" x2="340" y2="149"/>
+            </g>
+            <!-- H2→Output (accent) -->
+            <g stroke="#27AE60" stroke-width="1.1" opacity="0.75" fill="none">
+              <line x1="347" y1="107" x2="374" y2="128"/>
+              <line x1="347" y1="128" x2="374" y2="128"/>
+              <line x1="347" y1="149" x2="374" y2="128"/>
+            </g>
+            <!-- Input nodes (gray) -->
+            <circle cx="301" cy="107" r="6" fill="#8892A4"/><circle cx="301" cy="128" r="6" fill="#8892A4"/><circle cx="301" cy="149" r="6" fill="#8892A4"/>
+            <!-- H1 nodes (accent-light) -->
+            <circle cx="322" cy="100" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <circle cx="322" cy="118" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <circle cx="322" cy="136" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <circle cx="322" cy="154" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <!-- H2 nodes -->
+            <circle cx="347" cy="107" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <circle cx="347" cy="128" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <circle cx="347" cy="149" r="5.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8"/>
+            <!-- Output node (accent filled) -->
+            <circle cx="382" cy="128" r="8" fill="#27AE60"/>
+            <circle cx="379" cy="125" r="2.8" fill="rgba(255,255,255,0.55)"/>
+            <!-- Box 3 labels -->
+            <text x="345" y="21" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="700" fill="#1A1A2E">Neural Network</text>
+            <text x="345" y="244" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#8892A4">Long-Range Model</text>
+
+            <!-- Arrow 3 -->
+            <line x1="410" y1="132" x2="429" y2="132" stroke="#27AE60" stroke-width="2" marker-end="url(#arr)"/>
+
+            <!-- Box 4: MD Simulation (x=434, y=38, w=108, h=188) -->
+            <rect x="434" y="38" width="108" height="188" rx="10" fill="#f0faf5" stroke="#27AE60" stroke-width="1.5"/>
+            <!-- Motion trails -->
+            <g stroke="#CBD5E0" stroke-width="1" stroke-dasharray="3 2.5" stroke-linecap="round">
+              <line x1="448" y1="99"  x2="461" y2="93"/>
+              <line x1="511" y1="146" x2="522" y2="139"/>
+              <line x1="471" y1="183" x2="483" y2="175"/>
+            </g>
+            <!-- Scattered atoms -->
+            <circle cx="464" cy="91"  r="7" fill="#e6f7ef" stroke="#27AE60" stroke-width="1.2"/>
+            <circle cx="524" cy="137" r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="485" cy="173" r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="449" cy="130" r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="521" cy="97"  r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="491" cy="113" r="7" fill="#e6f7ef" stroke="#27AE60" stroke-width="1.2"/>
+            <circle cx="458" cy="163" r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="525" cy="165" r="7" fill="#E2E8F0" stroke="#CBD5E0" stroke-width="1.2"/>
+            <circle cx="500" cy="193" r="7" fill="#e6f7ef" stroke="#27AE60" stroke-width="1.2"/>
+            <text x="488" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="700" fill="#1A1A2E">MD Simulation</text>
+            <text x="488" y="238" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#8892A4">Properties</text>
+
+            <!-- Curved bracket below all boxes (y=255 to y=265) -->
+            <line x1="16"  y1="256" x2="16"  y2="263" stroke="#CBD5E0" stroke-width="1.2"/>
+            <line x1="16"  y1="259" x2="540" y2="259" stroke="#CBD5E0" stroke-width="1.2"/>
+            <line x1="540" y1="256" x2="540" y2="263" stroke="#CBD5E0" stroke-width="1.2"/>
+            <!-- Bracket centerpoint tick -->
+            <line x1="278" y1="259" x2="278" y2="268" stroke="#CBD5E0" stroke-width="1.2"/>
+            <text x="278" y="284" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#8892A4">
+              Dielectric Saturation · Polar Liquids · Electrochemical Systems
+            </text>
+          </svg>
+        </div>
+
+        <!-- Text content -->
+        <div class="theme-text-col reveal reveal-delay-2">
+          <p class="theme-num fade-up">Theme 01</p>
+          <h2 class="theme-title fade-up">Machine Learning Interatomic Potentials</h2>
+          <div class="theme-body">
+            <p>Density functional theory delivers near-chemical accuracy for small systems but remains computationally prohibitive at the length and time scales required to sample thermodynamic properties of complex materials. Neural network potentials (NNPs) trained on DFT data bridge this gap — retaining quantum mechanical accuracy while enabling nanosecond-scale molecular dynamics of thousands of atoms.</p>
+            <p>My work extends standard short-range NNPs by incorporating physically motivated long-range electrostatics. These models reproduce the dielectric properties of polar liquids — including dielectric saturation of water under strong electric fields — even beyond their training domain. This extrapolation capability arises from the physically grounded architecture, not memorization of training configurations.</p>
+            <p>Current applications span water, concentrated electrolyte solutions, and electrochemical interfaces where long-range polarization dominates solvation structure and ion dynamics. These potentials provide the quantum-accurate molecular foundation for understanding capacitance, ion transport, and electrolyte behavior across many orders of magnitude in concentration.</p>
+          </div>
+          <p class="theme-papers-label">Key publications</p>
+          <div class="theme-papers">
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-orange">J. Phys.<br>Chem. B</span>
+              <div>
+                <div class="theme-paper__title">Dielectric Saturation in Water from a Long Range Machine Learning Model</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Phys. Chem. B</em> 2023 · DOI: 10.1021/acs.jpcb.3c00390</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-teal">J. Chem.<br>Theory</span>
+              <div>
+                <div class="theme-paper__title">Long-Range Neural Network Potentials for Polar and Ionic Systems</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Chem. Theory Comput.</em> 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       THEME 2 — Solid-State Electrolytes
+       Text LEFT · SVG RIGHT (flipped)
+       ══════════════════════════════════════════ -->
+  <section class="theme-section theme-section--alt" id="sse">
+    <div class="container">
+      <div class="theme-layout theme-layout--flip reveal">
+
+        <!-- SVG: Electronic Paddlewheel Diagram -->
+        <div class="theme-svg-col">
+          <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" aria-label="Electronic paddle-wheel mechanism in AgI">
+            <defs>
+              <marker id="arr2" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0, 7 2.5, 0 5" fill="#27AE60"/>
+              </marker>
+              <marker id="arr2b" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0, 7 2.5, 0 5" fill="#27AE60" opacity="0.7"/>
+              </marker>
+            </defs>
+
+            <!-- Background grid -->
+            <g stroke="#E8ECF2" stroke-width="0.5" opacity="0.8">
+              <line x1="0"   y1="30"  x2="560" y2="30"/>
+              <line x1="0"   y1="60"  x2="560" y2="60"/>
+              <line x1="0"   y1="90"  x2="560" y2="90"/>
+              <line x1="0"   y1="120" x2="560" y2="120"/>
+              <line x1="0"   y1="150" x2="560" y2="150"/>
+              <line x1="0"   y1="180" x2="560" y2="180"/>
+              <line x1="0"   y1="210" x2="560" y2="210"/>
+              <line x1="0"   y1="240" x2="560" y2="240"/>
+              <line x1="0"   y1="270" x2="560" y2="270"/>
+              <line x1="30"  y1="0"   x2="30"  y2="300"/>
+              <line x1="60"  y1="0"   x2="60"  y2="300"/>
+              <line x1="90"  y1="0"   x2="90"  y2="300"/>
+              <line x1="120" y1="0"   x2="120" y2="300"/>
+              <line x1="150" y1="0"   x2="150" y2="300"/>
+              <line x1="180" y1="0"   x2="180" y2="300"/>
+              <line x1="210" y1="0"   x2="210" y2="300"/>
+              <line x1="240" y1="0"   x2="240" y2="300"/>
+              <line x1="300" y1="0"   x2="300" y2="300"/>
+              <line x1="330" y1="0"   x2="330" y2="300"/>
+              <line x1="360" y1="0"   x2="360" y2="300"/>
+              <line x1="390" y1="0"   x2="390" y2="300"/>
+              <line x1="420" y1="0"   x2="420" y2="300"/>
+              <line x1="450" y1="0"   x2="450" y2="300"/>
+              <line x1="480" y1="0"   x2="480" y2="300"/>
+              <line x1="510" y1="0"   x2="510" y2="300"/>
+              <line x1="540" y1="0"   x2="540" y2="300"/>
+            </g>
+
+            <!-- ── Phase labels ── -->
+            <text x="133" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">Ordered Phase (low T)</text>
+            <text x="418" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">Superionic Phase (high T)</text>
+
+            <!-- Center divider -->
+            <line x1="280" y1="28" x2="280" y2="295" stroke="#CBD5E0" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+            <!-- ══ LEFT HALF: Ordered Phase ══ -->
+            <!-- I⁻ anions: 3 cols × 3 rows at (55,90,165,240), x=(60,140,220) -->
+            <!-- Electron clouds (static dashed circles r=22) around I⁻ -->
+            <g fill="none" stroke="#8892A4" stroke-width="1" stroke-dasharray="3 2.5" opacity="0.55">
+              <circle cx="60"  cy="80"  r="23"/><circle cx="140" cy="80"  r="23"/>
+              <circle cx="220" cy="80"  r="23"/><circle cx="60"  cy="165" r="23"/>
+              <circle cx="140" cy="165" r="23"/><circle cx="220" cy="165" r="23"/>
+              <circle cx="60"  cy="250" r="23"/><circle cx="140" cy="250" r="23"/>
+              <circle cx="220" cy="250" r="23"/>
+            </g>
+            <!-- I⁻ atoms -->
+            <g fill="#E2E8F0" stroke="#9B59B6" stroke-width="1.5">
+              <circle cx="60"  cy="80"  r="16"/>
+              <circle cx="140" cy="80"  r="16"/>
+              <circle cx="220" cy="80"  r="16"/>
+              <circle cx="60"  cy="165" r="16"/>
+              <circle cx="140" cy="165" r="16"/>
+              <circle cx="220" cy="165" r="16"/>
+              <circle cx="60"  cy="250" r="16"/>
+              <circle cx="140" cy="250" r="16"/>
+              <circle cx="220" cy="250" r="16"/>
+            </g>
+            <!-- I⁻ labels -->
+            <text x="60"  y="83"  text-anchor="middle" dominant-baseline="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#6B21A8">I⁻</text>
+            <text x="140" y="83"  text-anchor="middle" dominant-baseline="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#6B21A8">I⁻</text>
+            <text x="220" y="83"  text-anchor="middle" dominant-baseline="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#6B21A8">I⁻</text>
+
+            <!-- Ag⁺ on-site (small, 3×2=6 midpoints) -->
+            <g fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5">
+              <circle cx="100" cy="122" r="9"/>
+              <circle cx="180" cy="122" r="9"/>
+              <circle cx="100" cy="207" r="9"/>
+              <circle cx="180" cy="207" r="9"/>
+            </g>
+            <g font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#1E8449" text-anchor="middle" dominant-baseline="middle">
+              <text x="100" y="122">Ag⁺</text>
+              <text x="180" y="122">Ag⁺</text>
+              <text x="100" y="207">Ag⁺</text>
+              <text x="180" y="207">Ag⁺</text>
+            </g>
+            <!-- Static e-density label -->
+            <text x="23" y="270" font-family="Inter,sans-serif" font-size="9" fill="#8892A4" font-style="italic">Static electron density</text>
+
+            <!-- ══ RIGHT HALF: Superionic Phase ══ -->
+            <!-- I⁻ anions (same relative positions + 280) -->
+            <!-- First: distorted electron clouds (ellipses at angles) -->
+            <g fill="none" stroke="#27AE60" stroke-width="1.2" stroke-dasharray="3 2.5" opacity="0.45">
+              <ellipse cx="340" cy="80"  rx="28" ry="17" transform="rotate(25  340 80)"/>
+              <ellipse cx="420" cy="80"  rx="18" ry="26" transform="rotate(-15 420 80)"/>
+              <ellipse cx="500" cy="80"  rx="26" ry="15" transform="rotate(45  500 80)"/>
+              <ellipse cx="340" cy="165" rx="22" ry="28" transform="rotate(-35 340 165)"/>
+              <ellipse cx="420" cy="165" rx="30" ry="15" transform="rotate(18  420 165)"/>
+              <ellipse cx="500" cy="165" rx="18" ry="26" transform="rotate(-50 500 165)"/>
+              <ellipse cx="340" cy="250" rx="26" ry="16" transform="rotate(60  340 250)"/>
+              <ellipse cx="420" cy="250" rx="16" ry="28" transform="rotate(-22 420 250)"/>
+              <ellipse cx="500" cy="250" rx="24" ry="18" transform="rotate(38  500 250)"/>
+            </g>
+            <!-- I⁻ atoms right half -->
+            <g fill="#E2E8F0" stroke="#9B59B6" stroke-width="1.5">
+              <circle cx="340" cy="80"  r="16"/>
+              <circle cx="420" cy="80"  r="16"/>
+              <circle cx="500" cy="80"  r="16"/>
+              <circle cx="340" cy="165" r="16"/>
+              <circle cx="420" cy="165" r="16"/>
+              <circle cx="500" cy="165" r="16"/>
+              <circle cx="340" cy="250" r="16"/>
+              <circle cx="420" cy="250" r="16"/>
+              <circle cx="500" cy="250" r="16"/>
+            </g>
+            <g font-family="Inter,sans-serif" font-size="8.5" font-weight="700" fill="#6B21A8" text-anchor="middle" dominant-baseline="middle">
+              <text x="340" y="80"/><text x="420" y="80"/><text x="500" y="80"/>
+            </g>
+            <!-- Displaced Ag⁺ (off-site) with motion arrows -->
+            <!-- Ag+ that should be at (380,122) → now at (363,106) -->
+            <path d="M 380 122 Q 372 112 363 106" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arr2)" stroke-dasharray="none"/>
+            <circle cx="363" cy="106" r="9" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+            <text x="363" y="106" text-anchor="middle" dominant-baseline="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#1E8449">Ag⁺</text>
+            <!-- Ag+ at (460,122) → displaced to (477,108) -->
+            <path d="M 460 122 Q 470 113 477 108" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <circle cx="477" cy="108" r="9" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+            <text x="477" y="108" text-anchor="middle" dominant-baseline="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#1E8449">Ag⁺</text>
+            <!-- Ag+ at (380,207) → displaced to (358,222) -->
+            <path d="M 380 207 Q 368 215 358 222" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arr2)"/>
+            <circle cx="358" cy="222" r="9" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+            <!-- Ag+ at (460,207) stays, slightly displaced -->
+            <circle cx="466" cy="200" r="9" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+            <!-- One Ag+ in lower region -->
+            <circle cx="375" cy="265" r="9" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+            <path d="M 380 294 Q 377 280 375 265" fill="none" stroke="#27AE60" stroke-width="1.2" stroke-dasharray="2 2" marker-end="url(#arr2)"/>
+
+            <!-- Curved rotation arrow on one ellipse (showing paddlewheel motion) -->
+            <path d="M 430 153 A 17 17 0 1 1 409 161" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arr2b)" opacity="0.8"/>
+
+            <!-- "Electronic Paddlewheels" label -->
+            <line x1="437" y1="148" x2="460" y2="128" stroke="#27AE60" stroke-width="1" stroke-dasharray="2 2"/>
+            <circle cx="436" cy="150" r="2.5" fill="#27AE60"/>
+            <text x="463" y="124" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#27AE60">Electronic</text>
+            <text x="463" y="136" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#27AE60">Paddlewheels</text>
+
+            <!-- ══ Energy Diagram (bottom) ══ -->
+            <rect x="0" y="298" width="560" height="102" fill="#F7F9FC"/>
+            <line x1="0" y1="298" x2="560" y2="298" stroke="#E8ECF2" stroke-width="1"/>
+            <!-- Axes -->
+            <line x1="140" y1="390" x2="424" y2="390" stroke="#CBD5E0" stroke-width="1.2" marker-end="url(#arr2)"/>
+            <line x1="140" y1="390" x2="140" y2="308" stroke="#CBD5E0" stroke-width="1.2" marker-end="url(#arr2)"/>
+            <!-- Double-well curve -->
+            <path d="M 140 385 C 158 385 170 368 195 368 C 220 368 255 345 280 345 C 305 345 342 368 365 368 C 390 368 406 385 424 385"
+              fill="none" stroke="#27AE60" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Axis labels -->
+            <text x="282" y="399" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#8892A4">Reaction Coordinate</text>
+            <text x="133" y="350" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#8892A4" transform="rotate(-90 133 350)">Energy</text>
+            <!-- Barrier label -->
+            <line x1="280" y1="345" x2="315" y2="320" stroke="#27AE60" stroke-width="1" stroke-dasharray="2 2"/>
+            <text x="318" y="317" font-family="Inter,sans-serif" font-size="9" fill="#27AE60" font-weight="600">Ion Hopping Barrier</text>
+          </svg>
+        </div>
+
+        <!-- Text -->
+        <div class="theme-text-col reveal reveal-delay-2">
+          <p class="theme-num fade-up">Theme 02</p>
+          <h2 class="theme-title fade-up">Solid-State Electrolytes &amp; Superionic Conductors</h2>
+          <div class="theme-body">
+            <p>Superionic conductors — materials that transport ions as efficiently as liquids while remaining mechanically solid — are the foundation of next-generation solid-state batteries. Understanding the microscopic origins of order-disorder transitions that produce superionic phases is a central open problem in solid-state chemistry.</p>
+            <p>In collaboration with the Remsing group, I discovered that the electronic polarizability of anion sublattices plays a previously unrecognized role in enabling fast ion conduction. In AgI and Na₃PS₄-type compounds, thermally activated fluctuations in electron density create dynamical <em>paddle-wheel</em> motions of anion electron clouds — transiently opening low-barrier pathways for cation hopping that would not exist in a classical picture.</p>
+            <p>This insight reshapes design criteria for superionic materials: optimizing electronic polarizability of the anion framework, not just structural geometry, is a direct handle on engineering ionic conductivity. Ongoing work examines hidden quantum disorder — spatially disordered but locally correlated electronic fluctuations — as a universal feature of superionic phases.</p>
+          </div>
+          <p class="theme-papers-label">Key publications</p>
+          <div class="theme-papers">
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-green">Nat.<br>Commun.</span>
+              <div>
+                <div class="theme-paper__title">Electronic Paddle-Wheels in a Solid-State Electrolyte</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing et al. — <em>Nature Communications</em> 2024, 15, 121</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-purple">Chem­Phys­Chem</span>
+              <div>
+                <div class="theme-paper__title">Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>ChemPhysChem</em> 2025</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-teal">J. Chem.<br>Phys.</span>
+              <div>
+                <div class="theme-paper__title">Hidden Quantum Disorder and Superionic Conduction</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Chem. Phys.</em> 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       THEME 3 — Electrochemical Interfaces
+       SVG LEFT · Text RIGHT
+       ══════════════════════════════════════════ -->
+  <section class="theme-section" id="interfaces">
+    <div class="container">
+      <div class="theme-layout reveal">
+
+        <!-- SVG: Electrode-Electrolyte Interface Cross-Section -->
+        <div class="theme-svg-col">
+          <svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" aria-label="Electrode-electrolyte interface cross-section">
+            <defs>
+              <marker id="arr3" markerWidth="6" markerHeight="5" refX="5.5" refY="2.5" orient="auto">
+                <polygon points="0 0, 6 2.5, 0 5" fill="#8892A4"/>
+              </marker>
+              <!-- Solvent molecule hatch for electrode -->
+              <pattern id="graphite" x="0" y="0" width="3" height="3" patternUnits="userSpaceOnUse">
+                <rect width="3" height="3" fill="#2D3748"/>
+              </pattern>
+            </defs>
+
+            <!-- ── Electrode block (x=0–80) ── -->
+            <rect x="0" y="0" width="80" height="380" fill="#2D3748"/>
+            <!-- Graphite layers (slightly wavy horizontal lines) -->
+            <g stroke="rgba(255,255,255,0.18)" stroke-width="1.8" stroke-linecap="round">
+              <path d="M 2 22  Q 40 19 78 22"/>
+              <path d="M 2 40  Q 40 43 78 40"/>
+              <path d="M 2 58  Q 40 55 78 58"/>
+              <path d="M 2 76  Q 40 79 78 76"/>
+              <path d="M 2 94  Q 40 91 78 94"/>
+              <path d="M 2 112 Q 40 115 78 112"/>
+              <path d="M 2 130 Q 40 127 78 130"/>
+              <path d="M 2 148 Q 40 151 78 148"/>
+              <path d="M 2 166 Q 40 163 78 166"/>
+              <path d="M 2 184 Q 40 187 78 184"/>
+              <path d="M 2 202 Q 40 199 78 202"/>
+              <path d="M 2 220 Q 40 223 78 220"/>
+              <path d="M 2 238 Q 40 235 78 238"/>
+              <path d="M 2 256 Q 40 259 78 256"/>
+              <path d="M 2 274 Q 40 271 78 274"/>
+              <path d="M 2 292 Q 40 295 78 292"/>
+              <path d="M 2 310 Q 40 307 78 310"/>
+              <path d="M 2 328 Q 40 331 78 328"/>
+              <path d="M 2 346 Q 40 343 78 346"/>
+              <path d="M 2 364 Q 40 367 78 364"/>
+            </g>
+            <!-- Electrode label -->
+            <text x="40" y="195" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.7)" transform="rotate(-90 40 195)">Electrode</text>
+
+            <!-- ── SEI layer (x=80–113) ── -->
+            <rect x="80" y="0" width="33" height="380" fill="rgba(39,174,96,0.10)"/>
+            <line x1="80"  y1="0" x2="80"  y2="380" stroke="#CBD5E0" stroke-width="1"/>
+            <!-- SEI right border (dashed) -->
+            <line x1="113" y1="0" x2="113" y2="380" stroke="#27AE60" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <!-- Tiny decomposition product circles in SEI -->
+            <circle cx="90"  cy="60"  r="4" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8" opacity="0.8"/>
+            <circle cx="103" cy="140" r="3.5" fill="#FEE9D1" stroke="#F59E0B" stroke-width="0.8" opacity="0.8"/>
+            <circle cx="88"  cy="220" r="4" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.8" opacity="0.8"/>
+            <circle cx="105" cy="300" r="3.5" fill="#D5F5E3" stroke="#27AE60" stroke-width="0.8" opacity="0.8"/>
+            <circle cx="93"  cy="340" r="3" fill="#EDE9FE" stroke="#7C3AED" stroke-width="0.8" opacity="0.7"/>
+            <!-- SEI label (rotated) -->
+            <text x="96.5" y="195" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#27AE60" transform="rotate(-90 96.5 195)">SEI</text>
+
+            <!-- ── Electrolyte region (x=113–560) ── -->
+            <rect x="113" y="0" width="447" height="380" fill="#F7F9FC"/>
+
+            <!-- IHP dashed line -->
+            <line x1="113" y1="8" x2="113" y2="372" stroke="#CBD5E0" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <!-- OHP dashed line -->
+            <line x1="148" y1="8" x2="148" y2="372" stroke="#CBD5E0" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+            <!-- IHP / OHP labels at top -->
+            <text x="115" y="12" font-family="Inter,sans-serif" font-size="8.5" fill="#8892A4" font-weight="500">IHP</text>
+            <text x="150" y="12" font-family="Inter,sans-serif" font-size="8.5" fill="#8892A4" font-weight="500">OHP</text>
+            <!-- Expanded labels below the short labels -->
+            <text x="115" y="23" font-family="Inter,sans-serif" font-size="7" fill="#CBD5E0">Inner Helmholtz Plane</text>
+            <text x="150" y="23" font-family="Inter,sans-serif" font-size="7" fill="#CBD5E0">Outer Helmholtz Plane</text>
+
+            <!-- ── Solvated Li+ clusters ── -->
+            <!-- Helper: each cluster = Li+ core + 5 solvent shells -->
+            <!-- Cluster 1: near IHP (130,90) — double layer aligned -->
+            <circle cx="130" cy="90"  r="14" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1"/>
+            <circle cx="144" cy="90"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="76"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="76"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="104" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="104" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="130" cy="90"  r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 2: near IHP aligned (130,200) -->
+            <circle cx="130" cy="200" r="14" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1"/>
+            <circle cx="144" cy="200" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="186" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="186" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="214" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="214" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="130" cy="200" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 3: near IHP aligned (130,315) -->
+            <circle cx="130" cy="315" r="14" fill="none" stroke="rgba(59,130,246,0.15)" stroke-width="1"/>
+            <circle cx="144" cy="315" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="301" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="301" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="116" cy="329" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="134" cy="329" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.8"/>
+            <circle cx="130" cy="315" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 4: bulk (230,70) -->
+            <circle cx="230" cy="70"  r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="244" cy="70"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="234" cy="56"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="216" cy="56"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="216" cy="84"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="234" cy="84"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="230" cy="70"  r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 5: bulk (340,140) -->
+            <circle cx="340" cy="140" r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="354" cy="140" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="344" cy="126" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="326" cy="126" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="326" cy="154" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="344" cy="154" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="340" cy="140" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 6: bulk (460,70) -->
+            <circle cx="460" cy="70"  r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="474" cy="70"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="464" cy="56"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="446" cy="56"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="446" cy="84"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="464" cy="84"  r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="460" cy="70"  r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 7: bulk (280,270) -->
+            <circle cx="280" cy="270" r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="294" cy="270" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="284" cy="256" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="266" cy="256" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="266" cy="284" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="284" cy="284" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="280" cy="270" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 8: bulk (430,300) -->
+            <circle cx="430" cy="300" r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="444" cy="300" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="434" cy="286" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="416" cy="286" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="416" cy="314" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="434" cy="314" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="430" cy="300" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <!-- Cluster 9: bulk (530,200) -->
+            <circle cx="530" cy="200" r="14" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="0.8"/>
+            <circle cx="544" cy="200" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="534" cy="186" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="516" cy="186" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="516" cy="214" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="534" cy="214" r="3.5" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="0.7"/>
+            <circle cx="530" cy="200" r="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+
+            <!-- ── Anions (TFSI⁻ / large anions) ── -->
+            <circle cx="210" cy="185" r="10" fill="#FFF5F5" stroke="#EF4444" stroke-width="1.3"/>
+            <text x="210" y="189" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#DC2626">−</text>
+            <circle cx="390" cy="230" r="10" fill="#FFF5F5" stroke="#EF4444" stroke-width="1.3"/>
+            <text x="390" y="234" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#DC2626">−</text>
+            <circle cx="510" cy="340" r="10" fill="#FFF5F5" stroke="#EF4444" stroke-width="1.3"/>
+            <text x="510" y="344" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#DC2626">−</text>
+            <circle cx="188" cy="345" r="10" fill="#FFF5F5" stroke="#EF4444" stroke-width="1.3"/>
+            <text x="188" y="349" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#DC2626">−</text>
+
+            <!-- ── Legend (bottom right) ── -->
+            <rect x="310" y="348" width="244" height="28" rx="6" fill="rgba(247,249,252,0.95)" stroke="#E8ECF2" stroke-width="0.8"/>
+            <circle cx="325" cy="362" r="5"   fill="#DBEAFE" stroke="#2563EB" stroke-width="1.2"/>
+            <text x="333" y="366" font-family="Inter,sans-serif" font-size="8.5" fill="#4A4A68">Li⁺ (solvated)</text>
+            <circle cx="405" cy="362" r="5"   fill="#FFF5F5" stroke="#EF4444" stroke-width="1.2"/>
+            <text x="413" y="366" font-family="Inter,sans-serif" font-size="8.5" fill="#4A4A68">TFSI⁻</text>
+            <rect  x="460" cy="358" x="460" y="359" width="18" height="4" rx="1" fill="#4A5568"/>
+            <text x="481" y="366" font-family="Inter,sans-serif" font-size="8.5" fill="#4A4A68">Graphene</text>
+          </svg>
+        </div>
+
+        <!-- Text -->
+        <div class="theme-text-col reveal reveal-delay-2">
+          <p class="theme-num fade-up">Theme 03</p>
+          <h2 class="theme-title fade-up">Electrochemical Interfaces &amp; Electrolyte Design</h2>
+          <div class="theme-body">
+            <p>The performance of electrochemical devices — from batteries to supercapacitors to carbon-capture electrolyzers — is fundamentally governed by structure and dynamics at electrode-electrolyte interfaces. These buried interfaces are notoriously difficult to probe experimentally, making molecular simulation an indispensable complement to experimental electrochemistry.</p>
+            <p>I apply AIMD and ML-MD to characterize the electrical double-layer structure, ion solvation shells, and adsorption behavior at graphite and transition-metal electrodes in water-in-salt (WiSE) electrolytes, ionic liquids, and fluorinated ether systems. Special focus is on how confinement, concentration, and applied potential reshape interfacial ion distributions and modify transport coefficients relative to bulk.</p>
+            <p>Emerging directions include constant-potential simulations using the Siepmann–Sprik model and grand canonical ML-MD, enabling direct comparison with electrochemical impedance and cyclic voltammetry. These approaches are essential for understanding SEI formation chemistry, electrostatic capacitance, and molecular-scale design of electrolytes for carbon capture in concentrated KOH and amine systems.</p>
+          </div>
+          <p class="theme-papers-label">Key publications</p>
+          <div class="theme-papers">
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-blue">J. Phys.<br>Chem. C</span>
+              <div>
+                <div class="theme-paper__title">Water-in-Salt Electrolyte at the Graphite Electrode Interface</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Phys. Chem. C</em> 2024</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-blue">J. Phys.<br>Chem. C</span>
+              <div>
+                <div class="theme-paper__title">Ether and Fluorinated Ether Electrolytes at Charged Interfaces</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Phys. Chem. C</em> 2022</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-teal">Nanoscale</span>
+              <div>
+                <div class="theme-paper__title">Water-in-Salt Electrolyte Confinement in Carbon Nanopores</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>Nanoscale</em> 2021</div>
+              </div>
+            </div>
+            <div class="theme-paper">
+              <span class="theme-paper__badge tp-orange">J. Phys.<br>Chem. B</span>
+              <div>
+                <div class="theme-paper__title">Hybrid Aqueous Water-in-Salt Electrolytes for Energy Storage</div>
+                <div class="theme-paper__meta"><strong>H. S. Dhattarwal</strong>, R. C. Remsing — <em>J. Phys. Chem. B</em> 2022</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="footer__name">Harender S. Dhattarwal</div>
+        <div class="footer__pos">Postdoctoral Research Associate</div>
+        <div class="footer__inst">Rutgers University<br>Dept. of Chemistry &amp; Chemical Biology</div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-label">Navigation</div>
+        <ul class="footer__nav">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="group.html">Group</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-label">Contact</div>
+        <a href="mailto:hsd@chem.rutgers.edu" class="footer__email">hsd@chem.rutgers.edu</a>
+        <div class="footer__social">
+          <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar" title="Google Scholar">
+            <svg viewBox="0 0 24 24" class="icon-scholar"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/HSDhattarwal" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/HSDhattarwal" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&#169; 2025 Harender S. Dhattarwal</span>
+      <span>Built with research in mind</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
