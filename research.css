@@ -1,0 +1,127 @@
+/* ============================================================
+   RESEARCH PAGE — Styles for research.html
+   ============================================================ */
+
+/* ── Page Header ─────────────────────────────────────────────  */
+.rp-header {
+  padding: var(--sp-16) 0 var(--sp-12);
+  text-align: center;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.rp-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 48px; height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.rp-header__label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: var(--sp-3);
+}
+.rp-header__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800; letter-spacing: -0.03em;
+  line-height: 1; color: var(--text-primary);
+  margin-bottom: var(--sp-4);
+}
+.rp-header__sub {
+  font-size: var(--text-lg); color: var(--text-secondary);
+  max-width: 54ch; margin: 0 auto; line-height: 1.65;
+}
+
+/* ── Theme Sections ──────────────────────────────────────────  */
+.theme-section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--border);
+}
+.theme-section:last-of-type { border-bottom: none; }
+.theme-section--alt { background: var(--bg-secondary); }
+
+.theme-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Even themes: text left, SVG right */
+.theme-layout--flip .theme-svg-col  { order: 2; }
+.theme-layout--flip .theme-text-col { order: 1; }
+
+/* ── SVG Column ──────────────────────────────────────────────  */
+.theme-svg-col {
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+.theme-svg-col svg {
+  width: 100%; height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: white;
+  display: block;
+}
+
+/* ── Text Column ─────────────────────────────────────────────  */
+.theme-num {
+  font-size: var(--text-xs); font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: var(--sp-3);
+}
+.theme-title {
+  font-size: var(--text-3xl); font-weight: 700;
+  letter-spacing: -0.025em; line-height: 1.15;
+  color: var(--text-primary); margin-bottom: var(--sp-6);
+}
+.theme-body { display: flex; flex-direction: column; gap: var(--sp-4); margin-bottom: var(--sp-8); }
+.theme-body p { font-size: var(--text-base); color: var(--text-secondary); line-height: 1.8; margin: 0; }
+
+/* ── Papers subsection ───────────────────────────────────────  */
+.theme-papers-label {
+  font-size: var(--text-xs); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-muted); margin-bottom: var(--sp-3);
+}
+.theme-papers { display: flex; flex-direction: column; gap: var(--sp-3); }
+.theme-paper {
+  display: flex; align-items: flex-start; gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--bg-primary);
+  transition: all 0.2s ease;
+}
+.theme-section--alt .theme-paper { background: var(--bg-secondary); }
+.theme-paper:hover { border-color: rgba(39,174,96,0.35); box-shadow: var(--shadow-sm); }
+.theme-paper__badge {
+  flex-shrink: 0; font-size: 10px; font-weight: 700;
+  padding: 4px 9px; border-radius: 6px;
+  text-align: center; line-height: 1.4; min-width: 54px;
+}
+.tp-green  { background: #D5F5E3; color: #1E8449; }
+.tp-orange { background: #FEE9D1; color: #9A3412; }
+.tp-blue   { background: #DBEAFE; color: #1E40AF; }
+.tp-purple { background: #EDE9FE; color: #5B21B6; }
+.tp-teal   { background: #CCFBF1; color: #0F766E; }
+.theme-paper__title {
+  font-size: 13px; font-weight: 600; color: var(--text-primary);
+  line-height: 1.4; margin-bottom: 2px;
+}
+.theme-paper__meta {
+  font-size: 11px; color: var(--text-muted); font-style: italic;
+}
+.theme-paper__meta strong { color: var(--text-secondary); font-style: normal; }
+
+/* ── Responsive ──────────────────────────────────────────────  */
+@media (max-width: 900px) {
+  .theme-layout { grid-template-columns: 1fr; gap: var(--sp-8); }
+  .theme-layout--flip .theme-svg-col,
+  .theme-layout--flip .theme-text-col { order: unset; }
+  .theme-svg-col { position: static; }
+  .theme-section { padding: var(--sp-12) 0; }
+}
