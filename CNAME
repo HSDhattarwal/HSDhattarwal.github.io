@@ -1,0 +1,12 @@
+# To use a custom domain, delete these comment lines and put ONLY your domain below.
+# Example:
+#   harenderdhattarwal.com
+#
+# Then configure your domain registrar's DNS with these A records:
+#   185.199.108.153
+#   185.199.109.153
+#   185.199.110.153
+#   185.199.111.153
+# And a CNAME record: www → HSDhattarwal.github.io.
+#
+# Finally, enable HTTPS in GitHub repo Settings → Pages → Custom domain.
