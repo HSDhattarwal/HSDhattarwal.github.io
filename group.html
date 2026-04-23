@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Future research group in computational materials chemistry. Prospective students and postdocs welcome. Current collaborators: Remsing Lab (Rutgers) and Kashyap Lab (IIT Delhi)."/>
+  <meta name="author" content="Harender S. Dhattarwal"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://HSDhattarwal.github.io/group.html"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Research Group — Harender Dhattarwal"/>
+  <meta property="og:description" content="Future research group in computational materials chemistry. Prospective students and postdocs welcome. Current collaborators: Remsing Lab (Rutgers) and Kashyap Lab (IIT Delhi)."/>
+  <meta property="og:url" content="https://HSDhattarwal.github.io/group.html"/>
+  <meta property="og:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
+  <meta property="og:site_name" content="Harender Dhattarwal"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Research Group — Harender Dhattarwal"/>
+  <meta name="twitter:description" content="Future research group in computational materials chemistry. Prospective students and postdocs welcome. Current collaborators: Remsing Lab (Rutgers) and Kashyap Lab (IIT Delhi)."/>
+  <meta name="twitter:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
+  <title>Research Group | Harender Dhattarwal</title>
+  <meta name="description" content="Future research group in computational materials chemistry — prospective students, postdocs, and current collaborators."/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Group page local styles ── */
+    .group-header {
+      padding: var(--sp-16) 0 var(--sp-12);
+      text-align: center;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .group-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 48px; height: 3px;
+      background: var(--accent); border-radius: 2px;
+    }
+    .group-header__label {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: var(--sp-3);
+    }
+    .group-header__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+      color: var(--text-primary); margin-bottom: var(--sp-4);
+    }
+    .group-header__sub {
+      font-size: var(--text-lg); color: var(--text-secondary);
+      max-width: 46ch; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* ── Status badge ── */
+    .group-status {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px;
+      background: rgba(39,174,96,0.08);
+      border: 1px solid rgba(39,174,96,0.25);
+      border-radius: 100px;
+      font-size: 12px; font-weight: 600;
+      color: var(--accent); letter-spacing: 0.04em;
+      margin-bottom: var(--sp-6);
+    }
+    .group-status-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent);
+      animation: pulse-glow 2.5s ease-in-out infinite;
+    }
+
+    /* ── Main layout ── */
+    .group-main {
+      padding: var(--sp-16) 0;
+      background: var(--bg-primary);
+    }
+    .group-content {
+      max-width: 800px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: var(--sp-12);
+    }
+
+    /* ── Prospective card (dashed accent border) ── */
+    .prospective-card {
+      border: 1.5px dashed var(--accent);
+      border-radius: 16px;
+      padding: var(--sp-10);
+      background: rgba(39,174,96,0.02);
+      position: relative;
+    }
+    .prospective-card__icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-5);
+    }
+    .prospective-card__icon svg {
+      width: 24px; height: 24px; color: var(--accent);
+    }
+    .prospective-card__title {
+      font-size: var(--text-xl); font-weight: 700;
+      color: var(--text-primary); letter-spacing: -0.02em;
+      margin-bottom: var(--sp-4);
+    }
+    .prospective-card__body {
+      display: flex; flex-direction: column; gap: var(--sp-3);
+      margin-bottom: var(--sp-8);
+    }
+    .prospective-card__body p {
+      font-size: 15px; color: var(--text-secondary);
+      line-height: 1.8; margin: 0;
+    }
+    .prospective-card__body p strong { color: var(--text-primary); font-weight: 600; }
+
+    /* ── Collaborators ── */
+    .collab-label {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent);
+      margin-bottom: var(--sp-6);
+    }
+    .collab-title {
+      font-size: var(--text-2xl); font-weight: 700;
+      letter-spacing: -0.025em; color: var(--text-primary);
+      margin-bottom: var(--sp-6);
+    }
+    .collab-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--sp-5);
+    }
+    .collab-card {
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: var(--sp-6);
+      background: var(--bg-secondary);
+      transition: all 0.2s ease;
+    }
+    .collab-card:hover {
+      border-color: rgba(39,174,96,0.35);
+      box-shadow: var(--shadow-md); transform: translateY(-2px);
+    }
+    .collab-card__avatar {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: var(--accent);
+      font-family: var(--font-serif); letter-spacing: -0.03em;
+      margin-bottom: var(--sp-4);
+    }
+    .collab-card__name {
+      font-size: var(--text-base); font-weight: 700;
+      color: var(--text-primary); margin-bottom: 2px;
+    }
+    .collab-card__inst {
+      font-size: 13px; color: var(--text-muted);
+      margin-bottom: var(--sp-4);
+    }
+    .collab-card__desc {
+      font-size: 13px; color: var(--text-secondary);
+      line-height: 1.7; margin-bottom: var(--sp-4);
+    }
+    .collab-card__link {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 13px; font-weight: 600; color: var(--accent);
+      text-decoration: none; transition: gap 0.2s ease;
+    }
+    .collab-card__link:hover { gap: 8px; text-decoration: none; }
+    .collab-card__link svg { width: 12px; height: 12px; }
+
+    /* ── Footer note ── */
+    .group-footer-note {
+      text-align: center;
+      padding: var(--sp-10) 0 var(--sp-4);
+      font-size: 13px; color: var(--text-muted);
+      font-style: italic;
+    }
+    .group-footer-note::before {
+      content: ''; display: block;
+      width: 40px; height: 1px;
+      background: var(--border);
+      margin: 0 auto var(--sp-4);
+    }
+
+    @media (max-width: 640px) {
+      .collab-grid { grid-template-columns: 1fr; }
+      .prospective-card { padding: var(--sp-6); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html"><span class="nav__monogram">HD</span><span class="nav__name">Harender Dhattarwal</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="group.html">Group</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay">
+  <button class="nav__overlay-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <ul class="nav__overlay-links" role="list">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="group.html">Group</a></li>
+  </ul>
+</div>
+
+<main class="page-offset">
+
+  <header class="group-header fade-up">
+    <div class="container">
+      <div class="group-status"><div class="group-status-dot"></div>Forming — positions open soon</div>
+      <p class="group-header__label">Research Group</p>
+      <h1 class="group-header__title">Research Group</h1>
+      <p class="group-header__sub">Building a team to advance computational materials chemistry</p>
+    </div>
+  </header>
+
+  <section class="group-main">
+    <div class="container">
+      <div class="group-content">
+
+        <!-- Prospective card -->
+        <div class="prospective-card reveal">
+          <div class="prospective-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2 class="prospective-card__title">Prospective Students &amp; Postdocs</h2>
+          <div class="prospective-card__body">
+            <p>
+              I am looking for motivated researchers with a background in 
+              <strong>computational chemistry, physics, or materials science</strong> 
+              who are excited about using and developing atomistic simulation methods 
+              to address real materials challenges. Prior experience with molecular 
+              dynamics, DFT, or machine learning is valued but not required — 
+              curiosity and rigour matter more.
+            </p>
+            <p>
+              A core focus of the group will be <strong>machine learning interatomic potentials</strong> 
+              for ionic and electrochemical systems, alongside ab initio molecular dynamics 
+              of solid-state electrolytes and electrode–electrolyte interfaces. If you are 
+              drawn to questions at the intersection of <strong>statistical mechanics, 
+              quantum chemistry, and energy materials</strong>, I would love to hear from you.
+            </p>
+            <p>
+              Positions will open once a faculty or research scientist appointment is confirmed. 
+              Prospective PhD students and postdocs are warmly encouraged to reach out early 
+              — including to discuss fellowship opportunities such as NSF GRFP, DOE SCGSR, 
+              or MSCA Postdoctoral Fellowships.
+            </p>
+          </div>
+          <a href="mailto:hsd@chem.rutgers.edu" class="btn-hero-primary" style="font-size:14px;padding:13px 26px;width:fit-content;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+        </div>
+
+        <!-- Current collaborators -->
+        <div class="reveal reveal-delay-1">
+          <p class="collab-label">Current Collaborators</p>
+          <h2 class="collab-title">Research Network</h2>
+          <div class="collab-grid">
+
+            <div class="collab-card fade-up">
+              <div class="collab-card__avatar">RR</div>
+              <div class="collab-card__name">Prof. Richard C. Remsing</div>
+              <div class="collab-card__inst">Rutgers University, New Brunswick</div>
+              <p class="collab-card__desc">
+                Statistical mechanics of liquids, electrolytes, and interfaces. 
+                Current host and primary collaborator — together we develop ML 
+                potentials and study superionic conductors and electrochemical systems.
+              </p>
+              <a href="https://remsinglab.github.io" class="collab-card__link">
+                Remsing Lab
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+            <div class="collab-card fade-up">
+              <div class="collab-card__avatar">HK</div>
+              <div class="collab-card__name">Prof. Hemant K. Kashyap</div>
+              <div class="collab-card__inst">IIT Delhi, New Delhi</div>
+              <p class="collab-card__desc">
+                Ionic liquids, deep eutectic solvents, and molecular simulation of 
+                complex electrolyte solutions. PhD advisor and ongoing collaborator 
+                in electrolyte structure and dynamics.
+              </p>
+              <a href="https://chemistry.iitd.ac.in/faculty/hemant-kumar-kashyap" class="collab-card__link">
+                Kashyap Lab
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="group-footer-note">This page will grow as the group forms.</p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="footer__name">Harender S. Dhattarwal</div>
+        <div class="footer__pos">Postdoctoral Research Associate</div>
+        <div class="footer__inst">Rutgers University<br>Dept. of Chemistry &amp; Chemical Biology</div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-label">Navigation</div>
+        <ul class="footer__nav">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="group.html">Group</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-label">Contact</div>
+        <a href="mailto:hsd@chem.rutgers.edu" class="footer__email">hsd@chem.rutgers.edu</a>
+        <div class="footer__social">
+          <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" class="icon-scholar"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/HSDhattarwal" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://github.com/HSDhattarwal" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&#169; 2025 Harender S. Dhattarwal</span>
+      <span>Built with research in mind</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
