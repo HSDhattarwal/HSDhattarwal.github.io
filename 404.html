@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Harender Dhattarwal</title>
+  <meta name="description" content="The page you're looking for doesn't exist."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .err-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle background grid */
+    .err-page::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(39,174,96,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(39,174,96,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+
+    .err-inner {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: var(--sp-8) var(--sp-6);
+      max-width: 520px;
+    }
+
+    .err-code {
+      font-family: var(--font-serif);
+      font-size: clamp(5rem, 20vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-4);
+      position: relative;
+      display: inline-block;
+    }
+    .err-code::after {
+      content: '404';
+      position: absolute;
+      inset: 0;
+      color: var(--accent);
+      opacity: 0.08;
+      transform: translate(4px, 4px);
+      z-index: -1;
+    }
+
+    .err-accent-bar {
+      width: 40px; height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      margin: 0 auto var(--sp-6);
+    }
+
+    .err-title {
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-3);
+    }
+
+    .err-desc {
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: var(--sp-8);
+      max-width: 38ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .err-actions {
+      display: flex;
+      gap: var(--sp-3);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--sp-10);
+    }
+
+    .err-nav {
+      display: flex;
+      gap: var(--sp-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .err-nav a {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .err-nav a:hover { color: var(--accent); text-decoration: none; }
+    .err-nav-dot { color: var(--border); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html"><span class="nav__monogram">HD</span><span class="nav__name">Harender Dhattarwal</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="group.html">Group</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay">
+  <button class="nav__overlay-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <ul class="nav__overlay-links" role="list">
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="group.html">Group</a></li>
+  </ul>
+</div>
+
+<main class="page-offset err-page">
+  <div class="err-inner">
+
+    <div class="err-code">404</div>
+    <div class="err-accent-bar"></div>
+
+    <h1 class="err-title">Page not found</h1>
+    <p class="err-desc">
+      This page doesn't exist or may have moved. 
+      Try heading back to the home page or 
+      navigating from the menu above.
+    </p>
+
+    <div class="err-actions">
+      <a href="index.html" class="btn-hero-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Return Home
+      </a>
+      <a href="publications.html" class="btn-hero-outline">Publications</a>
+    </div>
+
+    <nav class="err-nav" aria-label="Site links">
+      <a href="research.html">Research</a>
+      <span class="err-nav-dot" aria-hidden="true">·</span>
+      <a href="publications.html">Publications</a>
+      <span class="err-nav-dot" aria-hidden="true">·</span>
+      <a href="about.html">About</a>
+      <span class="err-nav-dot" aria-hidden="true">·</span>
+      <a href="group.html">Group</a>
+      <span class="err-nav-dot" aria-hidden="true">·</span>
+      <a href="mailto:hsd@chem.rutgers.edu">Contact</a>
+    </nav>
+
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
