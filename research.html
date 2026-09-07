@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Research Program | Harender S. Dhattarwal</title>
-  <meta name="description" content="Three research themes: Machine learning interatomic potentials, solid-state electrolytes & superionic conduction, and electrochemical interfaces under confinement."/>
+  <title>Research | Harender S. Dhattarwal</title>
+  <meta name="description" content="Research program of Dr. Harender S. Dhattarwal: Machine learning potentials, solid-state electrolytes, and electrochemical interfaces."/>
   <meta name="author" content="Harender S. Dhattarwal"/>
-  
-  <meta property="og:title" content="Research Program — Harender S. Dhattarwal"/>
-  <meta property="og:description" content="Physics-informed computational materials chemistry: ML potentials, solid-state batteries, and electrochemical interfaces."/>
+
+  <meta property="og:title" content="Research — Harender S. Dhattarwal"/>
+  <meta property="og:description" content="Machine learning interatomic potentials, superionic conductors, and electrochemical interfaces."/>
   <meta property="og:url" content="https://hsdhattarwal.github.io/research.html"/>
-  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/favicon.svg"/>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
   <link rel="alternate icon" href="favicon.svg"/>
@@ -18,414 +17,152 @@
 </head>
 <body>
 
-  <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav" id="main-nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__monogram">HD</span>
-        <div class="nav__brand-text">
-          <span class="nav__name">Harender Dhattarwal</span>
-          <span class="nav__tagline">Rutgers University · Computational Chemistry</span>
-        </div>
-      </a>
+  <!-- Top Navigation -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">Harender S. Dhattarwal</a>
 
-      <div class="nav__menu">
-        <ul class="nav__links" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html" class="active">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="group.html">Group</a></li>
-        </ul>
+      <div class="nav-links-wrap">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="about.html">CV</a></li>
+            <li><a href="group.html">Group</a></li>
+          </ul>
+        </nav>
 
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle color mode">
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
           <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__overlay" id="nav-overlay">
-    <ul class="nav__overlay-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html" class="active">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="group.html">Group</a></li>
-    </ul>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html">About</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">CV</a>
+    <a href="group.html">Group</a>
   </div>
 
-  <main class="page-offset">
+  <div class="page-wrapper">
+    <main class="main-content">
 
-    <!-- Page Header -->
-    <header class="pub-header">
-      <div class="container">
-        <span class="section-label">Research Program</span>
-        <h1 class="section-title" style="font-size:clamp(2.2rem, 4vw, 3rem);">Theoretical &amp; Computational Materials Chemistry</h1>
-        <p class="section-desc">
-          Developing physics-informed machine learning potentials, uncovering unconventional ion-transport pathways in solid-state electrolytes, and designing electrified electrochemical interfaces from first principles.
-        </p>
-      </div>
-    </header>
-
-    <!-- ══════════════════════════════════════════════════════
-         THEME 1: ML INTERATOMIC POTENTIALS
-         ══════════════════════════════════════════════════════ -->
-    <section class="theme-section" id="mlip">
-      <div class="container">
-        <div class="theme-grid">
-          
-          <div class="theme-text-col">
-            <div class="theme-number">Theme 01</div>
-            <h2 class="theme-title">Machine Learning Interatomic Potentials &amp; Long-Range Interactions</h2>
-            <p class="theme-lead">
-              Accurately capturing polarization, dielectric response, and non-local electrostatic screening across extended length and time scales.
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Program Overview</div>
+            <h1 class="section-heading" style="font-size:2.4rem;">Research Directions</h1>
+            <p style="font-size:1.1rem; color:var(--text-secondary); margin-top:8px; max-width:720px;">
+              My research program focuses on developing predictive, physics-informed computational frameworks to understand and design functional materials and electrified interfaces for clean energy storage and conversion.
             </p>
-            
-            <div class="theme-details">
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>The Challenge:</strong> Standard local machine learning interatomic potentials (MLIPs) rely on local cutoff spheres (typically 4–6 Å) and fail to capture non-local dielectric breakdown, electronic polarization, and collective charge fluctuations that dominate polar liquids and battery electrolytes.
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>Our Approach:</strong> Integrating long-range physical electrostatic models (e.g. self-consistent polarizable charges, Ewald summation) with deep neural network representations (DeepMD-kit, equivariant tensor networks).
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>Key Discovery:</strong> Quantified dielectric saturation of liquid water under external electric fields up to the megavolt-per-centimeter regime with quantum mechanical accuracy, resolving long-standing discrepancies between continuum Booth theory and empirical force fields.
-                </div>
-              </div>
-            </div>
-
-            <div class="theme-papers-box">
-              <div class="theme-papers-title">Representative Publications</div>
-              <div class="theme-papers-list">
-                <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-acs" style="padding:2px 6px; font-size:0.75rem;">JPCB 2023</span>
-                  Dielectric Saturation in Water from a Long Range Machine Learning Model (DOI: 10.1021/acs.jpcb.3c00390)
-                </a>
-                <a href="https://doi.org/10.1002/jcc.26702" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-wiley" style="padding:2px 6px; font-size:0.75rem;">JCC 2021</span>
-                  First-principles Investigation of Polyolefin Photo-oxidation (DOI: 10.1002/jcc.26702)
-                </a>
-              </div>
-            </div>
           </div>
 
-          <!-- Visual Illustration -->
-          <div class="theme-visual-col">
-            <div class="theme-visual-card">
-              <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;">
-                <rect width="480" height="320" fill="var(--bg-surface-alt)" rx="8"/>
-                
-                <!-- Box 1: DFT Data -->
-                <rect x="24" y="50" width="110" height="220" rx="8" fill="var(--bg-surface)" stroke="var(--border)" stroke-width="1.5"/>
-                <text x="79" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="var(--text-primary)">Ab Initio Data</text>
-                <circle cx="60" cy="140" r="10" fill="var(--primary)" opacity="0.7"/>
-                <circle cx="95" cy="120" r="14" fill="var(--accent)" opacity="0.7"/>
-                <circle cx="80" cy="170" r="8" fill="#f59e0b" opacity="0.7"/>
-                <line x1="60" y1="140" x2="95" y2="120" stroke="var(--text-muted)" stroke-dasharray="3 3"/>
-                <line x1="60" y1="140" x2="80" y2="170" stroke="var(--text-muted)" stroke-dasharray="3 3"/>
-                <text x="79" y="240" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="var(--text-muted)">VASP / CP2K / DFT</text>
-                
-                <!-- Arrow 1 -->
-                <path d="M 140 160 L 175 160" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr)"/>
-                
-                <!-- Box 2: Equivariant Embeddings -->
-                <rect x="185" y="50" width="120" height="220" rx="8" fill="var(--bg-surface)" stroke="var(--border)" stroke-width="1.5"/>
-                <text x="245" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="var(--text-primary)">ML Descriptors</text>
-                <text x="245" y="100" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="var(--text-muted)">DeepMD / SE(3)</text>
-                <!-- Neural Net nodes -->
-                <circle cx="215" cy="130" r="6" fill="var(--accent)"/>
-                <circle cx="215" cy="160" r="6" fill="var(--accent)"/>
-                <circle cx="215" cy="190" r="6" fill="var(--accent)"/>
-                <circle cx="275" cy="145" r="6" fill="var(--primary)"/>
-                <circle cx="275" cy="175" r="6" fill="var(--primary)"/>
-                <line x1="215" y1="130" x2="275" y2="145" stroke="var(--border-strong)"/>
-                <line x1="215" y1="160" x2="275" y2="145" stroke="var(--border-strong)"/>
-                <line x1="215" y1="160" x2="275" y2="175" stroke="var(--border-strong)"/>
-                <line x1="215" y1="190" x2="275" y2="175" stroke="var(--border-strong)"/>
-                <text x="245" y="240" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="var(--text-muted)">Local Cutoff + Dipoles</text>
-
-                <!-- Arrow 2 -->
-                <path d="M 310 160 L 345 160" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr)"/>
-
-                <!-- Box 3: Long Range MD -->
-                <rect x="350" y="50" width="110" height="220" rx="8" fill="var(--bg-surface)" stroke="var(--accent)" stroke-width="1.5"/>
-                <text x="405" y="80" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="700" fill="var(--text-primary)">Scale &amp; Dynamics</text>
-                <text x="405" y="100" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="var(--accent)">100k+ Atoms · ns</text>
-                <path d="M 370 180 Q 405 130 440 180 T 440 220" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="4 2"/>
-                <circle cx="405" cy="155" r="8" fill="var(--primary)"/>
-                <text x="405" y="240" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="var(--text-muted)">Dielectric Saturation</text>
-              </svg>
+          <!-- Pillar 1 -->
+          <article class="cv-section" style="margin-top:40px;">
+            <div class="cv-title" style="font-size:1.55rem;">
+              1. Machine Learning Interatomic Potentials with Long-Range Electrostatics
             </div>
-          </div>
+            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
+              <p>
+                Machine learning interatomic potentials (MLIPs) trained on density functional theory (DFT) data have transformed computational chemistry by enabling ab initio-accuracy molecular dynamics over unprecedented time and length scales. However, the vast majority of standard MLIP architectures (including Behler-Parrinello neural networks, DeepMD, and local message-passing graph neural networks) rely strictly on finite spatial cutoffs (typically 4–6 Å).
+              </p>
+              <p>
+                In polar liquids, concentrated electrolytes, and ferroelectric materials, this local approximation fundamentally breaks down. Local models cannot capture collective dielectric screening, long-range polarization fluctuations, or response to external electric fields.
+              </p>
+              <p>
+                To resolve this limitation, we build hybrid architectures that combine equivariant atomic environment descriptors with self-consistent electrostatic models and long-range Ewald summation. Using these models, we investigated the phenomenon of <strong>dielectric saturation in liquid water</strong> under external electric fields up to the gigavolt-per-meter regime. Our simulations revealed that dielectric saturation arises from a subtle thermodynamic competition between field-induced dipole alignment and the energetic penalty of disrupting the cooperative hydrogen-bonding network.
+              </p>
+              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
+                <strong>Key Publications:</strong>
+                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
+                  <li>H. S. Dhattarwal, A. Gao, and R. C. Remsing, <em>Dielectric Saturation in Water from a Long Range Machine Learning Model</em>, <strong>J. Phys. Chem. B</strong> 127, 3663 (2023). <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>V. Khatri, H. S. Dhattarwal, H. K. Kashyap, and G. Singh, <em>First-principles based Theoretical Investigation of Polyolefin Photo-oxidation</em>, <strong>J. Comput. Chem.</strong> 42, 1710 (2021). <a href="https://doi.org/10.1002/jcc.26702" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
+          <!-- Pillar 2 -->
+          <article class="cv-section" style="margin-top:56px;">
+            <div class="cv-title" style="font-size:1.55rem;">
+              2. Solid-State Electrolytes &amp; Superionic Conduction
+            </div>
+            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
+              <p>
+                All-solid-state lithium and sodium batteries offer the promise of non-flammability and significantly higher volumetric energy densities than conventional liquid-electrolyte cells. However, achieving rapid ion transport within a crystalline solid requires overcoming rigid framework barriers and high hopping activation energies.
+              </p>
+              <p>
+                In superionic conductors such as silver iodide (AgI) and complex thiophosphates, we discovered the <strong>electronic paddle-wheel mechanism</strong>. In molecular crystals, classic paddle-wheel conduction relies on the physical rotation of complex polyatomic anions (e.g., sulphate or borohydride groups) to nudge mobile cations past steric bottlenecks. In atomic solids with monoatomic anions, such mechanical rotation is impossible.
+              </p>
+              <p>
+                Using ab initio molecular dynamics and maximally localized Wannier functions, we demonstrated that dynamic fluctuations in the local valence electron density—coupled with localized cation-anion polarization—mimic the effect of rotating molecular paddles. These transient electronic fluctuations lower the instantaneous electrostatic barrier for cation hopping, explaining how atomic lattices achieve liquid-like ionic conductivities. We also characterized the temperature-dependent percolation of cation clusters in molten and crystalline AgI, establishing design rules for tailoring framework polarizability in next-generation solid electrolytes.
+              </p>
+              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
+                <strong>Key Publications:</strong>
+                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
+                  <li>H. S. Dhattarwal, R. Somni, and R. C. Remsing, <em>Electronic Paddle-Wheels in a Solid-State Electrolyte</em>, <strong>Nat. Commun.</strong> 15, 121 (2024). <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>H. S. Dhattarwal and R. C. Remsing, <em>Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</em>, <strong>ChemPhysChem</strong> 26, e202500077 (2025). <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>H. S. Dhattarwal and R. C. Remsing, <em>Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide</em>, <strong>J. Chem. Phys.</strong> 163, 234503 (2025). <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="cv-section" style="margin-top:56px;">
+            <div class="cv-title" style="font-size:1.55rem;">
+              3. Electrochemical Interfaces &amp; Confined Systems
+            </div>
+            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
+              <p>
+                Electrochemical energy storage devices—including supercapacitors, metal-ion batteries, and water electrolyzers—function through charge transfer and ion reorganization within the electrical double layer at polarized electrode surfaces.
+              </p>
+              <p>
+                Our work explores the interfacial structure and thermodynamics of advanced electrolyte formulations, including <strong>Water-in-Salt Electrolytes (WiSE)</strong>, room-temperature ionic liquids, and deep eutectic solvents (DES). By introducing hydrophobic ionic liquids into aqueous WiSE systems, we demonstrated that hybrid electrolytes can surpass the conventional 21 mol/kg solubility threshold, restructuring the interfacial double layer at graphite electrodes to dramatically suppress parasitic water decomposition.
+              </p>
+              <p>
+                Furthermore, under nanoscale confinement inside hydrophobic carbon pores and supramolecular coordination cages, the thermodynamic balance between capillary wetting, drying, and ion desolvation dictates transport rates. In collaborative work with synthetic chemists, we modeled redox-active coordination cages and discovered that metal-center oxidation states can <strong>shift encapsulated Brønsted acidity by up to 12 pKa units</strong>, opening new avenues for electrochemically switched catalysis and ion selectivity.
+              </p>
+              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
+                <strong>Key Publications:</strong>
+                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
+                  <li>T. J. Jones et al., <em>Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore</em>, <strong>J. Am. Chem. Soc.</strong> 147, 2086 (2025). <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>H. S. Dhattarwal and H. K. Kashyap, <em>Influence of Ionic Liquid on the Interfacial Structure of Water-in-Salt Electrolytes at Graphite Electrodes</em>, <strong>J. Phys. Chem. C</strong> 128, 536 (2024). <a href="https://doi.org/10.1021/acs.jpcc.3c06538" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>H. S. Dhattarwal, R. C. Remsing, and H. K. Kashyap, <em>Intercalation–deintercalation of Water-in-Salt Electrolytes in Nanoscale Confinement</em>, <strong>Nanoscale</strong> 13, 4195 (2021). <a href="https://doi.org/10.1039/D0NR08163A" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                  <li>H. S. Dhattarwal and H. K. Kashyap, <em>Heterogeneity and Nanostructure of Superconcentrated LiTFSI-EmimTFSI Hybrid Electrolytes</em>, <strong>J. Phys. Chem. B</strong> 126, 5291 (2022). <a href="https://doi.org/10.1021/acs.jpcb.2c02822" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>&copy; 2026 Harender S. Dhattarwal &middot; Department of Chemistry &amp; Chemical Biology, Rutgers University</div>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:harender.dhattarwal@rutgers.edu">Contact</a>
         </div>
       </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         THEME 2: SOLID-STATE ELECTROLYTES
-         ══════════════════════════════════════════════════════ -->
-    <section class="theme-section section--alt" id="sse">
-      <div class="container">
-        <div class="theme-grid theme-grid--reversed">
-          
-          <div class="theme-text-col">
-            <div class="theme-number">Theme 02</div>
-            <h2 class="theme-title">Solid-State Electrolytes &amp; Superionic Conduction</h2>
-            <p class="theme-lead">
-              Discovering novel mechanisms of ultrafast cation transport in inorganic solid electrolytes for all-solid-state batteries.
-            </p>
-            
-            <div class="theme-details">
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>The Challenge:</strong> Solid-state lithium and sodium batteries promise dramatic improvements in safety and energy density, but ion conductivities in crystals are typically hindered by rigid lattice barriers and high hopping activation energies.
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>The Electronic Paddle-Wheel:</strong> Identified an electronic analog of the classic molecular rotor paddle-wheel mechanism. In superionic conductors such as silver iodide (AgI) and thiophosphates, dynamic electronic polarization and localized cation clustering work cooperatively to open low-energy transit channels.
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>Broader Impact:</strong> Established physical design rules to engineer lattice polarizability and cation disorder in halide and chalcogenide fast-ion conductors.
-                </div>
-              </div>
-            </div>
-
-            <div class="theme-papers-box">
-              <div class="theme-papers-title">Representative Publications</div>
-              <div class="theme-papers-list">
-                <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-nature" style="padding:2px 6px; font-size:0.75rem;">Nat. Commun. 2024</span>
-                  Electronic Paddle-Wheels in a Solid-State Electrolyte (DOI: 10.1038/s41467-023-44274-z)
-                </a>
-                <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-chemphyschem" style="padding:2px 6px; font-size:0.75rem;">ChemPhysChem 2025</span>
-                  Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI (DOI: 10.1002/cphc.202500077)
-                </a>
-                <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-jcp" style="padding:2px 6px; font-size:0.75rem;">JCP 2025</span>
-                  Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide (DOI: 10.1063/5.0301431)
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Visual Illustration -->
-          <div class="theme-visual-col">
-            <div class="theme-visual-card">
-              <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;">
-                <rect width="480" height="320" fill="var(--bg-surface)" rx="8"/>
-                
-                <!-- Hexagonal Lattice Frame -->
-                <g stroke="var(--border-strong)" stroke-width="1.5" fill="none" opacity="0.7">
-                  <polygon points="240,60 320,110 320,210 240,260 160,210 160,110"/>
-                  <line x1="240" y1="60" x2="240" y2="160"/>
-                  <line x1="160" y1="110" x2="240" y2="160"/>
-                  <line x1="320" y1="110" x2="240" y2="160"/>
-                  <line x1="160" y1="210" x2="240" y2="160"/>
-                  <line x1="320" y1="210" x2="240" y2="160"/>
-                  <line x1="240" y1="260" x2="240" y2="160"/>
-                </g>
-
-                <!-- Framework Anions (Iodine / Sulfur) -->
-                <circle cx="240" cy="60" r="12" fill="var(--primary)" opacity="0.8"/>
-                <circle cx="320" cy="110" r="12" fill="var(--primary)" opacity="0.8"/>
-                <circle cx="320" cy="210" r="12" fill="var(--primary)" opacity="0.8"/>
-                <circle cx="240" cy="260" r="12" fill="var(--primary)" opacity="0.8"/>
-                <circle cx="160" cy="210" r="12" fill="var(--primary)" opacity="0.8"/>
-                <circle cx="160" cy="110" r="12" fill="var(--primary)" opacity="0.8"/>
-
-                <!-- Mobile Cations Percolating (Ag+ / Li+) -->
-                <circle cx="240" cy="160" r="10" fill="var(--accent)" style="box-shadow:0 0 10px var(--accent);"/>
-                <circle cx="200" cy="135" r="8" fill="var(--accent)" opacity="0.8"/>
-                <circle cx="280" cy="185" r="8" fill="var(--accent)" opacity="0.8"/>
-
-                <!-- Dynamic Hopping Path (Paddlewheel Arc) -->
-                <path d="M 195 135 Q 240 115 285 185" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5 3"/>
-                
-                <!-- Rotating Electronic Orbitals Schematic -->
-                <ellipse cx="240" cy="160" rx="35" ry="14" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 3" transform="rotate(35 240 160)"/>
-                
-                <text x="240" y="295" text-anchor="middle" font-family="var(--font-sans)" font-size="12" font-weight="600" fill="var(--text-secondary)">
-                  Electronic Paddle-Wheel &amp; Mobile Cation Trajectory
-                </text>
-              </svg>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════════════════
-         THEME 3: ELECTROCHEMICAL INTERFACES
-         ══════════════════════════════════════════════════════ -->
-    <section class="theme-section" id="interfaces">
-      <div class="container">
-        <div class="theme-grid">
-          
-          <div class="theme-text-col">
-            <div class="theme-number">Theme 03</div>
-            <h2 class="theme-title">Electrochemical Interfaces &amp; Confined Systems</h2>
-            <p class="theme-lead">
-              Nanoscale solvation, interfacial capacitance, and phase transitions in water-in-salt electrolytes and ionic liquids.
-            </p>
-            
-            <div class="theme-details">
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>The Challenge:</strong> Superconcentrated water-in-salt electrolytes (WiSE) and room-temperature ionic liquids expand battery voltage windows to over 3.0 V, but the molecular origin of electric double-layer capacitance and Solid Electrolyte Interphase (SEI) stability remains hotly contested.
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>Our Findings:</strong> Revealed how hybrid ionic liquid co-solvents break through the 21 m concentration limit of standard WiSE, suppressing parasitic water splitting at electrified graphite surfaces. Modeled how nanoscale confining material flexibility promotes capillary dewetting and accelerates ion transport.
-                </div>
-              </div>
-              <div class="theme-point">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <div>
-                  <strong>Redox-Active Nanopores:</strong> Demonstrated with experimental collaborators how redox-active multifunctional metal nodes in coordination cage nanopores can modulate local Brønsted acidity by up to 12 pKa units, providing unprecedented control over proton-coupled electron transfer.
-                </div>
-              </div>
-            </div>
-
-            <div class="theme-papers-box">
-              <div class="theme-papers-title">Representative Publications</div>
-              <div class="theme-papers-list">
-                <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-jacs" style="padding:2px 6px; font-size:0.75rem;">JACS 2025</span>
-                  Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore (DOI: 10.1021/jacs.4c13038)
-                </a>
-                <a href="https://doi.org/10.1021/acs.jpcc.3c06538" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-acs" style="padding:2px 6px; font-size:0.75rem;">JPCC 2024</span>
-                  Influence of Ionic Liquid on Interfacial Structure of Water-in-Salt Electrolytes (DOI: 10.1021/acs.jpcc.3c06538)
-                </a>
-                <a href="https://doi.org/10.1039/D0NR08163A" target="_blank" rel="noopener noreferrer">
-                  <span class="badge-journal badge-rsc" style="padding:2px 6px; font-size:0.75rem;">Nanoscale 2021</span>
-                  Intercalation–deintercalation of WiSE in hydrophobic confinement (DOI: 10.1039/D0NR08163A)
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Visual Illustration -->
-          <div class="theme-visual-col">
-            <div class="theme-visual-card">
-              <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;">
-                <rect width="480" height="320" fill="var(--bg-surface-alt)" rx="8"/>
-                
-                <!-- Electrode Plate (Left) -->
-                <rect x="30" y="30" width="36" height="260" rx="4" fill="var(--text-primary)"/>
-                <text x="48" y="165" text-anchor="middle" transform="rotate(-90 48 165)" font-family="var(--font-sans)" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.08em">GRAPHITE ELECTRODE</text>
-                
-                <!-- Electrode Charge Signs -->
-                <g fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle">
-                  <text x="54" y="60">-</text>
-                  <text x="54" y="110">-</text>
-                  <text x="54" y="210">-</text>
-                  <text x="54" y="260">-</text>
-                </g>
-
-                <!-- Helmholtz Layer / Double Layer -->
-                <line x1="85" y1="30" x2="85" y2="290" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.8"/>
-                
-                <!-- Compact Cations Layer (Emim+ / Li+) -->
-                <circle cx="110" cy="60" r="14" fill="var(--accent)" opacity="0.9"/>
-                <circle cx="110" cy="110" r="12" fill="var(--primary)" opacity="0.9"/>
-                <circle cx="110" cy="160" r="14" fill="var(--accent)" opacity="0.9"/>
-                <circle cx="110" cy="210" r="12" fill="var(--primary)" opacity="0.9"/>
-                <circle cx="110" cy="260" r="14" fill="var(--accent)" opacity="0.9"/>
-
-                <!-- Diffuse Layer & Solvation Shells -->
-                <g stroke="var(--border-strong)" stroke-width="1.2" fill="none">
-                  <circle cx="190" cy="90" r="22"/>
-                  <circle cx="240" cy="160" r="26"/>
-                  <circle cx="190" cy="230" r="22"/>
-                </g>
-                <!-- Anions TFSI- -->
-                <circle cx="190" cy="90" r="12" fill="#f59e0b" opacity="0.85"/>
-                <circle cx="240" cy="160" r="14" fill="#f59e0b" opacity="0.85"/>
-                <circle cx="190" cy="230" r="12" fill="#f59e0b" opacity="0.85"/>
-
-                <!-- Confining Slit Pore (Right) -->
-                <rect x="330" y="30" width="120" height="80" rx="4" fill="var(--bg-surface)" stroke="var(--border)" stroke-width="1.5"/>
-                <rect x="330" y="210" width="120" height="80" rx="4" fill="var(--bg-surface)" stroke="var(--border)" stroke-width="1.5"/>
-                <text x="390" y="75" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--text-secondary)">Pore Wall</text>
-                <text x="390" y="255" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--text-secondary)">Pore Wall</text>
-
-                <!-- Dewetted Nanoscale Gap -->
-                <text x="390" y="165" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="700" fill="var(--accent)">1–2 nm Confinement</text>
-              </svg>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── Footer ───────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand-title">Harender S. Dhattarwal, Ph.D.</div>
-          <p class="footer__brand-desc">
-            Postdoctoral Research Associate in Computational Materials Chemistry at Rutgers University.
-          </p>
-        </div>
-        <div>
-          <div class="footer__col-title">Navigation</div>
-          <div class="footer__links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research Program</a>
-            <a href="publications.html">Publications Archive</a>
-            <a href="about.html">Bio &amp; Curriculum Vitae</a>
-            <a href="group.html">Group &amp; Prospective</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer__col-title">Academic Profiles</div>
-          <div class="footer__links">
-            <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">The Remsing Lab</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <div>&copy; 2026 Harender S. Dhattarwal. Academic portfolio hosted on GitHub Pages.</div>
-        <div>Department of Chemistry and Chemical Biology · Rutgers University</div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

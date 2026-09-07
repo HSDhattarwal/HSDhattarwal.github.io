@@ -6,13 +6,12 @@
   <title>Harender S. Dhattarwal | Computational Materials Chemistry</title>
   <meta name="description" content="Dr. Harender S. Dhattarwal — Postdoctoral Research Associate at Rutgers University. Machine learning interatomic potentials, solid-state electrolytes, and electrochemical interfaces."/>
   <meta name="author" content="Harender S. Dhattarwal"/>
-  
-  <!-- Open Graph / Social Sharing -->
+
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Harender S. Dhattarwal — Computational Materials Chemist"/>
-  <meta property="og:description" content="Postdoctoral researcher at Rutgers University specialising in ML interatomic potentials, solid-state electrolytes, and electrochemical interfaces."/>
+  <meta property="og:title" content="Harender S. Dhattarwal"/>
+  <meta property="og:description" content="Postdoctoral Research Associate at Rutgers University — Computational Materials Chemistry."/>
   <meta property="og:url" content="https://hsdhattarwal.github.io/"/>
-  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/favicon.svg"/>
+  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/harender.jpg"/>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
   <link rel="alternate icon" href="favicon.svg"/>
@@ -20,446 +19,344 @@
 </head>
 <body>
 
-  <!-- ── Top Navigation Bar ───────────────────────────────── -->
-  <nav class="nav" id="main-nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__monogram">HD</span>
-        <div class="nav__brand-text">
-          <span class="nav__name">Harender Dhattarwal</span>
-          <span class="nav__tagline">Rutgers University · Computational Chemistry</span>
-        </div>
-      </a>
+  <!-- Top Navigation -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">Harender S. Dhattarwal</a>
 
-      <div class="nav__menu">
-        <ul class="nav__links" role="list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="group.html">Group</a></li>
-        </ul>
+      <div class="nav-links-wrap">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="about.html">CV</a></li>
+            <li><a href="group.html">Group</a></li>
+          </ul>
+        </nav>
 
-        <!-- Theme Switcher Button -->
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle color mode">
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
           <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <!-- Mobile Drawer Toggle -->
-        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div class="nav__overlay" id="nav-overlay">
-    <ul class="nav__overlay-links" role="list">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="group.html">Group</a></li>
-    </ul>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html" class="active">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html">CV</a>
+    <a href="group.html">Group</a>
   </div>
 
-  <main class="page-offset">
+  <div class="page-wrapper">
+    <main class="main-content">
 
-    <!-- ── 1. Hero Section ─────────────────────────────────── -->
-    <section class="home-hero">
-      <div class="container">
-        <div class="home-hero__grid">
-          
-          <div class="home-hero__text">
-            <div class="hero-pill">
-              <span class="hero-pill-dot"></span>
-              Postdoctoral Research Associate
-            </div>
+      <!-- Introduction Section -->
+      <section class="section" style="border-bottom:1px solid var(--border);">
+        <div class="container">
+          <div class="intro-grid">
             
-            <h1 class="hero-headline">Decoding Materials &amp; Interfaces at the Atomic Scale</h1>
+            <!-- Portrait & Direct Links -->
+            <div class="portrait-col">
+              <div class="portrait-frame">
+                <img src="assets/harender.jpg" alt="Dr. Harender S. Dhattarwal" class="portrait-img"/>
+              </div>
+
+              <div class="portrait-caption">
+                <div><strong>Harender S. Dhattarwal</strong></div>
+                <div>Postdoctoral Research Associate</div>
+                <div>Dept. of Chemistry &amp; Chemical Biology<br>Rutgers University</div>
+                <div style="margin-top:6px;">
+                  <a href="mailto:harender.dhattarwal@rutgers.edu" class="portrait-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    harender.dhattarwal@rutgers.edu
+                  </a>
+                </div>
+                <div>
+                  <a href="assets/CV_Dhattarwal.pdf" target="_blank" rel="noopener noreferrer" class="portrait-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Curriculum Vitae (PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bio Text -->
+            <div class="intro-content">
+              <div>
+                <h1 class="intro-name">Harender S. Dhattarwal</h1>
+                <div class="intro-title">Postdoctoral Research Associate in Computational Materials Chemistry</div>
+                <div class="intro-affiliation">
+                  Department of Chemistry and Chemical Biology, <strong>Rutgers University</strong><br>
+                  Advisor: <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">Prof. Richard C. Remsing</a>
+                </div>
+              </div>
+
+              <div class="intro-links-bar">
+                <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <span class="sep">/</span>
+                <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="sep">/</span>
+                <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="sep">/</span>
+                <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">Remsing Lab</a>
+                <span class="sep">/</span>
+                <a href="mailto:harender.dhattarwal@rutgers.edu">Email</a>
+              </div>
+
+              <div class="intro-bio">
+                <p>
+                  I am a computational materials chemist working at the intersection of statistical mechanics, quantum chemistry, and physics-informed machine learning. My research aims to understand and predict the behavior of complex condensed-phase materials—including superionic conductors, solid-state battery electrolytes, and electrified electrochemical interfaces—directly from atomic-scale simulations.
+                </p>
+                <p>
+                  Currently, as a postdoctoral researcher in the <strong>Remsing Lab</strong> at Rutgers University, my work centers on developing machine learning interatomic potentials with rigorous long-range electrostatic formulations, elucidating non-classical ion transport mechanisms (such as the <em>electronic paddle-wheel</em> effect in solid electrolytes), and modeling heterogeneous solid-liquid interfaces under applied potentials.
+                </p>
+                <p>
+                  I completed my <strong>Ph.D. in Chemistry at IIT Delhi</strong> in 2022 with <strong>Prof. Hemant K. Kashyap</strong>, focusing on the microscopic structure, dynamics, and interfacial capacitance of ionic liquids, deep eutectic solvents, and water-in-salt electrolytes. During my doctoral studies, I was also a visiting researcher collaborating with <strong>Prof. Jer-Lai Kuo</strong> at the Institute of Atomic and Molecular Sciences (IAMS), Academia Sinica, Taiwan.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent News Section (Editorial Timeline) -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Updates</div>
+            <h2 class="section-heading">Recent News</h2>
+          </div>
+
+          <div class="news-list">
             
-            <p class="hero-sub">
-              Physics-informed machine learning potentials · Solid-state electrolytes · Electrochemical interface thermodynamics
-            </p>
+            <div class="news-row">
+              <div class="news-date">AUG 2025</div>
+              <div class="news-text">
+                Received the <strong>Wiley Computers in Chemistry Outstanding Postdoc Award</strong> from the ACS COMP Division at the American Chemical Society Fall 2025 National Meeting in Washington, D.C.
+              </div>
+            </div>
+
+            <div class="news-row">
+              <div class="news-date">AUG 2025</div>
+              <div class="news-text">
+                Presented research on electronic fluctuations and superionic dynamics in silver iodide at the <strong>Chemistry and Physics of Liquids Gordon Research Conference (GRC)</strong> in Holderness, NH.
+              </div>
+            </div>
+
+            <div class="news-row">
+              <div class="news-date">FEB 2025</div>
+              <div class="news-text">
+                New collaborative paper with the Lipke Group published in <strong>JACS</strong>: <em>"Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore Lined with Multifunctional Metal Sites"</em>.
+                <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer">[DOI: 10.1021/jacs.4c13038]</a>
+              </div>
+            </div>
+
+            <div class="news-row">
+              <div class="news-date">2024–2025</div>
+              <div class="news-text">
+                Published mechanistic investigations of the electronic paddle-wheel ion conduction mechanism in <strong>Nature Communications</strong> (2024) and <strong>ChemPhysChem</strong> (2025), alongside cation clustering studies in <strong>J. Chem. Phys.</strong> (2025).
+                <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer">[DOI: 10.1038/s41467-023-44274-z]</a>
+              </div>
+            </div>
+
+            <div class="news-row">
+              <div class="news-date">CURRENT</div>
+              <div class="news-text">
+                Organizer of the monthly <strong>Theoretical Chemistry and Chemical Biology (TCCB) Seminar Series</strong> at Rutgers University, fostering cross-disciplinary discussions in computational chemical physics.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Research Themes -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;">
+            <div>
+              <div class="section-eyebrow">Program</div>
+              <h2 class="section-heading">Research Focus</h2>
+            </div>
+            <a href="research.html" style="font-size:0.92rem;">View full research details →</a>
+          </div>
+
+          <div class="pillars-list">
             
-            <p class="hero-affiliation">
-              Department of Chemistry and Chemical Biology, <strong>Rutgers University</strong><br>
-              Working with <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">Prof. Richard C. Remsing</a>
-            </p>
+            <article class="pillar-entry">
+              <div class="pillar-idx">01</div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Machine Learning Interatomic Potentials &amp; Long-Range Polarization</h3>
+                <p class="pillar-desc">
+                  Standard machine learning interatomic potentials typically truncate interactions beyond a short radial cutoff, fundamentally failing to describe long-range electrostatic screening, dielectric breakdown, and polarization response in polar fluids. We build physics-informed architectures that couple equivariant neural network representations with self-consistent electrostatic models. This enables quantum-accurate simulations of dielectric saturation in water and complex electrolyte mixtures across tens of nanometers and microsecond timescales.
+                </p>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">DeepMD</span>
+                  <span class="pillar-tag">Dielectric Saturation</span>
+                  <span class="pillar-tag">Equivariant Potentials</span>
+                  <span class="pillar-tag">Long-Range Electrostatics</span>
+                </div>
+              </div>
+            </article>
 
-            <div class="hero-actions">
-              <a href="research.html" class="btn-primary">
-                Explore Research
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-              <a href="publications.html" class="btn-outline">Publications (21)</a>
-              <a href="about.html" class="btn-outline">Biography &amp; CV</a>
-            </div>
+            <article class="pillar-entry">
+              <div class="pillar-idx">02</div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Solid-State Electrolytes &amp; Superionic Conduction</h3>
+                <p class="pillar-desc">
+                  All-solid-state batteries require inorganic solid electrolytes with room-temperature ionic conductivities comparable to liquid electrolytes. Using ab initio molecular dynamics and electronic structure methods, we uncovered the <em>electronic paddle-wheel mechanism</em> in fast-ion conductors such as silver iodide (AgI) and thiophosphates. Fluctuations in local electron density and dynamic cation-anion polarization act cooperatively to lower activation barriers for cation transit, challenging traditional rigid-lattice conduction paradigms.
+                </p>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Solid-State Batteries</span>
+                  <span class="pillar-tag">Superionic Conductors</span>
+                  <span class="pillar-tag">Electronic Paddle-Wheel</span>
+                  <span class="pillar-tag">AIMD</span>
+                </div>
+              </div>
+            </article>
 
-            <div class="hero-social">
-              <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" class="hero-social-link" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg>
-                Google Scholar
-              </a>
-              <a href="https://github.com/HSDhattarwal" class="hero-social-link" target="_blank" rel="noopener noreferrer" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/HSDhattarwal" class="hero-social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                LinkedIn
-              </a>
-              <a href="mailto:harender.dhattarwal@rutgers.edu" class="hero-social-link" title="Email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email
-              </a>
+            <article class="pillar-entry">
+              <div class="pillar-idx">03</div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Electrochemical Interfaces &amp; Solvation Under Confinement</h3>
+                <p class="pillar-desc">
+                  Energy storage kinetics and stability are governed by the nanostructure of the electrical double layer at polarized electrodes. We study interfacial ordering, desolvation penalties, and solid electrolyte interphase (SEI) formation in water-in-salt electrolytes (WiSE), ionic liquids, and deep eutectic solvents at electrified carbon and metal surfaces. In confined environments, our simulations demonstrate how confining pore wall flexibility can induce capillary dewetting and govern molecular transport.
+                </p>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Water-in-Salt (WiSE)</span>
+                  <span class="pillar-tag">Ionic Liquids</span>
+                  <span class="pillar-tag">Double Layer Capacitance</span>
+                  <span class="pillar-tag">Nanoconfinement</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="section" style="border-bottom:none;">
+        <div class="container">
+          <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px;">
+            <div>
+              <div class="section-eyebrow">Publications</div>
+              <h2 class="section-heading">Selected Publications</h2>
             </div>
+            <a href="publications.html" style="font-size:0.92rem;">View all 21 publications &amp; 2 book chapters →</a>
           </div>
 
-          <!-- Academic Card / Profile Overview -->
-          <div class="hero-card">
-            <div class="hero-card__avatar">HD</div>
-            <h2 class="hero-card__title">Harender S. Dhattarwal</h2>
-            <div class="hero-card__role">Ph.D. in Chemistry (IIT Delhi)</div>
+          <div class="pub-bibliography">
             
-            <div class="hero-card__list">
-              <div class="hero-card__item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                <span><strong>Affiliation:</strong> Rutgers University, Dept. of Chemistry &amp; Chemical Biology</span>
+            <article class="pub-entry">
+              <div class="pub-index">[1]</div>
+              <div class="pub-main">
+                <div class="pub-heading">
+                  <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer">Electronic Paddle-Wheels in a Solid-State Electrolyte</a>
+                </div>
+                <div class="pub-authors-line"><strong>Harender S. Dhattarwal</strong>, Rahul Somni, and Richard C. Remsing</div>
+                <div class="pub-citation-line">
+                  <span class="pub-journal-name">Nature Communications</span> <strong>15</strong>, 121 (2024)
+                  <span class="pub-links">
+                    <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer" class="pub-link-btn">DOI</a>
+                  </span>
+                </div>
               </div>
-              <div class="hero-card__item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="12 6 12 12 16 14"/></svg>
-                <span><strong>Specialization:</strong> DeepMD, AIMD, Solid-State Electrolytes, Confinement</span>
-              </div>
-              <div class="hero-card__item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span><strong>Location:</strong> CCB Building, Busch Campus, Piscataway, NJ</span>
-              </div>
-              <div class="hero-card__item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                <span><strong>Award:</strong> 2025 ACS–Wiley Computers in Chemistry Outstanding Postdoc</span>
-              </div>
-            </div>
-          </div>
+            </article>
 
+            <article class="pub-entry">
+              <div class="pub-index">[2]</div>
+              <div class="pub-main">
+                <div class="pub-heading">
+                  <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer">Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore Lined with Multifunctional Metal Sites</a>
+                </div>
+                <div class="pub-authors-line">Taro J. Jones, Kaitlyn G. Dutton, <strong>Harender S. Dhattarwal</strong>, P. Thomas Blackburn, Rupak Saha, Richard C. Remsing, and Mark C. Lipke</div>
+                <div class="pub-citation-line">
+                  <span class="pub-journal-name">Journal of the American Chemical Society</span> <strong>147</strong> (2), 2086–2097 (2025)
+                  <span class="pub-links">
+                    <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer" class="pub-link-btn">DOI</a>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pub-entry">
+              <div class="pub-index">[3]</div>
+              <div class="pub-main">
+                <div class="pub-heading">
+                  <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer">Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</a>
+                </div>
+                <div class="pub-authors-line"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
+                <div class="pub-citation-line">
+                  <span class="pub-journal-name">ChemPhysChem</span> <strong>26</strong> (21), e202500077 (2025)
+                  <span class="pub-links">
+                    <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer" class="pub-link-btn">DOI</a>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pub-entry">
+              <div class="pub-index">[4]</div>
+              <div class="pub-main">
+                <div class="pub-heading">
+                  <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer">Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide</a>
+                </div>
+                <div class="pub-authors-line"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
+                <div class="pub-citation-line">
+                  <span class="pub-journal-name">The Journal of Chemical Physics</span> <strong>163</strong>, 234503 (2025)
+                  <span class="pub-links">
+                    <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer" class="pub-link-btn">DOI</a>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article class="pub-entry">
+              <div class="pub-index">[5]</div>
+              <div class="pub-main">
+                <div class="pub-heading">
+                  <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer">Dielectric Saturation in Water from a Long Range Machine Learning Model</a>
+                </div>
+                <div class="pub-authors-line"><strong>Harender S. Dhattarwal</strong>, Ang Gao, and Richard C. Remsing</div>
+                <div class="pub-citation-line">
+                  <span class="pub-journal-name">The Journal of Physical Chemistry B</span> <strong>127</strong> (16), 3663–3671 (2023)
+                  <span class="pub-links">
+                    <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer" class="pub-link-btn">DOI</a>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>&copy; 2026 Harender S. Dhattarwal &middot; Department of Chemistry &amp; Chemical Biology, Rutgers University</div>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:harender.dhattarwal@rutgers.edu">Contact</a>
         </div>
       </div>
-    </section>
-
-    <!-- ── 2. Recent News & Updates (Borrowed from Remsing Lab) ─ -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Recent Updates</span>
-          <h2 class="section-title">News &amp; Highlights</h2>
-          <p class="section-desc">Recent milestones, awards, presentations, and publications.</p>
-        </div>
-
-        <div class="news-grid">
-          
-          <!-- Highlight 1: Wiley Award -->
-          <article class="news-card news-card--highlight">
-            <div class="news-meta">
-              <span class="news-date">August 26, 2025</span>
-              <span class="news-tag news-tag--award">★ Major Honor</span>
-            </div>
-            <h3 class="news-title">Wiley Computers in Chemistry Outstanding Postdoc Award</h3>
-            <p class="news-body">
-              Harender received the <strong>Wiley Computers in Chemistry Outstanding Postdoc Award</strong> at the ACS Fall 2025 National Meeting in Washington, D.C., presented by the ACS COMP Division in recognition of exceptional contributions to computational chemistry and materials modeling.
-            </p>
-            <a href="about.html#awards" class="news-link">
-              View honors &amp; awards
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- Highlight 2: GRC Liquids -->
-          <article class="news-card">
-            <div class="news-meta">
-              <span class="news-date">August 11, 2025</span>
-              <span class="news-tag">Conference</span>
-            </div>
-            <h3 class="news-title">Gordon Research Conference (GRC) on Liquids</h3>
-            <p class="news-body">
-              Attended and presented cutting-edge poster research on superionic conduction and electronic fluctuations in silver iodide electrolytes at the <em>Chemistry and Physics of Liquids</em> Gordon Research Conference (GRC) and Gordon Research Seminar (GRS) in Holderness, NH.
-            </p>
-            <a href="research.html#sse" class="news-link">
-              Read about the research
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- Highlight 3: Nature Communications Paper -->
-          <article class="news-card">
-            <div class="news-meta">
-              <span class="news-date">2024 – 2025</span>
-              <span class="news-tag">Publication</span>
-            </div>
-            <h3 class="news-title">Electronic Paddle-Wheels in Solid-State Electrolytes</h3>
-            <p class="news-body">
-              Our paper introducing the <em>electronic paddle-wheel mechanism</em> in solid-state electrolytes was published in <strong>Nature Communications</strong>, followed by mechanistic studies of superionic AgI in <strong>ChemPhysChem</strong> and <strong>J. Chem. Phys.</strong>
-            </p>
-            <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer" class="news-link">
-              Read the paper (DOI: 10.1038/s41467-023-44274-z)
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 3. Research Themes Grid (Borrowed from Yue Group) ── -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Research Focus</span>
-          <h2 class="section-title">Core Research Pillars</h2>
-          <p class="section-desc">Bridging quantum mechanics, statistical physics, and machine learning to pioneer next-generation energy materials.</p>
-        </div>
-
-        <div class="research-grid">
-          
-          <!-- Pillar 1 -->
-          <div class="research-card">
-            <div class="research-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3 class="research-card__title">ML Interatomic Potentials &amp; Long-Range Interactions</h3>
-            <p class="research-card__desc">
-              Developing equivariant neural network potentials that incorporate long-range polarization and electrostatic response. Enabling ab initio-fidelity simulations of water under extreme electric fields and dielectric saturation.
-            </p>
-            <div class="research-card__tags">
-              <span class="research-tag">DeepMD</span>
-              <span class="research-tag">Dielectric Saturation</span>
-              <span class="research-tag">Polar Liquids</span>
-            </div>
-            <a href="research.html#mlip" class="research-card__link">
-              Explore theme details →
-            </a>
-          </div>
-
-          <!-- Pillar 2 -->
-          <div class="research-card">
-            <div class="research-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            </div>
-            <h3 class="research-card__title">Solid-State Electrolytes &amp; Superionic Conduction</h3>
-            <p class="research-card__desc">
-              Unraveling non-classical ion transport mechanisms such as electronic paddle-wheels, cation clustering, and quantum disorder in superionic conductors (AgI, thiophosphates) for safe, high-capacity all-solid-state batteries.
-            </p>
-            <div class="research-card__tags">
-              <span class="research-tag">Solid-State Batteries</span>
-              <span class="research-tag">Paddlewheel Conduction</span>
-              <span class="research-tag">AIMD</span>
-            </div>
-            <a href="research.html#sse" class="research-card__link">
-              Explore theme details →
-            </a>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="research-card">
-            <div class="research-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h3 class="research-card__title">Electrochemical Interfaces &amp; Confined Systems</h3>
-            <p class="research-card__desc">
-              Investigating the microscopic structure of water-in-salt electrolytes (WiSE), ionic liquids, and deep eutectic solvents (DES) at electrified carbon/metal electrodes and within nanoscale hydrophobic confinement.
-            </p>
-            <div class="research-card__tags">
-              <span class="research-tag">WiSE</span>
-              <span class="research-tag">Capacitance</span>
-              <span class="research-tag">Nanoconfinement</span>
-            </div>
-            <a href="research.html#interfaces" class="research-card__link">
-              Explore theme details →
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 4. Featured Publications ────────────────────────── -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
-          <div>
-            <span class="section-label">Selected Contributions</span>
-            <h2 class="section-title">Featured Publications</h2>
-            <p class="section-desc">Highlights from 21 peer-reviewed publications spanning high-impact journals.</p>
-          </div>
-          <a href="publications.html" class="btn-outline" style="font-size:0.88rem;">View All 21 Publications →</a>
-        </div>
-
-        <div class="pub-list">
-
-          <!-- Paper 1: Nature Communications 2024 -->
-          <article class="pub-item">
-            <div class="pub-num">01</div>
-            <div class="pub-content">
-              <h3 class="pub-title">Electronic Paddle-Wheels in a Solid-State Electrolyte</h3>
-              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Rahul Somni, and Richard C. Remsing</div>
-              <div class="pub-meta">
-                <span class="pub-journal">Nat. Commun. 2024, 15, 121</span>
-                <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
-                  DOI: 10.1038/s41467-023-44274-z
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="pub-actions">
-              <span class="badge-journal badge-nature">Nat. Commun.</span>
-            </div>
-          </article>
-
-          <!-- Paper 2: JACS 2025 -->
-          <article class="pub-item">
-            <div class="pub-num">02</div>
-            <div class="pub-content">
-              <h3 class="pub-title">Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore Lined with Multifunctional Metal Sites</h3>
-              <div class="pub-authors">Taro J. Jones, Kaitlyn G. Dutton, <strong>Harender S. Dhattarwal</strong>, P. Thomas Blackburn, Rupak Saha, Richard C. Remsing, and Mark C. Lipke</div>
-              <div class="pub-meta">
-                <span class="pub-journal">J. Am. Chem. Soc. 2025, 147 (2), 2086–2097</span>
-                <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
-                  DOI: 10.1021/jacs.4c13038
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="pub-actions">
-              <span class="badge-journal badge-jacs">JACS</span>
-            </div>
-          </article>
-
-          <!-- Paper 3: ChemPhysChem 2025 -->
-          <article class="pub-item">
-            <div class="pub-num">03</div>
-            <div class="pub-content">
-              <h3 class="pub-title">Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</h3>
-              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
-              <div class="pub-meta">
-                <span class="pub-journal">ChemPhysChem 2025, 26 (21), e202500077</span>
-                <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
-                  DOI: 10.1002/cphc.202500077
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="pub-actions">
-              <span class="badge-journal badge-chemphyschem">ChemPhysChem</span>
-            </div>
-          </article>
-
-          <!-- Paper 4: JCP 2025 -->
-          <article class="pub-item">
-            <div class="pub-num">04</div>
-            <div class="pub-content">
-              <h3 class="pub-title">Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide</h3>
-              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
-              <div class="pub-meta">
-                <span class="pub-journal">J. Chem. Phys. 2025, 163, 234503</span>
-                <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
-                  DOI: 10.1063/5.0301431
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="pub-actions">
-              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5. Statistics Strip ─────────────────────────────── -->
-    <section class="stats-strip">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-num">21</span>
-            <span class="stat-label">Journal Articles</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">2</span>
-            <span class="stat-label">Invited Book Chapters</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">2019–</span>
-            <span class="stat-label">Continuous Impact</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">Rutgers</span>
-            <span class="stat-label">Chemistry &amp; Chemical Biology</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 6. Contact & Collaboration Callout ──────────────── -->
-    <section class="section">
-      <div class="container">
-        <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:40px; text-align:center; max-width:800px; margin:0 auto; box-shadow:var(--shadow-sm);">
-          <span class="section-label">Connect</span>
-          <h2 style="font-size:2rem; margin-bottom:12px;">Collaborations &amp; Opportunities</h2>
-          <p style="font-size:1.05rem; color:var(--text-secondary); max-width:580px; margin:0 auto 24px; line-height:1.6;">
-            I welcome discussions on scientific collaborations in machine learning potentials, solid-state ionics, and computational electrochemistry, as well as academic seminar invitations.
-          </p>
-          <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px;">
-            <a href="mailto:harender.dhattarwal@rutgers.edu" class="btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              harender.dhattarwal@rutgers.edu
-            </a>
-            <a href="about.html" class="btn-outline">Learn More About Harender</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── Footer ───────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand-title">Harender S. Dhattarwal, Ph.D.</div>
-          <p class="footer__brand-desc">
-            Postdoctoral Research Associate in Computational Materials Chemistry at Rutgers University. Developing physics-informed machine learning potentials and probing ion conduction at atomic interfaces.
-          </p>
-        </div>
-        <div>
-          <div class="footer__col-title">Navigation</div>
-          <div class="footer__links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research Program</a>
-            <a href="publications.html">Publications Archive</a>
-            <a href="about.html">Bio &amp; Curriculum Vitae</a>
-            <a href="group.html">Group &amp; Prospective</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer__col-title">Academic Profiles</div>
-          <div class="footer__links">
-            <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">The Remsing Lab</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <div>&copy; 2026 Harender S. Dhattarwal. Academic portfolio hosted on GitHub Pages.</div>
-        <div>Department of Chemistry and Chemical Biology · Rutgers University</div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

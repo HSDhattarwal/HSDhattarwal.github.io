@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About &amp; CV | Harender S. Dhattarwal</title>
-  <meta name="description" content="Curriculum Vitae, academic career, PhD at IIT Delhi, postdoctoral research at Rutgers University, honors and awards, and computational skills."/>
+  <title>Curriculum Vitae | Harender S. Dhattarwal</title>
+  <meta name="description" content="Curriculum Vitae of Dr. Harender S. Dhattarwal: Appointments, education at IIT Delhi, honors and awards, skills, and academic service."/>
   <meta name="author" content="Harender S. Dhattarwal"/>
 
-  <meta property="og:title" content="About &amp; CV — Harender S. Dhattarwal"/>
-  <meta property="og:description" content="Postdoctoral Research Associate at Rutgers University — Bio, education, honors, and skills."/>
+  <meta property="og:title" content="Curriculum Vitae — Harender S. Dhattarwal"/>
+  <meta property="og:description" content="Academic appointments, education, honors, and computational expertise."/>
   <meta property="og:url" content="https://hsdhattarwal.github.io/about.html"/>
-  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/favicon.svg"/>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
   <link rel="alternate icon" href="favicon.svg"/>
@@ -18,351 +17,244 @@
 </head>
 <body>
 
-  <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav" id="main-nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__monogram">HD</span>
-        <div class="nav__brand-text">
-          <span class="nav__name">Harender Dhattarwal</span>
-          <span class="nav__tagline">Rutgers University · Computational Chemistry</span>
-        </div>
-      </a>
+  <!-- Top Navigation -->
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">Harender S. Dhattarwal</a>
 
-      <div class="nav__menu">
-        <ul class="nav__links" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="group.html">Group</a></li>
-        </ul>
+      <div class="nav-links-wrap">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="about.html" class="active">CV</a></li>
+            <li><a href="group.html">Group</a></li>
+          </ul>
+        </nav>
 
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle color mode">
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
           <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
 
-        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- Mobile Drawer -->
-  <div class="nav__overlay" id="nav-overlay">
-    <ul class="nav__overlay-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="group.html">Group</a></li>
-    </ul>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="about.html" class="active">CV</a>
+    <a href="group.html">Group</a>
   </div>
 
-  <main class="page-offset">
+  <div class="page-wrapper">
+    <main class="main-content">
 
-    <!-- Page Header -->
-    <header class="pub-header">
-      <div class="container">
-        <span class="section-label">Academic Profile</span>
-        <h1 class="section-title">Biography &amp; Curriculum Vitae</h1>
-        <p class="section-desc">
-          Academic background, honors, computational skill set, and community leadership.
-        </p>
-      </div>
-    </header>
-
-    <section class="section">
-      <div class="container">
-        <div class="bio-grid">
+      <section class="section" style="border-bottom:none;">
+        <div class="container">
           
-          <!-- Sidebar / Quick Info -->
-          <aside class="bio-sidebar">
-            <div class="bio-avatar">HD</div>
-            <h2 class="bio-name">Harender S. Dhattarwal</h2>
-            <div class="bio-title">Postdoctoral Research Associate</div>
-            <div class="bio-dept">
-              Department of Chemistry and Chemical Biology<br>
-              Rutgers University, New Brunswick, NJ
+          <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:40px;">
+            <div>
+              <div class="section-eyebrow">Curriculum Vitae</div>
+              <h1 class="section-heading" style="font-size:2.4rem;">Harender S. Dhattarwal, Ph.D.</h1>
+              <p style="font-size:1.02rem; color:var(--text-secondary); margin-top:4px;">
+                Postdoctoral Research Associate &middot; Rutgers University &middot; Remsing Lab
+              </p>
             </div>
-
-            <a href="assets/CV_Dhattarwal.pdf" class="bio-cv-btn" target="_blank" rel="noopener noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Download Full CV (PDF)
-            </a>
-
-            <div class="bio-links-list">
-              <div class="bio-link-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href="mailto:harender.dhattarwal@rutgers.edu">harender.dhattarwal@rutgers.edu</a>
-              </div>
-              <div class="bio-link-item">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg>
-                <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar (21 papers)</a>
-              </div>
-              <div class="bio-link-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">github.com/HSDhattarwal</a>
-              </div>
-              <div class="bio-link-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">linkedin.com/in/HSDhattarwal</a>
-              </div>
-              <div class="bio-link-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Chemistry &amp; Chemical Biology Bldg, Busch Campus</span>
-              </div>
+            <div>
+              <a href="assets/CV_Dhattarwal.pdf" target="_blank" rel="noopener noreferrer" class="pub-link-btn" style="font-size:0.88rem; padding:6px 14px;">
+                Download PDF &darr;
+              </a>
             </div>
-          </aside>
+          </div>
 
-          <!-- Main Bio Body -->
-          <div class="bio-main">
+          <!-- Appointments -->
+          <div class="cv-section">
+            <h2 class="cv-title">Appointments</h2>
             
-            <!-- Biography -->
-            <section>
-              <h2 style="font-size:1.8rem; margin-bottom:16px;">Academic Overview</h2>
-              <div class="bio-prose">
-                <p>
-                  I am a postdoctoral research associate in the group of <strong>Prof. Richard C. Remsing</strong> at the Department of Chemistry and Chemical Biology, Rutgers University. My research bridges statistical mechanics, quantum chemistry, and machine learning to understand molecular and ionic phenomena in complex condensed-matter systems.
-                </p>
-                <p>
-                  My current efforts focus on developing physics-aware machine learning interatomic potentials that explicitly incorporate long-range polarization, unraveling fast-ion transport mechanisms (such as <em>electronic paddlewheels</em>) in solid-state electrolytes, and designing electrified electrochemical interfaces for safe, high-energy-density batteries and supercapacitors.
-                </p>
-                <p>
-                  I completed my <strong>Ph.D. in Chemistry at the Indian Institute of Technology (IIT) Delhi</strong> in 2022 under the mentorship of <strong>Prof. Hemant K. Kashyap</strong>, where I investigated the structure, dynamics, and thermodynamics of ionic liquids, deep eutectic solvents, and superconcentrated electrolytes using molecular dynamics and ab initio simulations. During my doctoral studies, I also conducted collaborative research with <strong>Prof. Jer-Lai Kuo</strong> at the Institute of Atomic and Molecular Sciences (IAMS), Academia Sinica, Taiwan. Prior to IIT Delhi, I earned an <strong>M.Sc. in Chemistry from IIT Guwahati</strong> (2017) and a <strong>B.Sc. (Honours) in Chemistry from Ramjas College, University of Delhi</strong> (2015).
-                </p>
+            <div class="cv-entry">
+              <div class="cv-dates">2022 &ndash; present</div>
+              <div class="cv-body">
+                <div class="cv-role">Postdoctoral Research Associate</div>
+                <div class="cv-place">Rutgers University &middot; Department of Chemistry &amp; Chemical Biology</div>
+                <div class="cv-notes">Advisor: Prof. Richard C. Remsing</div>
               </div>
-            </section>
+            </div>
 
-            <!-- Career Positions -->
-            <section>
-              <h2 style="font-size:1.8rem; margin-bottom:20px;">Positions Held</h2>
-              <div class="timeline">
-                
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2022 – Present</div>
-                  <div class="timeline-role">Postdoctoral Research Associate</div>
-                  <div class="timeline-inst">Rutgers University · Dept. of Chemistry &amp; Chemical Biology</div>
-                  <div class="timeline-desc">
-                    Research in the Remsing Lab on machine learning potentials, superionic conductors, and solid-liquid interfaces. Recipient of the 2025 ACS–Wiley Computers in Chemistry Outstanding Postdoc Award.
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2017 – 2022</div>
-                  <div class="timeline-role">Doctoral Researcher &amp; CSIR-UGC Fellow</div>
-                  <div class="timeline-inst">Indian Institute of Technology (IIT) Delhi · Dept. of Chemistry</div>
-                  <div class="timeline-desc">
-                    Thesis on structural and dynamical landscapes of modern electrolytes, deep eutectic solvents, and biocompatible ionic liquids with Prof. Hemant K. Kashyap.
-                  </div>
-                </div>
-
+            <div class="cv-entry">
+              <div class="cv-dates">2017 &ndash; 2022</div>
+              <div class="cv-body">
+                <div class="cv-role">Doctoral Researcher &amp; CSIR-UGC Fellow</div>
+                <div class="cv-place">Indian Institute of Technology (IIT) Delhi &middot; Department of Chemistry</div>
+                <div class="cv-notes">Advisor: Prof. Hemant K. Kashyap</div>
               </div>
-            </section>
+            </div>
 
-            <!-- Education Table -->
-            <section>
-              <h2 style="font-size:1.8rem; margin-bottom:16px;">Education &amp; Degrees</h2>
-              <table style="width:100%; border-collapse:collapse; background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; font-size:0.92rem;">
-                <thead>
-                  <tr style="background:var(--bg-surface-alt); border-bottom:1px solid var(--border); text-align:left;">
-                    <th style="padding:12px 16px;">Degree</th>
-                    <th style="padding:12px 16px;">Institution</th>
-                    <th style="padding:12px 16px;">Field</th>
-                    <th style="padding:12px 16px; text-align:right;">Year</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom:1px solid var(--border-subtle);">
-                    <td style="padding:12px 16px; font-weight:600;">Ph.D. in Chemistry</td>
-                    <td style="padding:12px 16px;">Indian Institute of Technology (IIT) Delhi</td>
-                    <td style="padding:12px 16px;">Computational Chemistry</td>
-                    <td style="padding:12px 16px; text-align:right; font-weight:600; color:var(--accent);">2022</td>
-                  </tr>
-                  <tr style="border-bottom:1px solid var(--border-subtle);">
-                    <td style="padding:12px 16px; font-weight:600;">M.Sc. in Chemistry</td>
-                    <td style="padding:12px 16px;">Indian Institute of Technology (IIT) Guwahati</td>
-                    <td style="padding:12px 16px;">Chemical Sciences</td>
-                    <td style="padding:12px 16px; text-align:right; font-weight:600; color:var(--accent);">2017</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:12px 16px; font-weight:600;">B.Sc. (Hons.) Chemistry</td>
-                    <td style="padding:12px 16px;">Ramjas College, University of Delhi</td>
-                    <td style="padding:12px 16px;">Chemistry</td>
-                    <td style="padding:12px 16px; text-align:right; font-weight:600; color:var(--accent);">2015</td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-
-            <!-- Honors & Awards (Borrowed from Remsing Lab & Yue Group) -->
-            <section id="awards">
-              <h2 style="font-size:1.8rem; margin-bottom:20px;">Honors &amp; Awards</h2>
-              <div class="timeline">
-                
-                <div class="timeline-item">
-                  <div class="timeline-dot timeline-dot--award"></div>
-                  <div class="timeline-year timeline-year--award">2025</div>
-                  <div class="timeline-role">Wiley Computers in Chemistry Outstanding Postdoc Award</div>
-                  <div class="timeline-inst">American Chemical Society (ACS) · COMP Division</div>
-                  <div class="timeline-desc">
-                    Awarded at the ACS Fall 2025 National Meeting in Washington, D.C. in recognition of outstanding achievements in computational and theoretical chemistry.
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2025</div>
-                  <div class="timeline-role">Gordon Research Conference Presenter</div>
-                  <div class="timeline-inst">GRC Chemistry and Physics of Liquids · Holderness, NH</div>
-                  <div class="timeline-desc">
-                    Selected for poster presentation on electronic fluctuations and paddlewheel ion transport in superionic electrolytes.
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2017 – 2022</div>
-                  <div class="timeline-role">CSIR-UGC Junior &amp; Senior Research Fellowship (JRF / SRF)</div>
-                  <div class="timeline-inst">Council of Scientific &amp; Industrial Research, Govt. of India</div>
-                  <div class="timeline-desc">
-                    Awarded top national ranking in Chemical Sciences fellowship competition.
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2017</div>
-                  <div class="timeline-role">GATE (Graduate Aptitude Test in Engineering) Qualified</div>
-                  <div class="timeline-inst">Ministry of Education, Govt. of India</div>
-                  <div class="timeline-desc">
-                    Nationwide qualification in Chemical Sciences for graduate studies and research.
-                  </div>
-                </div>
-
+            <div class="cv-entry">
+              <div class="cv-dates">2019</div>
+              <div class="cv-body">
+                <div class="cv-role">Visiting Research Scholar</div>
+                <div class="cv-place">Academia Sinica, Taiwan &middot; Institute of Atomic and Molecular Sciences (IAMS)</div>
+                <div class="cv-notes">Host: Prof. Jer-Lai Kuo</div>
               </div>
-            </section>
-
-            <!-- Computational Skills -->
-            <section>
-              <h2 style="font-size:1.8rem; margin-bottom:16px;">Technical &amp; Computational Skills</h2>
-              <div class="skills-grid">
-                
-                <div class="skill-card">
-                  <div class="skill-card__title">Electronic Structure &amp; AIMD</div>
-                  <div class="skill-card__tags">
-                    <span class="skill-chip">CP2K</span>
-                    <span class="skill-chip">VASP</span>
-                    <span class="skill-chip">Quantum ESPRESSO</span>
-                    <span class="skill-chip">Density Functional Theory (DFT)</span>
-                    <span class="skill-chip">Wannier90</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card__title">Machine Learning Potentials</div>
-                  <div class="skill-card__tags">
-                    <span class="skill-chip">DeepMD-kit</span>
-                    <span class="skill-chip">NequIP / Allegro</span>
-                    <span class="skill-chip">PyTorch</span>
-                    <span class="skill-chip">Equivariant Neural Networks</span>
-                    <span class="skill-chip">Active Learning / DP-GEN</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card__title">Classical &amp; Enhanced MD</div>
-                  <div class="skill-card__tags">
-                    <span class="skill-chip">LAMMPS</span>
-                    <span class="skill-chip">GROMACS</span>
-                    <span class="skill-chip">PLUMED (Metadynamics)</span>
-                    <span class="skill-chip">Umbrella Sampling</span>
-                    <span class="skill-chip">Free Energy Perturbation</span>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-card__title">Scientific Computing &amp; HPC</div>
-                  <div class="skill-card__tags">
-                    <span class="skill-chip">Python (NumPy, SciPy, ASE)</span>
-                    <span class="skill-chip">Slurm / PBS</span>
-                    <span class="skill-chip">MPI &amp; OpenMP</span>
-                    <span class="skill-chip">CUDA GPU Acceleration</span>
-                    <span class="skill-chip">Git / Linux</span>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-
-            <!-- Academic Service: TCCB Seminar Series -->
-            <section id="tccb">
-              <h2 style="font-size:1.8rem; margin-bottom:16px;">Academic Service &amp; Community</h2>
-              <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px; box-shadow:var(--shadow-sm);">
-                <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                  <span class="news-tag" style="background:var(--accent-soft); color:var(--accent);">Organizer</span>
-                  <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Rutgers University</span>
-                </div>
-                <h3 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:10px;">
-                  Theoretical Chemistry &amp; Chemical Biology (TCCB) Seminar Series
-                </h3>
-                <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.6; margin-bottom:14px;">
-                  Organizer of the monthly TCCB seminar series bringing together researchers across the Departments of Chemistry, Physics, and Chemical &amp; Biochemical Engineering at Rutgers to showcase state-of-the-art computational and theoretical chemical science.
-                </p>
-                <div style="font-size:0.88rem; color:var(--text-muted);">
-                  <strong>Next upcoming seminar:</strong> Guest speakers from leading institutions in enhanced sampling, electronic structure, and molecular machine learning.
-                </div>
-              </div>
-            </section>
-
+            </div>
           </div>
+
+          <!-- Education -->
+          <div class="cv-section">
+            <h2 class="cv-title">Education</h2>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2017 &ndash; 2022</div>
+              <div class="cv-body">
+                <div class="cv-role">Ph.D. in Chemistry</div>
+                <div class="cv-place">Indian Institute of Technology (IIT) Delhi</div>
+                <div class="cv-notes">
+                  <strong>Thesis:</strong> <em>Microscopic Structure, Dynamics and Interfacial Behavior of Modern Electrolytes from Molecular Simulations</em><br>
+                  Advisor: Prof. Hemant K. Kashyap
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2015 &ndash; 2017</div>
+              <div class="cv-body">
+                <div class="cv-role">M.Sc. in Chemistry</div>
+                <div class="cv-place">Indian Institute of Technology (IIT) Guwahati</div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2012 &ndash; 2015</div>
+              <div class="cv-body">
+                <div class="cv-role">B.Sc. (Honours) in Chemistry</div>
+                <div class="cv-place">Ramjas College, University of Delhi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honors & Awards -->
+          <div class="cv-section">
+            <h2 class="cv-title">Honors &amp; Awards</h2>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2025</div>
+              <div class="cv-body">
+                <div class="cv-role">Wiley Computers in Chemistry Outstanding Postdoc Award</div>
+                <div class="cv-place">American Chemical Society (ACS) &middot; COMP Division</div>
+                <div class="cv-notes">Awarded at the ACS Fall 2025 National Meeting in Washington, D.C.</div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2025</div>
+              <div class="cv-body">
+                <div class="cv-role">Gordon Research Conference Presenter</div>
+                <div class="cv-place">GRC Chemistry &amp; Physics of Liquids &middot; Holderness, NH</div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2017 &ndash; 2022</div>
+              <div class="cv-body">
+                <div class="cv-role">CSIR-UGC Junior &amp; Senior Research Fellowship (JRF / SRF)</div>
+                <div class="cv-place">Council of Scientific and Industrial Research, Government of India</div>
+                <div class="cv-notes">National rank in chemical sciences fellowship qualification.</div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2017</div>
+              <div class="cv-body">
+                <div class="cv-role">Graduate Aptitude Test in Engineering (GATE) Qualified</div>
+                <div class="cv-place">Ministry of Education, Government of India</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Computational Expertise -->
+          <div class="cv-section">
+            <h2 class="cv-title">Technical &amp; Computational Skills</h2>
+
+            <div class="cv-entry">
+              <div class="cv-dates">Methods</div>
+              <div class="cv-body">
+                <div class="cv-place">
+                  Ab Initio Molecular Dynamics (AIMD), Classical Molecular Dynamics, Equivariant Neural Network Potentials, Enhanced Sampling (Metadynamics, Umbrella Sampling, Free Energy Perturbation), Density Functional Theory (DFT), Wannier Function Analysis.
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">Software</div>
+              <div class="cv-body">
+                <div class="cv-place">
+                  CP2K, VASP, Quantum ESPRESSO, LAMMPS, GROMACS, PLUMED, DeepMD-kit, NequIP / Allegro, PyTorch, ASE.
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">HPC &amp; Coding</div>
+              <div class="cv-body">
+                <div class="cv-place">
+                  Python (NumPy, SciPy, Matplotlib), C++, Bash, Linux, Git, Slurm, MPI, OpenMP, CUDA GPU computing.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Service -->
+          <div class="cv-section">
+            <h2 class="cv-title">Service &amp; Community Leadership</h2>
+
+            <div class="cv-entry">
+              <div class="cv-dates">2023 &ndash; present</div>
+              <div class="cv-body">
+                <div class="cv-role">Organizer, Theoretical Chemistry and Chemical Biology (TCCB) Seminar Series</div>
+                <div class="cv-place">Rutgers University</div>
+                <div class="cv-notes">
+                  Organizing monthly departmental seminars, coordinating visiting faculty speakers, and facilitating discussions across physical chemistry and chemical physics.
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-dates">Reviewing</div>
+              <div class="cv-body">
+                <div class="cv-role">Peer Reviewer</div>
+                <div class="cv-place">
+                  Regular reviewer for journals published by the American Chemical Society (ACS), Royal Society of Chemistry (RSC), American Institute of Physics (AIP), and Elsevier.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>&copy; 2026 Harender S. Dhattarwal &middot; Department of Chemistry &amp; Chemical Biology, Rutgers University</div>
+        <div class="footer-links">
+          <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:harender.dhattarwal@rutgers.edu">Contact</a>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ── Footer ───────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand-title">Harender S. Dhattarwal, Ph.D.</div>
-          <p class="footer__brand-desc">
-            Postdoctoral Research Associate in Computational Materials Chemistry at Rutgers University.
-          </p>
-        </div>
-        <div>
-          <div class="footer__col-title">Navigation</div>
-          <div class="footer__links">
-            <a href="index.html">Home</a>
-            <a href="research.html">Research Program</a>
-            <a href="publications.html">Publications Archive</a>
-            <a href="about.html">Bio &amp; Curriculum Vitae</a>
-            <a href="group.html">Group &amp; Prospective</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer__col-title">Academic Profiles</div>
-          <div class="footer__links">
-            <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-            <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">The Remsing Lab</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <div>&copy; 2026 Harender S. Dhattarwal. Academic portfolio hosted on GitHub Pages.</div>
-        <div>Department of Chemistry and Chemical Biology · Rutgers University</div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

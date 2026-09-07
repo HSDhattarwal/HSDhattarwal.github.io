@@ -1,210 +1,163 @@
 /**
- * Academic Portfolio JavaScript
- * Harender S. Dhattarwal
- * Fast, pure vanilla JS with zero external dependencies
+ * Academic Portfolio — Harender S. Dhattarwal
+ * Clean, lightweight, dependency-free vanilla JS.
  */
 
 (function () {
   'use strict';
 
-  // ── 1. Theme Management (Light / Dark) ───────────────────
-  const themeToggle = document.getElementById('theme-toggle');
+  // 1. Theme Management
+  const themeBtn = document.getElementById('theme-toggle');
   const storedTheme = localStorage.getItem('hsd_theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-  function getActiveTheme() {
+  function getTheme() {
     if (storedTheme) return storedTheme;
     return prefersDark.matches ? 'dark' : 'light';
   }
 
-  function setTheme(theme) {
+  function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('hsd_theme', theme);
-    updateThemeIcon(theme);
-  }
-
-  function updateThemeIcon(theme) {
-    if (!themeToggle) return;
-    const sunIcon = themeToggle.querySelector('.icon-sun');
-    const moonIcon = themeToggle.querySelector('.icon-moon');
-    if (!sunIcon || !moonIcon) return;
-
-    if (theme === 'dark') {
-      sunIcon.style.display = 'block';
-      moonIcon.style.display = 'none';
-      themeToggle.setAttribute('aria-label', 'Switch to light mode');
-    } else {
-      sunIcon.style.display = 'none';
-      moonIcon.style.display = 'block';
-      themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+    if (!themeBtn) return;
+    const sun = themeBtn.querySelector('.icon-sun');
+    const moon = themeBtn.querySelector('.icon-moon');
+    if (sun && moon) {
+      if (theme === 'dark') {
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        themeBtn.setAttribute('aria-label', 'Switch to light theme');
+      } else {
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+        themeBtn.setAttribute('aria-label', 'Switch to dark theme');
+      }
     }
   }
 
-  // Initialize theme
-  setTheme(getActiveTheme());
+  applyTheme(getTheme());
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
       const current = document.documentElement.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
+      applyTheme(current === 'dark' ? 'light' : 'dark');
     });
   }
 
   prefersDark.addEventListener('change', function (e) {
     if (!localStorage.getItem('hsd_theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
+      applyTheme(e.matches ? 'dark' : 'light');
     }
   });
 
-  // ── 2. Mobile Navigation Drawer ──────────────────────────
-  const navToggle = document.getElementById('nav-toggle');
-  const navOverlay = document.getElementById('nav-overlay');
+  // 2. Mobile Nav Toggle
+  const mobileBtn = document.getElementById('mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
 
-  if (navToggle && navOverlay) {
-    navToggle.addEventListener('click', function () {
-      const isOpen = navOverlay.classList.contains('open');
-      if (isOpen) {
-        navOverlay.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      } else {
-        navOverlay.classList.add('open');
-        navToggle.classList.add('open');
-        navToggle.setAttribute('aria-expanded', 'true');
-      }
-    });
-
-    // Close when clicking an overlay link
-    navOverlay.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navOverlay.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && navOverlay.classList.contains('open')) {
-        navOverlay.classList.remove('open');
-        navToggle.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
+  if (mobileBtn && mobileDrawer) {
+    mobileBtn.addEventListener('click', function () {
+      const open = mobileDrawer.classList.toggle('open');
+      mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 
-  // ── 3. Nav Scroll Shadow ─────────────────────────────────
-  const mainNav = document.getElementById('main-nav');
-  if (mainNav) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 15) {
-        mainNav.classList.add('scrolled');
-      } else {
-        mainNav.classList.remove('scrolled');
-      }
-    }, { passive: true });
-  }
-
-  // ── 4. Active Nav Highlighting ───────────────────────────
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav__links a, .nav__overlay-links a');
-  navLinks.forEach(function (link) {
-    const href = (link.getAttribute('href') || '').split('#')[0];
-    const linkPath = href.split('/').pop() || 'index.html';
-    if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
-
-  // ── 5. Publications Filter & Search ──────────────────────
+  // 3. Publications Search and Filtering
   const searchInput = document.getElementById('pub-search');
-  const yearFilterBtns = document.querySelectorAll('#year-filters .filter-btn');
-  const topicFilterBtns = document.querySelectorAll('#topic-filters .filter-btn');
-  const pubItems = document.querySelectorAll('.pub-item[data-pub-item]');
-  const pubCountBadge = document.getElementById('pub-count');
-  const yearGroups = document.querySelectorAll('.year-group');
+  const yearButtons = document.querySelectorAll('[data-year-filter]');
+  const topicButtons = document.querySelectorAll('[data-topic-filter]');
+  const pubEntries = document.querySelectorAll('.pub-entry[data-year]');
+  const yearBlocks = document.querySelectorAll('.year-block');
+  const counterEl = document.getElementById('pub-counter');
 
-  if (pubItems.length > 0) {
-    let selectedYear = 'all';
-    let selectedTopic = 'all';
-    let searchQuery = '';
+  if (pubEntries.length > 0) {
+    let activeYear = 'all';
+    let activeTopic = 'all';
+    let currentQuery = '';
 
-    function applyPubFilters() {
-      let visibleCount = 0;
+    function filterPubs() {
+      let count = 0;
 
-      pubItems.forEach(function (item) {
-        const itemYear = item.getAttribute('data-year') || '';
-        const itemTopic = item.getAttribute('data-topic') || '';
-        const textContent = (item.textContent || '').toLowerCase();
+      pubEntries.forEach(function (entry) {
+        const year = entry.getAttribute('data-year') || '';
+        const topic = entry.getAttribute('data-topic') || '';
+        const text = entry.textContent.toLowerCase();
 
-        const matchYear = (selectedYear === 'all' || itemYear === selectedYear);
-        const matchTopic = (selectedTopic === 'all' || itemTopic.includes(selectedTopic));
-        const matchSearch = (!searchQuery || textContent.includes(searchQuery));
+        const matchYear = (activeYear === 'all' || year === activeYear);
+        const matchTopic = (activeTopic === 'all' || topic.includes(activeTopic));
+        const matchQuery = (!currentQuery || text.includes(currentQuery));
 
-        if (matchYear && matchTopic && matchSearch) {
-          item.style.display = 'grid';
-          visibleCount++;
+        if (matchYear && matchTopic && matchQuery) {
+          entry.style.display = 'grid';
+          count++;
         } else {
-          item.style.display = 'none';
+          entry.style.display = 'none';
         }
       });
 
-      // Show/hide year group containers based on visible children
-      yearGroups.forEach(function (group) {
-        const hasVisible = Array.from(group.querySelectorAll('.pub-item')).some(function (item) {
-          return item.style.display !== 'none';
+      // Toggle year section headers
+      yearBlocks.forEach(function (block) {
+        const visibleChild = Array.from(block.querySelectorAll('.pub-entry')).some(function (el) {
+          return el.style.display !== 'none';
         });
-        group.style.display = hasVisible ? 'block' : 'none';
+        block.style.display = visibleChild ? 'block' : 'none';
       });
 
-      if (pubCountBadge) {
-        pubCountBadge.textContent = visibleCount + ' of ' + pubItems.length + ' publications';
+      if (counterEl) {
+        counterEl.textContent = count + ' of ' + pubEntries.length + ' publications';
       }
     }
 
     if (searchInput) {
       searchInput.addEventListener('input', function (e) {
-        searchQuery = (e.target.value || '').trim().toLowerCase();
-        applyPubFilters();
+        currentQuery = (e.target.value || '').trim().toLowerCase();
+        filterPubs();
       });
     }
 
-    yearFilterBtns.forEach(function (btn) {
+    yearButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        yearFilterBtns.forEach(b => b.classList.remove('active'));
+        yearButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        selectedYear = btn.getAttribute('data-year') || 'all';
-        applyPubFilters();
+        activeYear = btn.getAttribute('data-year-filter') || 'all';
+        filterPubs();
       });
     });
 
-    topicFilterBtns.forEach(function (btn) {
+    topicButtons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        topicFilterBtns.forEach(b => b.classList.remove('active'));
+        topicButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        selectedTopic = btn.getAttribute('data-topic') || 'all';
-        applyPubFilters();
+        activeTopic = btn.getAttribute('data-topic-filter') || 'all';
+        filterPubs();
       });
     });
   }
 
-  // ── 6. Copy BibTeX Utility ───────────────────────────────
-  document.querySelectorAll('[data-copy-bibtex]').forEach(function (btn) {
+  // 4. BibTeX Drawer Toggle & Copy
+  document.querySelectorAll('[data-bibtex-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const bibtex = btn.getAttribute('data-copy-bibtex');
-      if (!bibtex) return;
-      navigator.clipboard.writeText(bibtex).then(function () {
-        const originalText = btn.textContent;
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(function () {
-          btn.textContent = originalText;
-          btn.classList.remove('copied');
-        }, 2000);
-      }).catch(function () {
-        prompt('Copy BibTeX citation:', bibtex);
-      });
+      const targetId = btn.getAttribute('data-bibtex-toggle');
+      const drawer = document.getElementById(targetId);
+      if (drawer) {
+        drawer.classList.toggle('open');
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-bibtex-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const targetId = btn.getAttribute('data-bibtex-copy');
+      const drawer = document.getElementById(targetId);
+      if (drawer) {
+        const code = drawer.querySelector('.bibtex-code');
+        if (code) {
+          navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+            const original = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function () { btn.textContent = original; }, 1800);
+          });
+        }
+      }
     });
   });
 

@@ -10,44 +10,45 @@
 </head>
 <body>
 
-  <nav class="nav" id="main-nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="index.html">
-        <span class="nav__monogram">HD</span>
-        <div class="nav__brand-text">
-          <span class="nav__name">Harender Dhattarwal</span>
-          <span class="nav__tagline">Rutgers University · Computational Chemistry</span>
-        </div>
-      </a>
-      <div class="nav__menu">
-        <ul class="nav__links" role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="group.html">Group</a></li>
-        </ul>
-        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle color mode">
+  <header class="site-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">Harender S. Dhattarwal</a>
+      <div class="nav-links-wrap">
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="about.html">CV</a></li>
+            <li><a href="group.html">Group</a></li>
+          </ul>
+        </nav>
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
           <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="page-offset" style="display:flex; align-items:center; justify-content:center; padding:80px 24px;">
-    <div style="text-align:center; max-width:540px;">
-      <div style="font-family:var(--font-serif); font-size:5rem; font-weight:700; color:var(--accent); line-height:1;">404</div>
-      <h1 style="font-size:2rem; margin:16px 0 12px;">Page Not Found</h1>
-      <p style="font-size:1.05rem; color:var(--text-secondary); margin-bottom:28px;">
-        The page you are looking for does not exist or may have been moved.
-      </p>
-      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-        <a href="index.html" class="btn-primary">Back to Home</a>
-        <a href="publications.html" class="btn-outline">Browse Publications</a>
+  <div class="page-wrapper">
+    <main class="main-content" style="display:flex; align-items:center; justify-content:center; padding:96px 24px;">
+      <div style="text-align:center; max-width:480px;">
+        <h1 style="font-size:3.5rem; font-weight:700; line-height:1; margin-bottom:12px;">404</h1>
+        <h2 style="font-size:1.5rem; font-weight:600; margin-bottom:12px;">Page Not Found</h2>
+        <p style="font-size:1.02rem; color:var(--text-muted); margin-bottom:24px;">
+          The requested page could not be found. Please check the URL or return to the homepage.
+        </p>
+        <a href="index.html" style="font-size:0.95rem;">&larr; Return to Home</a>
       </div>
-    </div>
-  </main>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>&copy; 2026 Harender S. Dhattarwal &middot; Rutgers University</div>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
