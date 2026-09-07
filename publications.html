@@ -1,89 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="21 peer-reviewed journal articles and 2 book chapters spanning Nature Communications, JACS, J. Phys. Chem., and more. 2019–2025."/>
+  <title>Publications | Harender S. Dhattarwal</title>
+  <meta name="description" content="21 peer-reviewed journal publications and 2 book chapters in Nature Communications, JACS, J. Chem. Phys., ChemPhysChem, PCCP, and more by Harender S. Dhattarwal."/>
   <meta name="author" content="Harender S. Dhattarwal"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://HSDhattarwal.github.io/publications.html"/>
-  <!-- Open Graph -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Publications — Harender Dhattarwal"/>
-  <meta property="og:description" content="21 peer-reviewed journal articles and 2 book chapters spanning Nature Communications, JACS, J. Phys. Chem., and more. 2019–2025."/>
-  <meta property="og:url" content="https://HSDhattarwal.github.io/publications.html"/>
-  <meta property="og:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
-  <meta property="og:site_name" content="Harender Dhattarwal"/>
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Publications — Harender Dhattarwal"/>
-  <meta name="twitter:description" content="21 peer-reviewed journal articles and 2 book chapters spanning Nature Communications, JACS, J. Phys. Chem., and more. 2019–2025."/>
-  <meta name="twitter:image" content="https://HSDhattarwal.github.io/assets/og-image.png"/>
-  <title>Publications | Harender Dhattarwal</title>
-  <meta name="description" content="Complete list of 21 peer-reviewed publications and 2 book chapters by Harender S. Dhattarwal."/>
+
+  <meta property="og:title" content="Publications — Harender S. Dhattarwal"/>
+  <meta property="og:description" content="21 peer-reviewed papers spanning ML potentials, solid-state electrolytes, and electrochemical interfaces."/>
+  <meta property="og:url" content="https://hsdhattarwal.github.io/publications.html"/>
+  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/favicon.svg"/>
+
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+  <link rel="alternate icon" href="favicon.svg"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<nav class="nav" id="main-nav">
-  <div class="container nav__inner">
-    <a class="nav__brand" href="index.html"><span class="nav__monogram">HD</span><span class="nav__name">Harender Dhattarwal</span></a>
-    <ul class="nav__links" role="list">
+  <!-- ── Navigation ───────────────────────────────────────── -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="index.html">
+        <span class="nav__monogram">HD</span>
+        <div class="nav__brand-text">
+          <span class="nav__name">Harender Dhattarwal</span>
+          <span class="nav__tagline">Rutgers University · Computational Chemistry</span>
+        </div>
+      </a>
+
+      <div class="nav__menu">
+        <ul class="nav__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="group.html">Group</a></li>
+        </ul>
+
+        <button class="theme-toggle-btn" id="theme-toggle" type="button" aria-label="Toggle color mode">
+          <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav__overlay" id="nav-overlay">
+    <ul class="nav__overlay-links" role="list">
+      <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="group.html">Group</a></li>
     </ul>
-    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-</nav>
-<div class="nav__overlay" id="nav-overlay">
-  <button class="nav__overlay-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-  <ul class="nav__overlay-links" role="list">
-    <li><a href="research.html">Research</a></li>
-    <li><a href="publications.html">Publications</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="group.html">Group</a></li>
-  </ul>
-</div>
 
-<main class="page-offset">
+  <main class="page-offset">
 
-  <!-- ── Page Header ── -->
-  <header class="pub-header">
-    <div class="container">
-      <div class="pub-header__inner fade-up">
-        <div>
-          <p class="pub-header__label">Complete record</p>
-          <h1 class="pub-header__title">Publications</h1>
-          <p class="pub-stats-strip">
-            <strong>21</strong> Journal Articles
-            <span class="pub-stats-dot">·</span>
-            <strong>2</strong> Book Chapters
-            <span class="pub-stats-dot">·</span>
-            2019–2025
-          </p>
-        </div>
-        <div>
-          <a href="https://scholar.google.com/citations?user=XXXX" class="btn-hero-outline" style="font-size:13px;padding:12px 22px;">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px;flex-shrink:0;"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg>
-            Google Scholar
-          </a>
+    <!-- Page Header -->
+    <header class="pub-header">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+          <div>
+            <span class="section-label">Complete Scholarly Record</span>
+            <h1 class="section-title">Publications</h1>
+            <p class="section-desc">
+              <strong>21</strong> Peer-Reviewed Journal Articles &nbsp;·&nbsp; <strong>2</strong> Invited Book Chapters &nbsp;·&nbsp; 2019–Present
+            </p>
+          </div>
+          <div>
+            <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-outline" style="gap:8px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg>
+              Google Scholar Profile
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ── Sticky Filter Bar ── -->
-  <div class="pub-filter-bar" id="pub-filter-bar">
-    <div class="container">
-      <div class="filter-rows">
+    <!-- Sticky Filter & Search Bar (Borrowed from Yue Group) -->
+    <div class="pub-controls">
+      <div class="container">
+        <div class="pub-search-wrap">
+          <svg class="pub-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="pub-search" class="pub-search-input" placeholder="Search publications by keyword, title, author, or journal... (e.g. paddlewheel, water, DeepMD, electrolyte)" aria-label="Search publications"/>
+        </div>
 
-        <!-- Year filter -->
-        <div class="filter-row">
-          <span class="filter-label">Year</span>
-          <div class="filter-btns" id="year-filters">
+        <div class="pub-filters">
+          <!-- Year Filters -->
+          <div class="pub-filter-group" id="year-filters">
+            <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted); margin-right:4px;">YEAR:</span>
             <button class="filter-btn active" data-year="all">All</button>
             <button class="filter-btn" data-year="2025">2025</button>
             <button class="filter-btn" data-year="2024">2024</button>
@@ -93,503 +105,767 @@
             <button class="filter-btn" data-year="2020">2020</button>
             <button class="filter-btn" data-year="2019">2019</button>
           </div>
-          <span class="filter-result-count" id="result-count"><span id="visible-count">21</span> papers</span>
-        </div>
 
-        <!-- Topic filter -->
-        <div class="filter-row">
-          <span class="filter-label">Topic</span>
-          <div class="filter-btns" id="topic-filters">
+          <!-- Topic Filters -->
+          <div class="pub-filter-group" id="topic-filters">
+            <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted); margin-right:4px;">TOPIC:</span>
             <button class="filter-btn active" data-topic="all">All Topics</button>
-            <button class="filter-btn" data-topic="ml-potentials">ML Potentials</button>
-            <button class="filter-btn" data-topic="solid-state">Solid-State</button>
-            <button class="filter-btn" data-topic="wise">WiSE</button>
-            <button class="filter-btn" data-topic="ionic-liquids">Ionic Liquids</button>
-            <button class="filter-btn" data-topic="des">DES</button>
+            <button class="filter-btn" data-topic="solid-state">Solid-State &amp; Fast Ionics</button>
+            <button class="filter-btn" data-topic="mlip">ML Potentials</button>
+            <button class="filter-btn" data-topic="wise">Water-in-Salt (WiSE)</button>
+            <button class="filter-btn" data-topic="ionic-liquids">Ionic Liquids &amp; DES</button>
+            <button class="filter-btn" data-topic="interfaces">Interfaces &amp; Confinement</button>
+          </div>
+
+          <div class="pub-count-badge" id="pub-count">Showing 21 of 21 publications</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <section class="section" style="padding-top:20px;">
+      <div class="container">
+        
+      <div class="year-group" data-year-container="2025">
+        <h2 class="year-heading">
+          2025
+          <span>3 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2025" data-topic="solid-state">
+            <div class="pub-num">21</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Chem. Phys. <strong>163</strong>, 234503 (2025)</span>
+                <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1063/5.0301431
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202521,
+  author = {Harender S. Dhattarwal and Richard C. Remsing},
+  title = {Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide},
+  journal = {J. Chem. Phys.},
+  year = {2025},
+  volume = {163},
+  pages = {234503},
+  doi = {10.1063/5.0301431}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2025" data-topic="solid-state">
+            <div class="pub-num">20</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Richard C. Remsing</div>
+              <div class="pub-meta">
+                <span class="pub-journal">ChemPhysChem <strong>26</strong> (21), e202500077 (2025)</span>
+                <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1002/cphc.202500077
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202520,
+  author = {Harender S. Dhattarwal and Richard C. Remsing},
+  title = {Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI},
+  journal = {ChemPhysChem},
+  year = {2025},
+  volume = {26},
+  number = {21},
+  pages = {e202500077},
+  doi = {10.1002/cphc.202500077}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-chemphyschem">ChemPhysChem</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2025" data-topic="interfaces">
+            <div class="pub-num">19</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore Lined with Multifunctional Metal Sites</h3>
+              <div class="pub-authors">Taro J. Jones, Kaitlyn G. Dutton, <strong>Harender S. Dhattarwal</strong>, P. Thomas Blackburn, Rupak Saha, Richard C. Remsing, and Mark C. Lipke</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Am. Chem. Soc. <strong>147</strong> (2), 2086–2097 (2025)</span>
+                <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/jacs.4c13038
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{taro202519,
+  author = {Taro J. Jones, Kaitlyn G. Dutton, Harender S. Dhattarwal, P. Thomas Blackburn, Rupak Saha, Richard C. Remsing, and Mark C. Lipke},
+  title = {Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore Lined with Multifunctional Metal Sites},
+  journal = {J. Am. Chem. Soc.},
+  year = {2025},
+  volume = {147},
+  number = {2},
+  pages = {2086–2097},
+  doi = {10.1021/jacs.4c13038}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jacs">JACS</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2024">
+        <h2 class="year-heading">
+          2024
+          <span>2 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2024" data-topic="solid-state">
+            <div class="pub-num">18</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Electronic Paddle-Wheels in a Solid-State Electrolyte</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Rahul Somni, and Richard C. Remsing</div>
+              <div class="pub-meta">
+                <span class="pub-journal">Nat. Commun. <strong>15</strong>, 121 (2024)</span>
+                <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1038/s41467-023-44274-z
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202418,
+  author = {Harender S. Dhattarwal, Rahul Somni, and Richard C. Remsing},
+  title = {Electronic Paddle-Wheels in a Solid-State Electrolyte},
+  journal = {Nat. Commun.},
+  year = {2024},
+  volume = {15},
+  pages = {121},
+  doi = {10.1038/s41467-023-44274-z}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-nature">Nat. Commun.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2024" data-topic="wise">
+            <div class="pub-num">17</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Unveiling the Influence of Ionic Liquid on the Interfacial Structure and Capacitive Performance of Water-in-Salt Electrolytes at Graphite Electrodes</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. C <strong>128</strong> (1), 536–548 (2024)</span>
+                <a href="https://doi.org/10.1021/acs.jpcc.3c06538" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcc.3c06538
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202417,
+  author = {Harender S. Dhattarwal and Hemant K. Kashyap},
+  title = {Unveiling the Influence of Ionic Liquid on the Interfacial Structure and Capacitive Performance of Water-in-Salt Electrolytes at Graphite Electrodes},
+  journal = {J. Phys. Chem. C},
+  year = {2024},
+  volume = {128},
+  number = {1},
+  pages = {536–548},
+  doi = {10.1021/acs.jpcc.3c06538}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. C</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2023">
+        <h2 class="year-heading">
+          2023
+          <span>3 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2023" data-topic="mlip">
+            <div class="pub-num">16</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Dielectric Saturation in Water from a Long Range Machine Learning Model</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Ang Gao, and Richard C. Remsing</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. B <strong>127</strong> (16), 3663–3671 (2023)</span>
+                <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcb.3c00390
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202316,
+  author = {Harender S. Dhattarwal, Ang Gao, and Richard C. Remsing},
+  title = {Dielectric Saturation in Water from a Long Range Machine Learning Model},
+  journal = {J. Phys. Chem. B},
+  year = {2023},
+  volume = {127},
+  number = {16},
+  pages = {3663–3671},
+  doi = {10.1021/acs.jpcb.3c00390}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. B</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2023" data-topic="ionic-liquids">
+            <div class="pub-num">15</div>
+            <div class="pub-content">
+              <h3 class="pub-title">How NaFTA Salt Affects the Structural Landscape and Dynamics of Pyrr1,3 FTA Ionic Liquid: Role of Anion Asymmetry and Salt Concentration</h3>
+              <div class="pub-authors">Navneet Singh, Mrityunjay K. Jha, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Chem. Phys. <strong>158</strong> (10), 104502 (2023)</span>
+                <a href="https://doi.org/10.1063/5.0133966" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1063/5.0133966
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{navneet202315,
+  author = {Navneet Singh, Mrityunjay K. Jha, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {How NaFTA Salt Affects the Structural Landscape and Dynamics of Pyrr1,3 FTA Ionic Liquid: Role of Anion Asymmetry and Salt Concentration},
+  journal = {J. Chem. Phys.},
+  year = {2023},
+  volume = {158},
+  number = {10},
+  pages = {104502},
+  doi = {10.1063/5.0133966}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2023" data-topic="ionic-liquids">
+            <div class="pub-num">14</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Microstructures of Choline Amino Acid based Biocompatible Ionic Liquids</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">Chem. Rec. <strong>23</strong> (5), e202200295 (2023)</span>
+                <a href="https://doi.org/10.1002/tcr.202200295" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1002/tcr.202200295
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202314,
+  author = {Harender S. Dhattarwal and Hemant K. Kashyap},
+  title = {Microstructures of Choline Amino Acid based Biocompatible Ionic Liquids},
+  journal = {Chem. Rec.},
+  year = {2023},
+  volume = {23},
+  number = {5},
+  pages = {e202200295},
+  doi = {10.1002/tcr.202200295}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-wiley">Chem. Rec.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2022">
+        <h2 class="year-heading">
+          2022
+          <span>3 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2022" data-topic="wise">
+            <div class="pub-num">13</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Heterogeneity and Nanostructure of Superconcentrated LiTFSI-EmimTFSI Hybrid Aqueous Electrolytes: Beyond the 21 m Limit of WiSE</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. B <strong>126</strong> (28), 5291–5301 (2022)</span>
+                <a href="https://doi.org/10.1021/acs.jpcb.2c02822" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcb.2c02822
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202213,
+  author = {Harender S. Dhattarwal and Hemant K. Kashyap},
+  title = {Heterogeneity and Nanostructure of Superconcentrated LiTFSI-EmimTFSI Hybrid Aqueous Electrolytes: Beyond the 21 m Limit of WiSE},
+  journal = {J. Phys. Chem. B},
+  year = {2022},
+  volume = {126},
+  number = {28},
+  pages = {5291–5301},
+  doi = {10.1021/acs.jpcb.2c02822}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. B</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2022" data-topic="interfaces">
+            <div class="pub-num">12</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Mechanistic Insight on the Stability of Ether and Fluorinated Ether Solvent-based Lithium Bis(fluoromethanesulfonyl) Electrolytes near Li Metal Surface</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Jer-Lai Kuo, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. C <strong>126</strong> (21), 8953–8964 (2022)</span>
+                <a href="https://doi.org/10.1021/acs.jpcc.2c02323" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcc.2c02323
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender202212,
+  author = {Harender S. Dhattarwal, Jer-Lai Kuo, and Hemant K. Kashyap},
+  title = {Mechanistic Insight on the Stability of Ether and Fluorinated Ether Solvent-based Lithium Bis(fluoromethanesulfonyl) Electrolytes near Li Metal Surface},
+  journal = {J. Phys. Chem. C},
+  year = {2022},
+  volume = {126},
+  number = {21},
+  pages = {8953–8964},
+  doi = {10.1021/acs.jpcc.2c02323}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. C</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2022" data-topic="ionic-liquids">
+            <div class="pub-num">11</div>
+            <div class="pub-content">
+              <h3 class="pub-title">An Overview of Structure and Dynamics Associated with Hydrophobic Deep Eutectic Solvents and Their Applications in Extraction Processes</h3>
+              <div class="pub-authors">Akshay Malik, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">ChemPhysChem <strong>23</strong> (18), e202200239 (2022)</span>
+                <a href="https://doi.org/10.1002/cphc.202200239" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1002/cphc.202200239
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{akshay202211,
+  author = {Akshay Malik, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {An Overview of Structure and Dynamics Associated with Hydrophobic Deep Eutectic Solvents and Their Applications in Extraction Processes},
+  journal = {ChemPhysChem},
+  year = {2022},
+  volume = {23},
+  number = {18},
+  pages = {e202200239},
+  doi = {10.1002/cphc.202200239}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-chemphyschem">ChemPhysChem</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2021">
+        <h2 class="year-heading">
+          2021
+          <span>5 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2021" data-topic="mlip">
+            <div class="pub-num">10</div>
+            <div class="pub-content">
+              <h3 class="pub-title">First-principles based Theoretical Investigation of Impact of Polyolefin Structure on Photo-oxidation Behaviour</h3>
+              <div class="pub-authors">Vikas Khatri, <strong>Harender S. Dhattarwal</strong>, Hemant K. Kashyap, and Gurmeet Singh</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Comput. Chem. <strong>42</strong> (24), 1710–1720 (2021)</span>
+                <a href="https://doi.org/10.1002/jcc.26702" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1002/jcc.26702
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{vikas202110,
+  author = {Vikas Khatri, Harender S. Dhattarwal, Hemant K. Kashyap, and Gurmeet Singh},
+  title = {First-principles based Theoretical Investigation of Impact of Polyolefin Structure on Photo-oxidation Behaviour},
+  journal = {J. Comput. Chem.},
+  year = {2021},
+  volume = {42},
+  number = {24},
+  pages = {1710–1720},
+  doi = {10.1002/jcc.26702}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-wiley">J. Comput. Chem.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2021" data-topic="interfaces">
+            <div class="pub-num">09</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Structure of Cholinium Glycinate Biocompatible Ionic Liquid at Graphite Electrode Interface</h3>
+              <div class="pub-authors">Aditya Gupta, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Chem. Phys. <strong>154</strong>, 184702 (2021)</span>
+                <a href="https://doi.org/10.1063/5.0049171" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1063/5.0049171
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{aditya20219,
+  author = {Aditya Gupta, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {Structure of Cholinium Glycinate Biocompatible Ionic Liquid at Graphite Electrode Interface},
+  journal = {J. Chem. Phys.},
+  year = {2021},
+  volume = {154},
+  pages = {184702},
+  doi = {10.1063/5.0049171}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2021" data-topic="ionic-liquids">
+            <div class="pub-num">08</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Unique and Generic Structural Features of Cholinium Amino Acid Biocompatible Ionic Liquids</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">Phys. Chem. Chem. Phys. <strong>23</strong>, 10662–10673 (2021)</span>
+                <a href="https://doi.org/10.1039/D1CP00937K" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1039/D1CP00937K
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender20218,
+  author = {Harender S. Dhattarwal and Hemant K. Kashyap},
+  title = {Unique and Generic Structural Features of Cholinium Amino Acid Biocompatible Ionic Liquids},
+  journal = {Phys. Chem. Chem. Phys.},
+  year = {2021},
+  volume = {23},
+  pages = {10662–10673},
+  doi = {10.1039/D1CP00937K}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-rsc">PCCP</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2021" data-topic="ionic-liquids">
+            <div class="pub-num">07</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Distinct Solvation Structures of CO2 and SO2 in Reline and Ethaline Deep Eutectic Solvents Revealed by AIMD Simulations</h3>
+              <div class="pub-authors">Akshay Malik, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. B <strong>125</strong> (7), 1852–1863 (2021)</span>
+                <a href="https://doi.org/10.1021/acs.jpcb.0c09824" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcb.0c09824
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{akshay20217,
+  author = {Akshay Malik, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {Distinct Solvation Structures of CO2 and SO2 in Reline and Ethaline Deep Eutectic Solvents Revealed by AIMD Simulations},
+  journal = {J. Phys. Chem. B},
+  year = {2021},
+  volume = {125},
+  number = {7},
+  pages = {1852–1863},
+  doi = {10.1021/acs.jpcb.0c09824}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. B</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2021" data-topic="wise">
+            <div class="pub-num">06</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Intercalation–deintercalation of water-in-salt electrolytes in nanoscale hydrophobic confinement</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Richard C. Remsing, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">Nanoscale <strong>13</strong>, 4195–4204 (2021)</span>
+                <a href="https://doi.org/10.1039/D0NR08163A" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1039/D0NR08163A
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender20216,
+  author = {Harender S. Dhattarwal, Richard C. Remsing, and Hemant K. Kashyap},
+  title = {Intercalation–deintercalation of water-in-salt electrolytes in nanoscale hydrophobic confinement},
+  journal = {Nanoscale},
+  year = {2021},
+  volume = {13},
+  pages = {4195–4204},
+  doi = {10.1039/D0NR08163A}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-rsc">Nanoscale</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2020">
+        <h2 class="year-heading">
+          2020
+          <span>3 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2020" data-topic="interfaces">
+            <div class="pub-num">05</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Mechanistic Insight on the Formation of Solid Electrolyte Interphase (SEI) by Acetonitrile-Based Superconcentrated [Li][TFSI] Electrolyte Near Li Metal</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Yun-Wen Chen, Jer-Lai Kuo, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. C <strong>124</strong> (50), 27495–27506 (2020)</span>
+                <a href="https://doi.org/10.1021/acs.jpcc.0c08009" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcc.0c08009
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender20205,
+  author = {Harender S. Dhattarwal, Yun-Wen Chen, Jer-Lai Kuo, and Hemant K. Kashyap},
+  title = {Mechanistic Insight on the Formation of Solid Electrolyte Interphase (SEI) by Acetonitrile-Based Superconcentrated [Li][TFSI] Electrolyte Near Li Metal},
+  journal = {J. Phys. Chem. C},
+  year = {2020},
+  volume = {124},
+  number = {50},
+  pages = {27495–27506},
+  doi = {10.1021/acs.jpcc.0c08009}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. C</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2020" data-topic="ionic-liquids">
+            <div class="pub-num">04</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Molecular Dynamics Investigation of Wetting-Dewetting Behavior of Reline DES Nanodroplet at Model Carbon Material</h3>
+              <div class="pub-authors">Akshay Malik, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Chem. Phys. <strong>153</strong>, 164704 (2020)</span>
+                <a href="https://doi.org/10.1063/5.0023460" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1063/5.0023460
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{akshay20204,
+  author = {Akshay Malik, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {Molecular Dynamics Investigation of Wetting-Dewetting Behavior of Reline DES Nanodroplet at Model Carbon Material},
+  journal = {J. Chem. Phys.},
+  year = {2020},
+  volume = {153},
+  pages = {164704},
+  doi = {10.1063/5.0023460}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2020" data-topic="interfaces">
+            <div class="pub-num">03</div>
+            <div class="pub-content">
+              <h3 class="pub-title">How Flexibility of Nanoscale Solvophobic Confining Material Promotes Capillary Evaporation of Ionic Liquids</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong>, Richard C. Remsing, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Phys. Chem. C <strong>124</strong> (8), 4899–4909 (2020)</span>
+                <a href="https://doi.org/10.1021/acs.jpcc.9b11755" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1021/acs.jpcc.9b11755
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender20203,
+  author = {Harender S. Dhattarwal, Richard C. Remsing, and Hemant K. Kashyap},
+  title = {How Flexibility of Nanoscale Solvophobic Confining Material Promotes Capillary Evaporation of Ionic Liquids},
+  journal = {J. Phys. Chem. C},
+  year = {2020},
+  volume = {124},
+  number = {8},
+  pages = {4899–4909},
+  doi = {10.1021/acs.jpcc.9b11755}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-acs">J. Phys. Chem. C</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="year-group" data-year-container="2019">
+        <h2 class="year-heading">
+          2019
+          <span>2 papers</span>
+        </h2>
+        <div class="pub-list">
+          <article class="pub-item" data-pub-item data-year="2019" data-topic="ionic-liquids">
+            <div class="pub-num">02</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Molecular Dynamics Investigation of Wetting-Dewetting Behavior of Model Carbon Material by 1-Butyl-3-methylimidazolium Acetate Ionic Liquid Nanodroplet</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Chem. Phys. <strong>151</strong>, 244705 (2019)</span>
+                <a href="https://doi.org/10.1063/1.5131851" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1063/1.5131851
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{harender20192,
+  author = {Harender S. Dhattarwal and Hemant K. Kashyap},
+  title = {Molecular Dynamics Investigation of Wetting-Dewetting Behavior of Model Carbon Material by 1-Butyl-3-methylimidazolium Acetate Ionic Liquid Nanodroplet},
+  journal = {J. Chem. Phys.},
+  year = {2019},
+  volume = {151},
+  pages = {244705},
+  doi = {10.1063/1.5131851}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-jcp">J. Chem. Phys.</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2019" data-topic="interfaces">
+            <div class="pub-num">01</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Molecular Dynamics Investigation of Electrostatic Properties of Pyrrolidinium Cation Based Ionic Liquids Near Electrified Carbon Electrodes</h3>
+              <div class="pub-authors">Shobha Sharma, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">J. Mol. Liq. <strong>291</strong>, 111269 (2019)</span>
+                <a href="https://doi.org/10.1016/j.molliq.2019.111269" target="_blank" rel="noopener noreferrer" class="pub-doi-pill">
+          DOI: 10.1016/j.molliq.2019.111269
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+                <button type="button" class="pub-doi-pill" style="cursor:pointer; background:var(--bg-surface);" data-copy-bibtex="@article{shobha20191,
+  author = {Shobha Sharma, Harender S. Dhattarwal, and Hemant K. Kashyap},
+  title = {Molecular Dynamics Investigation of Electrostatic Properties of Pyrrolidinium Cation Based Ionic Liquids Near Electrified Carbon Electrodes},
+  journal = {J. Mol. Liq.},
+  year = {2019},
+  volume = {291},
+  pages = {111269},
+  doi = {10.1016/j.molliq.2019.111269}
+}" title="Copy BibTeX Citation">
+                  BibTeX
+                </button>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-elsevier">J. Mol. Liq.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+        <!-- Book Chapters -->
+        <div class="year-group" style="margin-top:56px;">
+          <h2 class="year-heading">
+            Invited Book Chapters
+            <span>2 book chapters</span>
+          </h2>
+          <div class="pub-list">
+            
+          <article class="pub-item" data-pub-item data-year="2022" data-topic="chapters">
+            <div class="pub-num">B2</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Structure and Stability of Modern Electrolytes in Nanoscale Confinements from Molecular Dynamics Perspective</h3>
+              <div class="pub-authors"><strong>Harender S. Dhattarwal</strong> and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">In <em>Synthesis and Applications of Nanomaterials and Nanocomposites</em>, Elsevier (2022)</span>
+                <span class="news-tag" style="font-size:0.75rem; background:var(--accent-soft); color:var(--accent);">Invited Book Chapter</span>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-elsevier">Book Chapter</span>
+            </div>
+          </article>
+          <article class="pub-item" data-pub-item data-year="2022" data-topic="chapters">
+            <div class="pub-num">B1</div>
+            <div class="pub-content">
+              <h3 class="pub-title">Advances in Understanding the Applications of Deep Eutectic Solvents in Gas Capture</h3>
+              <div class="pub-authors">Akshay Malik, <strong>Harender S. Dhattarwal</strong>, and Hemant K. Kashyap</div>
+              <div class="pub-meta">
+                <span class="pub-journal">In <em>Deep Eutectic Solvents: Fundamentals and Emerging Applications</em>, Elsevier (2022)</span>
+                <span class="news-tag" style="font-size:0.75rem; background:var(--accent-soft); color:var(--accent);">Invited Book Chapter</span>
+              </div>
+            </div>
+            <div class="pub-actions">
+              <span class="badge-journal badge-elsevier">Book Chapter</span>
+            </div>
+          </article>
           </div>
         </div>
 
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- ── Publication List ── -->
-  <section class="pub-content-area">
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="footer">
     <div class="container">
-
-      <div id="pub-no-results" class="pub-no-results">
-        No publications match the selected filters.
-      </div>
-
-      <div class="pub-year-section" data-year-group="2025">
-        <h2 class="pub-year-heading fade-up">2025</h2>
-        <div class="pub-item reveal" data-year="2025" data-topic="wise">
-          <div class="pub-num">01</div>
-          <div class="pub-inner">
-            <div class="pub-title">Tuning Brønsted Acidity by up to 12 p<em>K</em><sub>a</sub> Units in a Redox-Active Nanopore</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, P. Bharadwaj, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Am. Chem. Soc.</em> 2025</span>
-              <a href="https://doi.org/10.1021/jacs.5c01234" class="pub-doi-link" title="Open DOI">10.1021/jacs.5c01234<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">JACS</span>
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-title">Harender S. Dhattarwal, Ph.D.</div>
+          <p class="footer__brand-desc">
+            Postdoctoral Research Associate in Computational Materials Chemistry at Rutgers University.
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigation</div>
+          <div class="footer__links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research Program</a>
+            <a href="publications.html">Publications Archive</a>
+            <a href="about.html">Bio &amp; Curriculum Vitae</a>
+            <a href="group.html">Group &amp; Prospective</a>
           </div>
         </div>
-        <div class="pub-item reveal" data-year="2025" data-topic="solid-state">
-          <div class="pub-num">02</div>
-          <div class="pub-inner">
-            <div class="pub-title">Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>ChemPhysChem</em> 2025</span>
-              <a href="https://doi.org/10.1002/cphc.202500089" class="pub-doi-link" title="Open DOI">10.1002/cphc.202500089<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Solid-State</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-wiley">ChemPhysChem</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2025" data-topic="solid-state">
-          <div class="pub-num">03</div>
-          <div class="pub-inner">
-            <div class="pub-title">Hidden Quantum Disorder Enables Superionic Conduction in Na<sub>3</sub>PS<sub>4</sub></div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Chem. Phys.</em> 2025</span>
-              <a href="https://doi.org/10.1063/5.0231456" class="pub-doi-link" title="Open DOI">10.1063/5.0231456<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Solid-State</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-aip">J. Chem. Phys.</span>
+        <div>
+          <div class="footer__col-title">Academic Profiles</div>
+          <div class="footer__links">
+            <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://remsinglab.com" target="_blank" rel="noopener noreferrer">The Remsing Lab</a>
           </div>
         </div>
       </div>
 
-      <div class="pub-year-section" data-year-group="2024">
-        <h2 class="pub-year-heading fade-up">2024</h2>
-        <div class="pub-item reveal" data-year="2024" data-topic="solid-state">
-          <div class="pub-num">04</div>
-          <div class="pub-inner">
-            <div class="pub-title">Electronic Paddle-Wheels in a Solid-State Electrolyte</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Nat. Commun.</em> 2024, <strong>15</strong>, 121</span>
-              <a href="https://doi.org/10.1038/s41467-024-45121-3" class="pub-doi-link" title="Open DOI">10.1038/s41467-024-45121-3<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Solid-State</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-nature">Nat. Commun.</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2024" data-topic="wise">
-          <div class="pub-num">05</div>
-          <div class="pub-inner">
-            <div class="pub-title">Structural Origins of Water-in-Salt Electrolyte Behavior at the Graphite Electrode</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. C</em> 2024</span>
-              <a href="https://doi.org/10.1021/acs.jpcc.4c01872" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcc.4c01872<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. C</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2024" data-topic="ml-potentials">
-          <div class="pub-num">06</div>
-          <div class="pub-inner">
-            <div class="pub-title">Long-Range Machine Learning Potentials for Polar Liquids and Electrolyte Solutions</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Chem. Theory Comput.</em> 2024</span>
-              <a href="https://doi.org/10.1021/acs.jctc.4c00567" class="pub-doi-link" title="Open DOI">10.1021/acs.jctc.4c00567<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">ML Potentials</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Chem. Theory Comput.</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2024" data-topic="wise">
-          <div class="pub-num">07</div>
-          <div class="pub-inner">
-            <div class="pub-title">Ion Adsorption and Double-Layer Structure in Superconcentrated LiTFSI Electrolytes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, M. K. Petersen, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Phys. Chem. Chem. Phys.</em> 2024</span>
-              <a href="https://doi.org/10.1039/D4CP01234A" class="pub-doi-link" title="Open DOI">10.1039/D4CP01234A<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">Phys. Chem. Chem. Phys.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-year-section" data-year-group="2023">
-        <h2 class="pub-year-heading fade-up">2023</h2>
-        <div class="pub-item reveal" data-year="2023" data-topic="ml-potentials">
-          <div class="pub-num">08</div>
-          <div class="pub-inner">
-            <div class="pub-title">Dielectric Saturation in Water from a Long Range Machine Learning Model</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. B</em> 2023</span>
-              <a href="https://doi.org/10.1021/acs.jpcb.3c00390" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcb.3c00390<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">ML Potentials</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. B</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2023" data-topic="ml-potentials">
-          <div class="pub-num">09</div>
-          <div class="pub-inner">
-            <div class="pub-title">Machine Learning Molecular Dynamics of Ion Transport in Concentrated Aqueous Electrolytes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. Lett.</em> 2023</span>
-              <a href="https://doi.org/10.1021/acs.jpclett.3c02345" class="pub-doi-link" title="Open DOI">10.1021/acs.jpclett.3c02345<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">ML Potentials</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. Lett.</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2023" data-topic="ionic-liquids">
-          <div class="pub-num">10</div>
-          <div class="pub-inner">
-            <div class="pub-title">Structure and Dynamics of Ionic Liquids Confined in Graphene Nanochannels</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, J. Montes de Oca, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Nanoscale</em> 2023</span>
-              <a href="https://doi.org/10.1039/D3NR04567B" class="pub-doi-link" title="Open DOI">10.1039/D3NR04567B<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Ionic Liquids</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">Nanoscale</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-year-section" data-year-group="2022">
-        <h2 class="pub-year-heading fade-up">2022</h2>
-        <div class="pub-item reveal" data-year="2022" data-topic="wise">
-          <div class="pub-num">11</div>
-          <div class="pub-inner">
-            <div class="pub-title">Ether and Fluorinated Ether Electrolyte Structure at Charged Carbon Interfaces</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. C</em> 2022</span>
-              <a href="https://doi.org/10.1021/acs.jpcc.2c05678" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcc.2c05678<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. C</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2022" data-topic="wise">
-          <div class="pub-num">12</div>
-          <div class="pub-inner">
-            <div class="pub-title">Hybrid Aqueous/Organic Water-in-Salt Electrolytes for High-Voltage Energy Storage</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. B</em> 2022</span>
-              <a href="https://doi.org/10.1021/acs.jpcb.2c03901" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcb.2c03901<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. B</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2022" data-topic="wise">
-          <div class="pub-num">13</div>
-          <div class="pub-inner">
-            <div class="pub-title">Molecular Mechanisms of Electrochemical Stability Windows in Superconcentrated Electrolytes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, S. Wan, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Phys. Chem. Chem. Phys.</em> 2022</span>
-              <a href="https://doi.org/10.1039/D2CP01890C" class="pub-doi-link" title="Open DOI">10.1039/D2CP01890C<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">Phys. Chem. Chem. Phys.</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2022" data-topic="des">
-          <div class="pub-num">14</div>
-          <div class="pub-inner">
-            <div class="pub-title">Deep Eutectic Solvent Structure and Ion Dynamics at Electrified Interfaces</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Chem. Phys.</em> 2022</span>
-              <a href="https://doi.org/10.1063/5.0098712" class="pub-doi-link" title="Open DOI">10.1063/5.0098712<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">DES</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-aip">J. Chem. Phys.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-year-section" data-year-group="2021">
-        <h2 class="pub-year-heading fade-up">2021</h2>
-        <div class="pub-item reveal" data-year="2021" data-topic="wise">
-          <div class="pub-num">15</div>
-          <div class="pub-inner">
-            <div class="pub-title">Water-in-Salt Electrolyte Structure and Dynamics under Nanopore Confinement</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Nanoscale</em> 2021</span>
-              <a href="https://doi.org/10.1039/D1NR02345F" class="pub-doi-link" title="Open DOI">10.1039/D1NR02345F<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">Nanoscale</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2021" data-topic="des">
-          <div class="pub-num">16</div>
-          <div class="pub-inner">
-            <div class="pub-title">Solvation Structure and Hydrogen Bonding Networks in Deep Eutectic Solvents</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. B</em> 2021</span>
-              <a href="https://doi.org/10.1021/acs.jpcb.1c04123" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcb.1c04123<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">DES</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. B</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2021" data-topic="ionic-liquids">
-          <div class="pub-num">17</div>
-          <div class="pub-inner">
-            <div class="pub-title">Molecular Dynamics of Imidazolium Ionic Liquids at Charged Carbon Electrodes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, A. Torabi, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. Lett.</em> 2021</span>
-              <a href="https://doi.org/10.1021/acs.jpclett.1c01234" class="pub-doi-link" title="Open DOI">10.1021/acs.jpclett.1c01234<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Ionic Liquids</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. Lett.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-year-section" data-year-group="2020">
-        <h2 class="pub-year-heading fade-up">2020</h2>
-        <div class="pub-item reveal" data-year="2020" data-topic="wise">
-          <div class="pub-num">18</div>
-          <div class="pub-inner">
-            <div class="pub-title">Ion Transport Mechanisms and Conductivity Anomalies in Water-in-Salt Electrolytes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. B</em> 2020</span>
-              <a href="https://doi.org/10.1021/acs.jpcb.0c06789" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcb.0c06789<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. B</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2020" data-topic="ml-potentials">
-          <div class="pub-num">19</div>
-          <div class="pub-inner">
-            <div class="pub-title">Ab Initio Molecular Dynamics of Electrode–Electrolyte Interfaces from First Principles</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong>, P. Goyal, and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Chem. Theory Comput.</em> 2020</span>
-              <a href="https://doi.org/10.1021/acs.jctc.0c00456" class="pub-doi-link" title="Open DOI">10.1021/acs.jctc.0c00456<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">ML Potentials</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Chem. Theory Comput.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-year-section" data-year-group="2019">
-        <h2 class="pub-year-heading fade-up">2019</h2>
-        <div class="pub-item reveal" data-year="2019" data-topic="des">
-          <div class="pub-num">20</div>
-          <div class="pub-inner">
-            <div class="pub-title">Ion Solvation and Association Equilibria in Choline Chloride Deep Eutectic Solvents</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>Phys. Chem. Chem. Phys.</em> 2019</span>
-              <a href="https://doi.org/10.1039/C9CP04567G" class="pub-doi-link" title="Open DOI">10.1039/C9CP04567G<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">DES</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">Phys. Chem. Chem. Phys.</span>
-          </div>
-        </div>
-        <div class="pub-item reveal" data-year="2019" data-topic="ionic-liquids">
-          <div class="pub-num">21</div>
-          <div class="pub-inner">
-            <div class="pub-title">Confinement-Induced Structural Transitions in Ionic Liquids at Nanoporous Carbon Electrodes</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite"><em>J. Phys. Chem. C</em> 2019</span>
-              <a href="https://doi.org/10.1021/acs.jpcc.9c08901" class="pub-doi-link" title="Open DOI">10.1021/acs.jpcc.9c08901<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">Ionic Liquids</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-acs">J. Phys. Chem. C</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Book Chapters -->
-      <div class="pub-chapters-section">
-        <h2 class="pub-chapters-heading fade-up">Book Chapters</h2>
-        <div class="pub-item pub-item--chapter">
-          <div class="pub-num pub-num--chapter">BC1</div>
-          <div class="pub-inner">
-            <div class="pub-title">Machine Learning Potentials for Electrolyte Simulations: Methods and Applications</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite">in <em>Frontiers in Computational Chemistry</em>, Wiley-VCH, 2024. Chapter 7.</span>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">ML Potentials</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-wiley">Wiley-VCH</span>
-          </div>
-        </div>
-        <div class="pub-item pub-item--chapter">
-          <div class="pub-num pub-num--chapter">BC2</div>
-          <div class="pub-inner">
-            <div class="pub-title">Water-in-Salt Electrolytes: Structure, Properties, and Electrochemical Applications</div>
-            <div class="pub-authors"><strong>H. S. Dhattarwal</strong> and R. C. Remsing</div>
-            <div class="pub-meta-row">
-              <span class="pub-journal-cite">in <em>Advanced Battery Electrolytes</em>, Royal Society of Chemistry, 2023. Chapter 4.</span>
-              <span class="tag tag--gray" style="font-size:10px;padding:2px 7px;">WiSE</span>
-            </div>
-          </div>
-          <div class="pub-badge-col">
-            <span class="jbadge jbadge-rsc">RSC</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__col">
-        <div class="footer__name">Harender S. Dhattarwal</div>
-        <div class="footer__pos">Postdoctoral Research Associate</div>
-        <div class="footer__inst">Rutgers University<br>Dept. of Chemistry &amp; Chemical Biology</div>
-      </div>
-      <div class="footer__col">
-        <div class="footer__col-label">Navigation</div>
-        <ul class="footer__nav">
-          <li><a href="research.html">Research</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="group.html">Group</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <div class="footer__col-label">Contact</div>
-        <a href="mailto:hsd@chem.rutgers.edu" class="footer__email">hsd@chem.rutgers.edu</a>
-        <div class="footer__social">
-          <a href="https://scholar.google.com/citations?user=XXXX" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" class="icon-scholar"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-24L0 9.5h3.6l8.4-6.3 8.4 6.3H24L12 0Zm-5 13.8a7 7 0 0 1 10 0L24 9.5 12 1 0 9.5l5 4.3Z"/></svg></a>
-          <a href="https://www.linkedin.com/in/HSDhattarwal" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="https://github.com/HSDhattarwal" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-        </div>
+      <div class="footer__bottom">
+        <div>&copy; 2026 Harender S. Dhattarwal. Academic portfolio hosted on GitHub Pages.</div>
+        <div>Department of Chemistry and Chemical Biology · Rutgers University</div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>&#169; 2025 Harender S. Dhattarwal</span>
-      <span>Built with research in mind</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="js/main.js"></script>
-<script>
-/* ── Publications Filter ─────────────────────────────────────── */
-(function () {
-  let activeYear  = 'all';
-  let activeTopic = 'all';
-
-  const items      = document.querySelectorAll('.pub-item[data-year]');
-  const yearSects  = document.querySelectorAll('.pub-year-section');
-  const noResults  = document.getElementById('pub-no-results');
-  const countEl    = document.getElementById('visible-count');
-
-  function applyFilters() {
-    let visible = 0;
-
-    items.forEach(item => {
-      const yMatch = activeYear  === 'all' || item.dataset.year  === activeYear;
-      const tMatch = activeTopic === 'all' || item.dataset.topic === activeTopic;
-      const show   = yMatch && tMatch;
-      item.classList.toggle('filtered-out', !show);
-      if (show) visible++;
-    });
-
-    // Hide empty year groups
-    yearSects.forEach(sec => {
-      const anyVisible = sec.querySelectorAll('.pub-item:not(.filtered-out)').length > 0;
-      sec.style.display = anyVisible ? '' : 'none';
-    });
-
-    // Count and no-results
-    if (countEl) countEl.textContent = visible;
-    if (noResults) noResults.classList.toggle('visible', visible === 0);
-  }
-
-  // Year filter
-  document.querySelectorAll('.filter-btn[data-year]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn[data-year]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeYear = btn.dataset.year;
-      applyFilters();
-    });
-  });
-
-  // Topic filter
-  document.querySelectorAll('.filter-btn[data-topic]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn[data-topic]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeTopic = btn.dataset.topic;
-      applyFilters();
-    });
-  });
-})();
-</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
