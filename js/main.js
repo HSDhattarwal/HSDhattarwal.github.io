@@ -1,164 +1,64 @@
-/**
- * Academic Portfolio — Harender S. Dhattarwal
- * Clean, lightweight, dependency-free vanilla JS.
- */
+'use strict';
+
+// Normalisation also makes common chemistry notation searchable as plain text.
+function publicationMatches(text, query) {
+  const normalise = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/ø/g, 'o').replace(/Ø/g, 'O').toLowerCase();
+  const haystack = normalise(text);
+  return normalise(query).trim().split(/\s+/).every(word => haystack.includes(word));
+}
 
 (function () {
-  'use strict';
+  const form = document.getElementById('publication-search');
+  if (!form) return;
+  const input = document.getElementById('pub-search');
+  const counter = document.getElementById('pub-counter');
+  const empty = document.getElementById('no-results');
+  const entries = Array.from(document.querySelectorAll('.pub-entry'));
+  const groups = Array.from(document.querySelectorAll('.year-block'));
+  const jumps = Array.from(document.querySelectorAll('.year-links a'));
+  const initialCount = counter.textContent;
+  // Index what a reader sees, not the hidden BibTeX (whose field names would match almost every query).
+  const searchable = entries.map(entry => ({
+    entry,
+    text: Array.from(entry.querySelectorAll('h3, .pub-authors, .pub-citation, .pub-meta')).map(node => node.textContent).join(' ')
+  }));
 
-  // 1. Theme Management
-  const themeBtn = document.getElementById('theme-toggle');
-  const storedTheme = localStorage.getItem('hsd_theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function getTheme() {
-    if (storedTheme) return storedTheme;
-    return prefersDark.matches ? 'dark' : 'light';
+  function filter() {
+    let count = 0;
+    searchable.forEach(({ entry, text }) => {
+      entry.hidden = !publicationMatches(text, input.value);
+      if (!entry.hidden) count++;
+    });
+    groups.forEach(group => {
+      group.hidden = !Array.from(group.querySelectorAll('.pub-entry')).some(entry => !entry.hidden);
+    });
+    jumps.forEach(link => {
+      link.hidden = document.querySelector(link.getAttribute('href')).hidden;
+    });
+    const yearNav = document.querySelector('.year-links');
+    if (yearNav) yearNav.hidden = jumps.every(link => link.hidden);
+    empty.hidden = count !== 0;
+    counter.textContent = input.value.trim() ? `Showing ${count} of ${entries.length} publications` : initialCount;
+    // Keep the query in the address so a filtered list can be shared.
+    const url = new URL(window.location.href);
+    if (input.value.trim()) url.searchParams.set('q', input.value.trim()); else url.searchParams.delete('q');
+    window.history.replaceState(null, '', url);
   }
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('hsd_theme', theme);
-    if (!themeBtn) return;
-    const sun = themeBtn.querySelector('.icon-sun');
-    const moon = themeBtn.querySelector('.icon-moon');
-    if (sun && moon) {
-      if (theme === 'dark') {
-        sun.style.display = 'block';
-        moon.style.display = 'none';
-        themeBtn.setAttribute('aria-label', 'Switch to light theme');
-      } else {
-        sun.style.display = 'none';
-        moon.style.display = 'block';
-        themeBtn.setAttribute('aria-label', 'Switch to dark theme');
-      }
-    }
+  form.addEventListener('submit', event => event.preventDefault());
+  input.addEventListener('input', filter);
+  const clear = event => {
+    event.preventDefault();
+    input.value = '';
+    filter();
+    input.focus();
+  };
+  form.addEventListener('reset', clear);
+  document.querySelectorAll('[data-clear]').forEach(button => button.addEventListener('click', clear));
+  form.hidden = false;
+  const initial = new URLSearchParams(window.location.search).get('q');
+  if (initial) {
+    input.value = initial;
+    filter();
   }
-
-  applyTheme(getTheme());
-
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      const current = document.documentElement.getAttribute('data-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
-
-  prefersDark.addEventListener('change', function (e) {
-    if (!localStorage.getItem('hsd_theme')) {
-      applyTheme(e.matches ? 'dark' : 'light');
-    }
-  });
-
-  // 2. Mobile Nav Toggle
-  const mobileBtn = document.getElementById('mobile-toggle');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-
-  if (mobileBtn && mobileDrawer) {
-    mobileBtn.addEventListener('click', function () {
-      const open = mobileDrawer.classList.toggle('open');
-      mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-
-  // 3. Publications Search and Filtering
-  const searchInput = document.getElementById('pub-search');
-  const yearButtons = document.querySelectorAll('[data-year-filter]');
-  const topicButtons = document.querySelectorAll('[data-topic-filter]');
-  const pubEntries = document.querySelectorAll('.pub-entry[data-year]');
-  const yearBlocks = document.querySelectorAll('.year-block');
-  const counterEl = document.getElementById('pub-counter');
-
-  if (pubEntries.length > 0) {
-    let activeYear = 'all';
-    let activeTopic = 'all';
-    let currentQuery = '';
-
-    function filterPubs() {
-      let count = 0;
-
-      pubEntries.forEach(function (entry) {
-        const year = entry.getAttribute('data-year') || '';
-        const topic = entry.getAttribute('data-topic') || '';
-        const text = entry.textContent.toLowerCase();
-
-        const matchYear = (activeYear === 'all' || year === activeYear);
-        const matchTopic = (activeTopic === 'all' || topic.includes(activeTopic));
-        const matchQuery = (!currentQuery || text.includes(currentQuery));
-
-        if (matchYear && matchTopic && matchQuery) {
-          entry.style.display = 'grid';
-          count++;
-        } else {
-          entry.style.display = 'none';
-        }
-      });
-
-      // Toggle year section headers
-      yearBlocks.forEach(function (block) {
-        const visibleChild = Array.from(block.querySelectorAll('.pub-entry')).some(function (el) {
-          return el.style.display !== 'none';
-        });
-        block.style.display = visibleChild ? 'block' : 'none';
-      });
-
-      if (counterEl) {
-        counterEl.textContent = count + ' of ' + pubEntries.length + ' publications';
-      }
-    }
-
-    if (searchInput) {
-      searchInput.addEventListener('input', function (e) {
-        currentQuery = (e.target.value || '').trim().toLowerCase();
-        filterPubs();
-      });
-    }
-
-    yearButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        yearButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeYear = btn.getAttribute('data-year-filter') || 'all';
-        filterPubs();
-      });
-    });
-
-    topicButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        topicButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeTopic = btn.getAttribute('data-topic-filter') || 'all';
-        filterPubs();
-      });
-    });
-  }
-
-  // 4. BibTeX Drawer Toggle & Copy
-  document.querySelectorAll('[data-bibtex-toggle]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const targetId = btn.getAttribute('data-bibtex-toggle');
-      const drawer = document.getElementById(targetId);
-      if (drawer) {
-        drawer.classList.toggle('open');
-      }
-    });
-  });
-
-  document.querySelectorAll('[data-bibtex-copy]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const targetId = btn.getAttribute('data-bibtex-copy');
-      const drawer = document.getElementById(targetId);
-      if (drawer) {
-        const code = drawer.querySelector('.bibtex-code');
-        if (code) {
-          navigator.clipboard.writeText(code.textContent.trim()).then(function () {
-            const original = btn.textContent;
-            btn.textContent = 'Copied!';
-            setTimeout(function () { btn.textContent = original; }, 1800);
-          });
-        }
-      }
-    });
-  });
-
 })();

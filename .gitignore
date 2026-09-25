@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Source render (1.35 GB) — too large for GitHub; web versions live in assets/media/
+assets/AgI-movie.gif
+
+# Local review screenshots from design passes
+.impeccable/review/

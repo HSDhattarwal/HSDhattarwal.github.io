@@ -1,169 +1,108 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research | Harender S. Dhattarwal</title>
-  <meta name="description" content="Research program of Dr. Harender S. Dhattarwal: Machine learning potentials, solid-state electrolytes, and electrochemical interfaces."/>
-  <meta name="author" content="Harender S. Dhattarwal"/>
-
-  <meta property="og:title" content="Research — Harender S. Dhattarwal"/>
-  <meta property="og:description" content="Machine learning interatomic potentials, superionic conductors, and electrochemical interfaces."/>
-  <meta property="og:url" content="https://hsdhattarwal.github.io/research.html"/>
-
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
-  <link rel="alternate icon" href="favicon.svg"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta name="description" content="Physically faithful models of heterogeneous interfaces and the electronic origins of ion transport. Research by Harender S. Dhattarwal at Cornell University.">
+  <link rel="canonical" href="https://hsdhattarwal.github.io/research.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research | Harender S. Dhattarwal">
+  <meta property="og:description" content="Long-range machine-learning potentials and electronic paddle-wheels in solid-state electrolytes.">
+  <meta property="og:url" content="https://hsdhattarwal.github.io/research.html">
+  <meta property="og:image" content="https://hsdhattarwal.github.io/assets/media/agi-paddle-wheel-poster.jpg">
+  <meta name="theme-color" content="#e4ecd8">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/pad.css">
 </head>
 <body>
-
-  <!-- Top Navigation -->
-  <header class="site-nav">
-    <div class="container nav-container">
-      <a href="index.html" class="nav-brand">Harender S. Dhattarwal</a>
-
-      <div class="nav-links-wrap">
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">About</a></li>
-            <li><a href="research.html" class="active">Research</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="about.html">CV</a></li>
-            <li><a href="group.html">Group</a></li>
-          </ul>
-        </nav>
-
-        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
-          <svg class="icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-
-        <button class="mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="sheet">
+    <header class="title-block">
+      <div class="tb-name">
+        <p class="tb-wordmark"><a href="index.html">Harender S. Dhattarwal</a></p>
+        <p class="contact">
+          <a href="mailto:hd436@cornell.edu">Email</a>
+          <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ">Google Scholar</a>
+          <a href="https://github.com/HSDhattarwal">GitHub</a>
+        </p>
       </div>
-    </div>
-  </header>
+      <p class="tb-post"><strong>Postdoctoral Associate · Cornell University</strong><a href="https://yuegroup.cbe.cornell.edu/">Prof. Shuwen Yue’s group</a>, Robert F. Smith School of Chemical and Biomolecular Engineering</p>
+      <nav class="tb-nav" aria-label="Main navigation">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" aria-current="page">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ol>
+      </nav>
+    </header>
 
-  <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobile-drawer">
-    <a href="index.html">About</a>
-    <a href="research.html" class="active">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="about.html">CV</a>
-    <a href="group.html">Group</a>
-  </div>
+    <main id="main" tabindex="-1">
+      <header class="page-head">
+        <h1>Research</h1>
+        <p class="lead">How do interactions at the electronic and molecular scale govern the behaviour of a material? My work connects physically faithful atomistic descriptions with the mechanisms behind dielectric response and ionic conduction.</p>
+      </header>
 
-  <div class="page-wrapper">
-    <main class="main-content">
-
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-eyebrow">Program Overview</div>
-            <h1 class="section-heading" style="font-size:2.4rem;">Research Directions</h1>
-            <p style="font-size:1.1rem; color:var(--text-secondary); margin-top:8px; max-width:720px;">
-              My research program focuses on developing predictive, physics-informed computational frameworks to understand and design functional materials and electrified interfaces for clean energy storage and conversion.
-            </p>
-          </div>
-
-          <!-- Pillar 1 -->
-          <article class="cv-section" style="margin-top:40px;">
-            <div class="cv-title" style="font-size:1.55rem;">
-              1. Machine Learning Interatomic Potentials with Long-Range Electrostatics
-            </div>
-            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
-              <p>
-                Machine learning interatomic potentials (MLIPs) trained on density functional theory (DFT) data have transformed computational chemistry by enabling ab initio-accuracy molecular dynamics over unprecedented time and length scales. However, the vast majority of standard MLIP architectures (including Behler-Parrinello neural networks, DeepMD, and local message-passing graph neural networks) rely strictly on finite spatial cutoffs (typically 4–6 Å).
-              </p>
-              <p>
-                In polar liquids, concentrated electrolytes, and ferroelectric materials, this local approximation fundamentally breaks down. Local models cannot capture collective dielectric screening, long-range polarization fluctuations, or response to external electric fields.
-              </p>
-              <p>
-                To resolve this limitation, we build hybrid architectures that combine equivariant atomic environment descriptors with self-consistent electrostatic models and long-range Ewald summation. Using these models, we investigated the phenomenon of <strong>dielectric saturation in liquid water</strong> under external electric fields up to the gigavolt-per-meter regime. Our simulations revealed that dielectric saturation arises from a subtle thermodynamic competition between field-induced dipole alignment and the energetic penalty of disrupting the cooperative hydrogen-bonding network.
-              </p>
-              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
-                <strong>Key Publications:</strong>
-                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
-                  <li>H. S. Dhattarwal, A. Gao, and R. C. Remsing, <em>Dielectric Saturation in Water from a Long Range Machine Learning Model</em>, <strong>J. Phys. Chem. B</strong> 127, 3663 (2023). <a href="https://doi.org/10.1021/acs.jpcb.3c00390" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>V. Khatri, H. S. Dhattarwal, H. K. Kashyap, and G. Singh, <em>First-principles based Theoretical Investigation of Polyolefin Photo-oxidation</em>, <strong>J. Comput. Chem.</strong> 42, 1710 (2021). <a href="https://doi.org/10.1002/jcc.26702" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- Pillar 2 -->
-          <article class="cv-section" style="margin-top:56px;">
-            <div class="cv-title" style="font-size:1.55rem;">
-              2. Solid-State Electrolytes &amp; Superionic Conduction
-            </div>
-            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
-              <p>
-                All-solid-state lithium and sodium batteries offer the promise of non-flammability and significantly higher volumetric energy densities than conventional liquid-electrolyte cells. However, achieving rapid ion transport within a crystalline solid requires overcoming rigid framework barriers and high hopping activation energies.
-              </p>
-              <p>
-                In superionic conductors such as silver iodide (AgI) and complex thiophosphates, we discovered the <strong>electronic paddle-wheel mechanism</strong>. In molecular crystals, classic paddle-wheel conduction relies on the physical rotation of complex polyatomic anions (e.g., sulphate or borohydride groups) to nudge mobile cations past steric bottlenecks. In atomic solids with monoatomic anions, such mechanical rotation is impossible.
-              </p>
-              <p>
-                Using ab initio molecular dynamics and maximally localized Wannier functions, we demonstrated that dynamic fluctuations in the local valence electron density—coupled with localized cation-anion polarization—mimic the effect of rotating molecular paddles. These transient electronic fluctuations lower the instantaneous electrostatic barrier for cation hopping, explaining how atomic lattices achieve liquid-like ionic conductivities. We also characterized the temperature-dependent percolation of cation clusters in molten and crystalline AgI, establishing design rules for tailoring framework polarizability in next-generation solid electrolytes.
-              </p>
-              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
-                <strong>Key Publications:</strong>
-                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
-                  <li>H. S. Dhattarwal, R. Somni, and R. C. Remsing, <em>Electronic Paddle-Wheels in a Solid-State Electrolyte</em>, <strong>Nat. Commun.</strong> 15, 121 (2024). <a href="https://doi.org/10.1038/s41467-023-44274-z" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>H. S. Dhattarwal and R. C. Remsing, <em>Electronic Paddlewheels Impact the Dynamics of Superionic Conduction in AgI</em>, <strong>ChemPhysChem</strong> 26, e202500077 (2025). <a href="https://doi.org/10.1002/cphc.202500077" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>H. S. Dhattarwal and R. C. Remsing, <em>Electronic Fluctuations, Cation Clustering, and Ionic Dynamics in Molten Silver Iodide</em>, <strong>J. Chem. Phys.</strong> 163, 234503 (2025). <a href="https://doi.org/10.1063/5.0301431" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- Pillar 3 -->
-          <article class="cv-section" style="margin-top:56px;">
-            <div class="cv-title" style="font-size:1.55rem;">
-              3. Electrochemical Interfaces &amp; Confined Systems
-            </div>
-            <div style="font-size:1.02rem; color:var(--text-secondary); line-height:1.8; display:flex; flex-direction:column; gap:16px;">
-              <p>
-                Electrochemical energy storage devices—including supercapacitors, metal-ion batteries, and water electrolyzers—function through charge transfer and ion reorganization within the electrical double layer at polarized electrode surfaces.
-              </p>
-              <p>
-                Our work explores the interfacial structure and thermodynamics of advanced electrolyte formulations, including <strong>Water-in-Salt Electrolytes (WiSE)</strong>, room-temperature ionic liquids, and deep eutectic solvents (DES). By introducing hydrophobic ionic liquids into aqueous WiSE systems, we demonstrated that hybrid electrolytes can surpass the conventional 21 mol/kg solubility threshold, restructuring the interfacial double layer at graphite electrodes to dramatically suppress parasitic water decomposition.
-              </p>
-              <p>
-                Furthermore, under nanoscale confinement inside hydrophobic carbon pores and supramolecular coordination cages, the thermodynamic balance between capillary wetting, drying, and ion desolvation dictates transport rates. In collaborative work with synthetic chemists, we modeled redox-active coordination cages and discovered that metal-center oxidation states can <strong>shift encapsulated Brønsted acidity by up to 12 pKa units</strong>, opening new avenues for electrochemically switched catalysis and ion selectivity.
-              </p>
-              <div style="background:var(--bg-subtle); border-left:3px solid var(--accent); padding:12px 18px; font-size:0.92rem;">
-                <strong>Key Publications:</strong>
-                <ul style="list-style:disc; margin-left:20px; margin-top:6px;">
-                  <li>T. J. Jones et al., <em>Tuning Brønsted Acidity by up to 12 pKa Units in a Redox-Active Nanopore</em>, <strong>J. Am. Chem. Soc.</strong> 147, 2086 (2025). <a href="https://doi.org/10.1021/jacs.4c13038" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>H. S. Dhattarwal and H. K. Kashyap, <em>Influence of Ionic Liquid on the Interfacial Structure of Water-in-Salt Electrolytes at Graphite Electrodes</em>, <strong>J. Phys. Chem. C</strong> 128, 536 (2024). <a href="https://doi.org/10.1021/acs.jpcc.3c06538" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>H. S. Dhattarwal, R. C. Remsing, and H. K. Kashyap, <em>Intercalation–deintercalation of Water-in-Salt Electrolytes in Nanoscale Confinement</em>, <strong>Nanoscale</strong> 13, 4195 (2021). <a href="https://doi.org/10.1039/D0NR08163A" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                  <li>H. S. Dhattarwal and H. K. Kashyap, <em>Heterogeneity and Nanostructure of Superconcentrated LiTFSI-EmimTFSI Hybrid Electrolytes</em>, <strong>J. Phys. Chem. B</strong> 126, 5291 (2022). <a href="https://doi.org/10.1021/acs.jpcb.2c02822" target="_blank" rel="noopener noreferrer">[DOI]</a></li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
+      <section class="topic" id="long-range" aria-labelledby="long-range-heading">
+        <div class="topic-side">
+          <p class="topic-kind">Models &amp; interfaces</p>
+          <ol class="topic-papers" aria-label="Papers on this topic">
+            <li><span class="year">2023</span> <i>J. Phys. Chem. B</i><a href="https://doi.org/10.1021/acs.jpcb.3c00390">Dielectric saturation in water from a long-range machine learning model</a></li>
+          </ol>
+        </div>
+        <div class="topic-body">
+          <h2 id="long-range-heading">Physical fidelity beyond the local environment</h2>
+          <p>Heterogeneous systems place demanding constraints on atomistic models: local chemical structure must remain consistent with electrostatic interactions extending across an interface. My research interest is in <strong>long-range machine-learning interatomic potentials</strong> that retain this physical fidelity, particularly for environments relevant to catalysis and battery interfaces.</p>
+          <p>Water in an electric field offers a direct test of that description. Our study of dielectric saturation showed that a long-range model predicts water’s nonlinear response even without training on strong-field conditions. As water molecules align with the field, their orientational fluctuations become restricted and the dielectric constant decreases. The result demonstrates transferability of a physically informed description beyond its training conditions.</p>
         </div>
       </section>
 
+      <section class="topic" id="paddle-wheels" aria-labelledby="paddle-heading">
+        <div class="topic-side">
+          <p class="topic-kind">Mechanisms &amp; materials</p>
+          <ol class="topic-papers" aria-label="Papers on this topic">
+            <li><span class="year">2024</span> <i>Nature Communications</i><a href="https://doi.org/10.1038/s41467-023-44274-z">Electronic paddle-wheels in a solid-state electrolyte</a></li>
+            <li><span class="year">2025</span> <i>ChemPhysChem</i><a href="https://doi.org/10.1002/cphc.202500077">Electronic paddlewheels impact the dynamics of superionic conduction in AgI</a></li>
+            <li><span class="year">2025</span> <i>J. Chem. Phys.</i><a href="https://doi.org/10.1063/5.0301431">Electronic fluctuations, cation clustering, and ionic dynamics in molten silver iodide</a></li>
+          </ol>
+        </div>
+        <div class="topic-body">
+          <h2 id="paddle-heading">An electronic route to fast ion transport</h2>
+          <p>Ion conduction in a solid is not simply motion through a fixed lattice. The surrounding electron density can participate in the mechanism. Our simulations of silver iodide (AgI), published in <em>Nature Communications</em>, identified <strong>electronic paddle-wheels</strong>: the rotation of iodide lone pairs coupled to collective silver-ion diffusion.</p>
+          <p>This provides an electronic counterpart to the familiar picture of rotating molecular ions assisting transport. Subsequent work connects these electronic motions to the time-dependent friction experienced by silver ions. In molten AgI, iodide polarisation screens interactions between silver ions and promotes clustering. Together, these studies place electronic motion at the heart of a microscopic description of ionic conduction.</p>
+        </div>
+      </section>
+
+      <section class="topic topic-quiet" aria-labelledby="context-heading">
+        <div class="topic-side">
+          <p class="topic-kind">Earlier work</p>
+        </div>
+        <div class="topic-body">
+          <h2 id="context-heading">A foundation in liquids and interfaces</h2>
+          <p>Earlier work on concentrated electrolytes, ionic liquids, and nanoscale confinement explored how molecular organisation changes near surfaces. These studies provide the interfacial and statistical-mechanical context for my current research. <a href="publications.html">Browse the full publication list.</a></p>
+        </div>
+      </section>
+
+      <!-- FUTURE DIRECTIONS — placeholder only, intentionally not rendered.
+      Add a short, author-approved statement of independent research questions here
+      after a later discussion. Do not infer plans from published work or group aims.
+      <section aria-labelledby="future-heading">
+        <h2 id="future-heading">Future directions</h2>
+        <p>[Author-approved text to be added.]</p>
+      </section>
+      -->
+
+      <a class="continue" href="publications.html">
+        <span>Continue reading</span>
+        <strong>Publications<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></strong>
+      </a>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>&copy; 2026 Harender S. Dhattarwal &middot; Department of Chemistry &amp; Chemical Biology, Rutgers University</div>
-        <div class="footer-links">
-          <a href="https://scholar.google.com/citations?user=Y4dvObYAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <a href="https://github.com/HSDhattarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/HSDhattarwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:harender.dhattarwal@rutgers.edu">Contact</a>
-        </div>
-      </div>
+    <footer class="sheet-foot">
+      <span>© 2026 Harender S. Dhattarwal</span>
+      <a href="mailto:hd436@cornell.edu">hd436@cornell.edu</a>
     </footer>
   </div>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
